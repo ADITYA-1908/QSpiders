@@ -1,0 +1,9 @@
+1. WAQTD the designations in which there are at lest 2 employees Present .
+2. WAQTD the names that are repeated
+3. WAQTD names that are repeated exactly twice .
+4. WAQTD the salary that is repeated .
+5. WAQTD number of employees working in each dept having At least 2 emp's Character 'A' or 'S' in their names .
+6. WAQTD job and total salary of each job , if the total salary Of each job is greater than 3450 .
+7. WAQTD job and total salary of the employees if the employees Are earning more than 1500.
+8. WAQTD Job wise maximum salary if the maximum salary Of each job exceeds 2000 .
+9. WAQTD number of emp earning sal more than 1200 in each job and the total sal needed to pay emp of each job must exceeds 3800.

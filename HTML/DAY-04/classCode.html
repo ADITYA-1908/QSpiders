@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tables Concept</title>
+    <style>
+      table,
+      tr,
+      td,
+      th {
+        text-align: center;
+        border-collapse: collapse;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <table border="1">
+      <thead style="background-color: orange">
+        <tr>
+          <th>Heading 1</th>
+          <th>Heading 2</th>
+          <th>Heading 3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Data 1</td>
+          <td style="background-color: blue">Data 2</td>
+          <td>Data 3</td>
+        </tr>
+        <tr>
+          <td>Data 4</td>
+          <td style="background-color: blue">Data 5</td>
+          <td>Data 6</td>
+        </tr>
+        <tr style="background-color: aqua">
+          <td>Data 4</td>
+          <td>Data 5</td>
+          <td>Data 6</td>
+        </tr>
+      </tbody>
+      <tfoot style="background-color: green">
+        <tr>
+          <td colspan="3">footer</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <hr />
+    <hr />
+
+    <!-- this table code is for understanding the rowspan and colspan -->
+    <table border="1">
+      <tr>
+        <th>Heading 1</th>
+        <th colspan="2">Heading 2</th>
+        <!-- <th>Heading 3</th> -->
+      </tr>
+      <tr>
+        <td>Data 1</td>
+        <td>Data 2</td>
+        <td>Data 3</td>
+      </tr>
+      <tr>
+        <td>Data 4</td>
+        <td>Data 5</td>
+        <td>Data 6</td>
+      </tr>
+    </table>
+    <hr />
+    <hr />
+    <center>
+      <table border="1">
+        <colgroup>
+          <col span="2" style="background-color: green" />
+
+          <col style="background-color: orange" />
+        </colgroup>
+        <tr>
+          <th>Heading 1</th>
+          <th>Heading 2</th>
+          <th>Heading 3</th>
+        </tr>
+        <tr>
+          <td>Data 1</td>
+          <td>Data 2</td>
+          <td rowspan="2">Data 3</td>
+        </tr>
+        <tr>
+          <td>Data 4</td>
+          <td>Data 5</td>
+          <!-- <td>Data 6</td> -->
+        </tr>
+      </table>
+    </center>
+  </body>
+</html>
