@@ -6,7 +6,7 @@
     <title>Form Tag</title>
     <style>
       body {
-        background-color: antiquewhite;
+        /* background-color: antiquewhite; */
       }
       h1 {
         text-align: center;
@@ -16,9 +16,9 @@
         width: 500px;
         margin: 0 auto;
         padding: 20px;
-        border: 1px solid #ccc;
         border-radius: 5px;
-        background-color: #f5f5f5;
+        /* border: 1px solid #ccc;
+        background-color: #f8f8f8; */
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         font-family: Arial, sans-serif;
         font-size: 16px;
@@ -60,109 +60,129 @@
     <hr />
     <br /><br />
 
-    <div class="form-tag">
-      <center>
-        <h2><u>Registration Form</u></h2>
-      </center>
-      <br />
-      <form action="" method="username">
-        <!-- email type -->
-        <label for="email">Email:</label>
-        <input type="email" />
-        <br />
-        <!-- password type -->
-        <label for="password">Password:</label>
-        <input type="password" />
-        <br />
-        <!-- text type -->
-        <label for="userName">Name:</label>
-        <input type="text" value="adi_subham" />
-        <br />
-        <!-- file type -->
-        <label for="profile">Profile:</label>
-        <input type="file" /><br />
-        <!-- number type -->
-        <label for="age">Age:</label>
-        <input type="number" />
-        <br />
-        <!-- date type -->
-        <label for="DOB">DOB:</label>
-        <input type="date" />
-        <br />
-        <!-- radio button -->
-        <label for="branch">Branch:</label>
-        <input type="radio" name="branch" /> CSE
-        <input type="radio" name="branch" />IT
-        <input type="radio" name="branch" />CST
-        <br />
-        <!-- check box -->
-        <label for="qualification"> Qualification: </label>
-        <input type="checkbox" />10th <input type="checkbox" />12th
-        <input type="checkbox" />Diploma
-        <br />
-        <!-- Range -->
-        <label for="range">Range:</label>
-        <input type="range" />
-        <br /><br />
-        <!-- select type  -->
-        <label for="">Rank:</label>
-        <select name="rank" id="">
-          <option value="">Select</option>
-          <option value="1-2 Lank">1-2 Lank</option>
-          <option value="2-3 Lakh">2-3 Lakh</option>
-          <option value="3-4 Lakh">3-4 Lakh</option>
-          <option value="4-5 Lakh">4-5 Lakh</option>
-        </select>
-        <br />
-        <br />
+    <fieldset>
+      <div class="form-tag">
+        <legend>Form</legend>
 
-        <!-- time type  -->
-        <label for="time">Joining Time:</label>
-        <input type="time" />
+        <center>
+          <h2><u>Registration Form</u></h2>
+        </center>
         <br />
+        <form action="" method="username">
+          <!-- email type -->
+          <label for="email">Email:</label>
+          <input type="email" />
+          <br />
+          <!-- password type -->
+          <label for="password">Password:</label>
+          <input type="password" />
+          <br />
+          <!-- text type -->
+          <label for="userName">Name:</label>
+          <input type="text" value="adi_subham" />
+          <br />
+          <!-- file type -->
+          <label for="profile">Profile:</label>
+          <input type="file" /><br />
+          <!-- number type -->
+          <label for="age">Age:</label>
+          <input type="number" />
+          <br />
+          <!-- date type -->
+          <label for="DOB">DOB:</label>
+          <input type="date" />
+          <br />
+          <!-- radio button -->
+          <label for="branch">Branch:</label>
+          <input type="radio" name="branch" /> CSE
+          <input type="radio" name="branch" />IT
+          <input type="radio" name="branch" />CST
+          <br />
+          <!-- check box -->
+          <label for="qualification"> Qualification: </label>
+          <input type="checkbox" />10th <input type="checkbox" />12th
+          <input type="checkbox" />Diploma
+          <br />
+          <!-- Range -->
+          <label for="range">Range:</label>
+          <input type="range" />
+          <br /><br />
+          <!-- select type  -->
+          <label for="">Rank:</label>
+          <select name="rank" id="">
+            <option value="">Select</option>
+            <option value="1-2 Lank">1-2 Lank</option>
+            <option value="2-3 Lakh">2-3 Lakh</option>
+            <option value="3-4 Lakh">3-4 Lakh</option>
+            <option value="4-5 Lakh">4-5 Lakh</option>
+          </select>
+          <br />
+          <br />
 
-        <!-- date and time type -->
-        <label for="date-time-type">Date and Time:</label>
-        <input type="datetime-local" />
-        <br />
-        <br />
-        <!-- search results -->
-        <label for="search">Search:</label>
-        <input type="search" />
-        <br /><br />
-        <!-- color type -->
-        <label for="color">Color:</label>
-        <input type="color" />
-        <br /><br />
+          <!-- time type  -->
+          <label for="time">Joining Time:</label>
+          <input type="time" />
+          <br />
 
-        <!-- button tag -->
-        <label for="button">Button:</label>
-        <input type="submit" />
-        <br /><br />
-        <!-- reset button -->
-        <label for="reset">Reset</label>
-        <input type="reset" />
-        <br /><br />
-        <!-- month type -->
-        <label for="month">Month:</label>
-        <input type="month" />
-        <br /><br />
+          <!-- date and time type -->
+          <label for="date-time-type">Date and Time:</label>
+          <input type="datetime-local" />
+          <br />
+          <br />
+          <!-- search results -->
+          <label for="search">Search:</label>
+          <input type="search" />
+          <br /><br />
+          <!-- color type -->
+          <label for="color">Color:</label>
+          <input type="color" />
+          <br /><br />
 
-        <!-- week type -->
-        <label for="week">Week:</label>
-        <input type="week" />
-        <br /><br />
-        <!-- url type -->
-        <label for="url">URL:</label>
-        <input type="url" />
-        <br /><br />
-        <!-- hidden type -->
-        <label for="hiddle">Hidden:</label>
+          <!-- button tag -->
+          <label for="button">Button:</label>
+          <input type="submit" />
+          <br /><br />
+          <!-- reset button -->
+          <label for="reset">Reset</label>
+          <input type="reset" />
+          <br /><br />
+          <!-- month type -->
+          <label for="month">Month:</label>
+          <input type="month" />
+          <br /><br />
+
+          <!-- week type -->
+          <label for="week">Week:</label>
+          <input type="week" />
+          <br /><br />
+          <!-- url type -->
+          <label for="url">URL:</label>
+          <input type="url" />
+          <br /><br />
+          <!-- hidden type -->
+          <!-- <label for="hidden">Hidden:</label>
         <input type="hidden" />
+        <br /><br /> -->
 
-        <br /><br />
-        <button>Submit</button>
-      </form>
-    </div>
+          <!-- textarea type -->
+          <label for="message">Message:</label>
+          <textarea name="" cols="40" rows="10"></textarea>
+          <br /><br />
+
+          <!-- datalist type -->
+          <input type="search" list="fruits" />
+          <datalist>
+            <option value="Apple">Apple</option>
+            <option value="Banana">Banana</option>
+            <option value="Cherry">Cherry</option>
+            <option value="Date">Date</option>
+            <option value="Elderberry">Elderberry</option>
+          </datalist>
+          <br />
+          <br />
+          <button>Submit</button>
+        </form>
+      </div>
+    </fieldset>
   </body>
 </html>
