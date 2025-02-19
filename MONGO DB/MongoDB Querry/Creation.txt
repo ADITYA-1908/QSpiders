@@ -1,0 +1,74 @@
+<--------------SYNTEX-------------->
+
+1. To show the Database
+	show dbs
+
+2. Creating a database
+	use <databaseName>
+
+3. Creating a collection 
+	db.createCollection("<collectionName>")
+
+4. To show the collection in the Brain
+	show collection
+
+5. Insert the Data into Collection
+	db.<collectionName>.insertOne({"key":"value"})
+
+6. show data present in the collection 
+	db.<collectionName>.find()
+
+
+<---------------Command Line------------------>
+
+C:\Users\DELL>mongosh
+
+test>
+
+1
+test> show dbs
+admin   40.00 KiB
+config  48.00 KiB
+local   40.00 KiB
+
+2
+test> use Brain
+switched to db Brain
+
+Brain> show dbs
+admin   40.00 KiB
+config  72.00 KiB
+local   40.00 KiB
+
+3
+Brain> db.createCollection("memory")
+{ ok: 1 }
+
+Brain> show dbs
+Brain    8.00 KiB
+admin   40.00 KiB
+config  96.00 KiB
+local   40.00 KiB
+
+4
+Brain> show collections
+memory
+
+
+5
+Brain> db.memory.insertOne({"userName":"Aditya","age":21})
+{
+  acknowledged: true,
+  insertedId: ObjectId('67b5b8f8819560e5814d7942')
+}
+
+
+6
+Brain> db.memory.find()
+[
+  {
+    _id: ObjectId('67b5b8f8819560e5814d7942'),
+    userName: 'Aditya',
+    age: 21
+  }
+]
