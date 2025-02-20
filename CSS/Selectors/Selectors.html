@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selectors</title>
+    <link rel="stylesheet" href="Selectors.css" />
+  </head>
+  <body>
+    <center><h1>CSS Selectors</h1></center>
+    <hr>
+    <ol>
+      <li><h3>Simple Selectors</h3></li>
+      <ol>
+        <li>ID selectors(#)</li>
+        <li>Class selectors(.)</li>
+        <li>TagName selectors(p)</li>
+        <li>Grouping selectors</li>
+        <li>Universal selector (*)</li>  
+    </ol>
+    <li><h3>Simple Selectors Example</h3></li>
+    <ol>
+        <li id="ID-selectors">ID selectors</li>
+        <li class="Class-selectors">Class selectors</li>
+        <li>TagName selectors</li>
+        <ol type="I">
+            <li><p>Para1</p></li>
+            <li><p>Para2</p></li>
+            <li><p>Para3</p></li>
+            <li><p>Para4</p></li>
+        </ol>
+        <li>Grouping selectors</li>
+        <ol type="A">
+            <li>Tag Name</li>
+            <ol type="I">
+                <li><h4>GS-1</h4></li>
+                <li><h5>GS-2</h5></li>
+             
+                <li><span>GS-4</span></li>
+            </ol>
+            <li>ID and Class</li>
+             <ol type="I">
+                <li><div class="GS-2">
+                    GS1
+                </div></li>
+                <li><div id="GS-1">
+                    GS1
+                </div></li>
+            </ol>
+             <li>ID,Class and Tag</li>
+             <ol type="I">
+                <li><div id="ICT-3">
+                    GS1
+                </div></li>
+                <li><div class="ICT-3">
+                    GS1
+                </div></li>
+                <li><h6>GS-3</h6></li>
+            </ol>
+
+        </ol>
+        <li>Universal selectors</li>
+        <ol>
+            <li>The universal selector(*)</li>
+        </ol>
+    </ol>  
+<li><h3>Priority list</h3></li>
+<ol>
+        <li>ID selectors(#)</li>
+        <li>Class selectors(.)</li>
+        <li>TagName selectors</li>
+        <li>Universal selector (*)</li>  
+</ol>
+
+
+    <li><h3>Note</h3></li>
+    <ol>
+        <li>
+            class name can be duplicate but id can not be duplicate.
+        </li>
+        <li>priority high to low (#   -> .   ->  Tag    ->  *)</li>
+    </ol>
+      </ol>
+    </ol>
+
+  </body>
+</html>

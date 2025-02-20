@@ -1,0 +1,35 @@
+#ID-selectors {
+  color: red;
+}
+
+.Class-selectors {
+  color: rgb(182, 113, 24);
+}
+
+/* TagName selectors */
+p {
+  color: rgb(11, 4, 116);
+}
+
+/* Group selector */
+h4,
+h5,
+span {
+  color: rgb(224, 16, 137);
+}
+
+#GS-1,
+.GS-2 {
+  color: rgb(236, 146, 11);
+}
+
+#ICT-3,
+.ICT-3,
+h6 {
+  color: rgb(188, 80, 221);
+}
+
+/* universal Selector  */
+/* *{
+    color: rgb(236, 146, 11);
+} */
