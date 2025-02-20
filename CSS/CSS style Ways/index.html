@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .internal h2 {
+        color: red;
+        background-color: yellow;
+      }
+      .internal span {
+        color: red;
+        background-color: yellow;
+      }
+      .internal div {
+        color: red;
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <center><h1>Inline CSS</h1></center>
+    <hr />
+    <h2 style="color: red; background-color: black">Block level</h2>
+    <span style="color: red; background-color: black">Inline Block</span>
+    <br /><br /><br />
+    <div style="background-color: black; color: white">Hello</div>
+    <br /><br />
+    <hr />
+    <center><h1>Internal CSS</h1></center>
+    <hr />
+    <div class="internal">
+      <h2>Block Level</h2>
+      <span>inline Block</span> <br /><br />
+      <div>Hello</div>
+    </div>
+    <br /><br />
+    <hr />
+    <center><h1>Internal CSS</h1></center>
+    <hr />
+    <div class="External">
+      <h2>Block Level</h2>
+      <span>inline Block</span> <br /><br />
+      <div>Hello</div>
+    </div>
+  </body>
+</html>

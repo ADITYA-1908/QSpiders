@@ -1,22 +1,62 @@
-<--------------SYNTEX-------------->
+<--------------CREATE SYNTEX-------------->
 
 1. To show the Database
+
 	show dbs
 
+
+
 2. Creating a database
+
 	use <databaseName>
 
+
+
 3. Creating a collection 
+
 	db.createCollection("<collectionName>")
 
+
+
 4. To show the collection in the Brain
+
 	show collection
 
-5. Insert the Data into Collection
+
+
+5. Insert one the Data into Collection
+NOTE
+1.It accept a array of object ([{}])
+2.if it have duplicate key in the object then it will update latest keys
+
 	db.<collectionName>.insertOne({"key":"value"})
+
+
 
 6. show data present in the collection 
 	db.<collectionName>.find()
+
+
+
+7. insert many data in a collection 
+
+
+NOTE
+1.Ony accept data if it is inside array.
+2.inser will be null if we provide ([{}])
+
+	db.<collectionName>.insertMany([{"key":"value"},{"key":"value"}])
+
+
+
+8.Insert more then one filed in a collection 
+	db.insertOne({"key":"value","key":"value"})
+
+9.Insert helps to add one or more then one data 
+	9.1  db.<collectionName>.insert({})
+	9.2  db.<collectionName>.insert([{},{}])
+
+
 
 
 <---------------Command Line------------------>
@@ -63,6 +103,15 @@ Brain> db.memory.insertOne({"userName":"Aditya","age":21})
 }
 
 
+NOTE(1)
+Brain> db.Thought.insertOne([{}])
+{
+  acknowledged: true,
+  insertedId: ObjectId('67b7063073b4cf13974d7948')
+}
+
+
+
 6
 Brain> db.memory.find()
 [
@@ -72,3 +121,54 @@ Brain> db.memory.find()
     age: 21
   }
 ]
+
+
+7
+Brain> db.Thought.insertMany([{"food":"Pizza"},{"place":"manali"}])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('67b6fd4a73b4cf13974d7943'),
+    '1': ObjectId('67b6fd4a73b4cf13974d7944')
+  }
+}
+
+
+7 NOTE(2)
+Brain> db.Thought.insertMany([{}])
+{
+  acknowledged: true,
+  insertedIds: { '0': ObjectId('67b7058e73b4cf13974d7947') }
+}
+
+
+
+8
+Brain> db.Thought.insertOne({"UserName":"Aditya","userName1":"Sritam"})
+{
+  acknowledged: true,
+  insertedId: ObjectId('67b7014a73b4cf13974d7946')
+}
+
+
+9
+
+9.1  
+Brain> db.memory.insert({"cartoon":"raju"})
+{
+  acknowledged: true,
+  insertedIds: { '0': ObjectId('67b712af73b4cf13974d794a') }
+}
+
+
+
+9.2
+
+Brain> db.memory.insert([{"name":"adi_subham"},{"collage":"NIST"}])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('67b7131573b4cf13974d794b'),
+    '1': ObjectId('67b7131573b4cf13974d794c')
+  }
+}

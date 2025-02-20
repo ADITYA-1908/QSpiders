@@ -1,0 +1,64 @@
+1. How to read DataBase
+	a)show dbs
+	b)Show DataBases
+
+2.How to read a Collection
+	showcollection
+
+3. How to read a document
+	db.collectionName.find()
+	db.collectionName.findOne()
+
+
+
+<---------------READ SYNTAX--------------------->
+
+1.FindOne()
+	used to find 1st Object
+	db.<collectionName>.findOne()
+
+
+2.Count()
+	Used to count number of collection present in the object
+	 db.<collectionName>.find().count()
+	db.<collectionName>.countDocument()
+	 db.<collectionName>.estimatedDocumentCount()
+
+3.getCollectionName()
+	used to count all the collection name 
+	db.getCollectionNames().length
+
+4.getCollectionName()
+	used to find all the collection name 
+	db.getCollectionNames()
+
+
+5.find a specific Data 
+	based upon condtion find a document
+	db.<collectionName>.find({<key>:<"value">})
+
+<---------------------Command Shell------------------------>
+
+1
+Brain> db.Thought.findOne()
+{ _id: ObjectId('67b6fb4173b4cf13974d7942'), job: 'TCS' }
+
+
+2
+Brain> db.Thought.find().count()
+7
+
+
+3
+Brain> db.getCollectionNames().length
+2
+
+
+4
+Brain> db.getCollectionNames()
+[ 'Thought', 'memory' ]
+
+
+5
+Brain> db.Thought.find({Friend:"Anurag"})
+[ { _id: ObjectId('67b7009073b4cf13974d7945'), Friend: 'Anurag' } ]
