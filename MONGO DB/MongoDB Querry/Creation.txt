@@ -172,3 +172,64 @@ Brain> db.memory.insert([{"name":"adi_subham"},{"collage":"NIST"}])
     '1': ObjectId('67b7131573b4cf13974d794c')
   }
 }
+
+
+
+10) If the collection is not there then it will create a collection and insert.
+
+myclass> show dbs
+admin      40.00 KiB
+config    108.00 KiB
+local      40.00 KiB
+mytution    8.00 KiB
+
+
+myclass> db.mba.insertOne({username:"Aditya"})
+{
+  acknowledged: true,
+  insertedId: ObjectId('67b85eeeeb850023774d7945')
+}
+
+
+myclass> show collections
+mba
+
+
+myclass> db.bca.insertOne({username:"Aditya"})
+{
+  acknowledged: true,
+  insertedId: ObjectId('67b85f07eb850023774d7946')
+}
+
+
+myclass> show collections
+bca
+mba
+
+
+
+11) Rename a collection 
+
+myclass> show collections
+bca
+mba
+
+
+myclass> db.createCollection("mtech")
+{ ok: 1 }
+
+
+myclass> show collections
+bca
+mba
+MTech
+
+
+myclass> db.mtech.renameCollection("btech")
+{ ok: 1 }
+
+
+myclass> show collections
+bca
+btech
+mba

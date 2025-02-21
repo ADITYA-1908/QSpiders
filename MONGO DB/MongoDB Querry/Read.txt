@@ -24,7 +24,7 @@
 	db.<collectionName>.countDocument()
 	 db.<collectionName>.estimatedDocumentCount()
 
-3.getCollectionName()
+3. db.getCollectionName()
 	used to count all the collection name 
 	db.getCollectionNames().length
 
@@ -37,6 +37,8 @@
 	based upon condtion find a document
 	db.<collectionName>.find({<key>:<"value">})
 
+6.count key doucument
+	db.<collectionName>.find({username:"Name2"}).count()
 <---------------------Command Shell------------------------>
 
 1

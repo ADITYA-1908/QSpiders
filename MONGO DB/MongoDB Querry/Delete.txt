@@ -1,0 +1,116 @@
+<------------------Delete Syntax------------------------>
+1) delete one element
+	
+	db.<CollectionName>.deleteOne({})
+
+2) Delete a specific element 
+
+	db.<CollectionName>.deleteOne({key:"value"})
+
+3) Delete Many document
+	db.<CollectionName>.deleteMany({key:"value"})
+
+	3.1)Delete all the element
+		db.<CollectionName>.deleteMany({})
+
+
+4)Delete the data through the object ID
+	db.<CollectionName>.deleteOne({<objectID>})
+
+
+5) Delete a Collection
+	db.<Collection>.drop()
+
+6)Delete a DataBase
+	db.dropDatabase()
+<------------------MongoDB Shell----------->
+
+1
+Brain> db.Thought.deleteOne({})
+{ acknowledged: true, deletedCount: 1 }
+
+
+2
+Brain> db.Thought.deleteOne({place:"manali"})
+{ acknowledged: true, deletedCount: 1 }
+
+
+
+3
+Brain> db.Thought.deleteMany({food1:"pizzaa"})
+{ acknowledged: true, deletedCount: 2 }
+
+	3.1
+	Brain> db.Thought.deleteMany({})
+	{ acknowledged: true, deletedCount: 4 }
+
+
+4
+Brain> db.Thought.deleteOne({_id: ObjectId('67b7063073b4cf13974d7948')})
+{ acknowledged: true, deletedCount: 1 }
+
+
+
+5
+Brain> db.Thought.drop()
+true
+
+
+6
+Brain> db.dropDatabase()
+{ ok: 1, dropped: 'Brain' }
+
+
+
+
+7) Drop Database delete current DataBase only
+
+Brain> use myclass
+switched to db myclass
+
+
+myclass> db.createCollection("friends")
+{ ok: 1 }
+
+
+myclass> show dbs
+admin     40.00 KiB
+config   108.00 KiB
+local     40.00 KiB
+myclass    8.00 KiB
+
+
+myclass> use mytution
+switched to db mytution
+
+
+mytution> db.createCollection("friends")
+{ ok: 1 }
+
+
+
+mytution> show dbs
+admin      40.00 KiB
+config    108.00 KiB
+local      40.00 KiB
+myclass     8.00 KiB
+mytution    8.00 KiB
+
+
+mytution> use myclass
+switched to db myclass
+
+
+myclass> show collections
+friends
+
+
+myclass> db.dropDatabase("mytution")
+{ ok: 1, dropped: 'myclass' }
+
+
+myclass> show dbs
+admin      40.00 KiB
+config    108.00 KiB
+local      40.00 KiB
+mytution    8.00 KiB 
