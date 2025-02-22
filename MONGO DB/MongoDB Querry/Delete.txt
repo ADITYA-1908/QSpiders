@@ -23,6 +23,8 @@
 
 6)Delete a DataBase
 	db.dropDatabase()
+
+	
 <------------------MongoDB Shell----------->
 
 1

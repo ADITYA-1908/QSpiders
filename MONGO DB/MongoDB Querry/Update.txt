@@ -1,0 +1,135 @@
+<------------------------------SYNTEX------------------------------>
+
+1) Update value of one Data
+	db.<collectionName>.updateOne({Key:value},{$set:{key:value}})
+
+2)create a new filed or new key and value pair in a doucument 
+	db.<collectionName>.updateOne({Key:value},{$set:{key:value}})
+
+3) while inserting a document we can create a ID of a object but once 
+it is created we can't change the _ID
+
+
+4)update the kay of a field
+	db.<collectionName>.updateOne({key:value},{$rename:{"oldkey":"newkey"}})
+
+
+5) Update a key and value or remove it from the object
+	db.<collectionName>.updateOne({key:"value"},{$unset:{key:""}})
+
+
+NOTE
+
+1) $set:{key:value}
+2) $rename:{oldName:newName}
+3) $unset:{key:""}
+
+<------------------------MONGODB SHELL----------------------------->
+
+1)
+
+aditya> db.aditya.updateOne({name:"manali"},{$set:{name:"kashmir"}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+
+
+aditya> db.aditya.find()
+[
+  {
+    _id: ObjectId('67b9a5838c1501aad44d7942'),
+    name: 'kashmir',
+    km: 110
+  }
+]
+
+
+
+2)
+
+aditya> db.aditya.updateOne({name:"kashmir"},{$set:{budget:"10000"}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+aditya> db.aditya.find()
+[
+  {
+    _id: ObjectId('67b9a7568c1501aad44d7943'),
+    name: 'kashmir',
+    km: 120,
+    budget: '10000'
+  }
+]
+
+
+
+3) 
+
+aditya> db.aditya.insertOne({_id:123,name:"manali",km:140,budget:"8000"})
+{ acknowledged: true, insertedId: 123 }
+
+
+aditya> db.aditya.find()
+[
+  {
+    _id: ObjectId('67b9a7568c1501aad44d7943'),
+    name: 'kashmir',
+    km: 120,
+    budget: '10000'
+  },
+  { _id: 123, name: 'manali', km: 140, budget: '8000' }
+]
+
+
+aditya> db.aditya.updateOne({name:"manali"},{$set:{_id:143}})
+MongoServerError: Performing an update on the path '_id' would modify the immutable field '_id'
+
+
+4)
+
+aditya> db.aditya.updateOne({name:"kashmir"},{$rename:{"name":"username"}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+aditya> db.aditya.find()
+[
+  {
+    _id: ObjectId('67b9a7568c1501aad44d7943'),
+    km: 120,
+    budget: '10000',
+    username: 'kashmir'
+  }
+]
+
+
+
+5)
+
+aditya> db.aditya.updateOne({username:"kashmir"},{$unset:{km:""}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+aditya> db.aditya.find()
+[
+  {
+    _id: ObjectId('67b9a7568c1501aad44d7943'),
+    budget: '10000',
+    username: 'kashmir'
+  }
+]
