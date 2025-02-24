@@ -3,18 +3,16 @@
   margin: 0;
   box-sizing: border-box;
 }
-p {
-  background-color: rgb(60, 219, 11);
+
+.btn {
+  background-color: rgb(228, 120, 143);
   height: 30px;
   padding-top: 5px;
   width: 110px;
   font-size: larger;
   margin: 10px 0px 10px 300px;
   text-align: center;
-}
-.block:hover ~ .display {
-  display: block;
-  margin-left: 20px;
+  cursor: pointer;
 }
 .display {
   width: 300px;
@@ -24,6 +22,24 @@ p {
   margin-top: 20px;
   background-color: aqua;
   display: none;
+}
+
+.block:hover ~ .display {
+  display: block;
+  margin-left: 20px;
+}
+
+.parent1 {
+  height: 250px;
+  border: 3px solid red;
+  border-radius: 20px;
+  display: block;
+  background-color: aliceblue;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.inline:hover ~ .parent1 {
+  display: inline;
 }
 
 .parent {
