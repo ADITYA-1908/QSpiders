@@ -1,0 +1,61 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+p {
+  background-color: rgb(60, 219, 11);
+  height: 30px;
+  padding-top: 5px;
+  width: 110px;
+  font-size: larger;
+  margin: 10px 0px 10px 300px;
+  text-align: center;
+}
+.block:hover ~ .display {
+  display: block;
+  margin-left: 20px;
+}
+.display {
+  width: 300px;
+  height: 300px;
+  border: 2px solid black;
+  border-radius: 8px;
+  margin-top: 20px;
+  background-color: aqua;
+  display: none;
+}
+
+.parent {
+  height: 250px;
+  border: 3px solid red;
+  display: block;
+  align-items: center;
+  border-radius: 20px;
+  background-color: aliceblue;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.child {
+  width: 25%;
+  height: 30%;
+  border: 2px solid blue;
+  margin: 5px;
+  border-radius: 10px;
+}
+.flex:hover ~ .parent {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* pseduo selectors  */
+.child:nth-child(1) {
+  background-color: red;
+}
+.child:nth-child(2) {
+  background-color: green;
+}
+.child:nth-child(3) {
+  background-color: blue;
+}

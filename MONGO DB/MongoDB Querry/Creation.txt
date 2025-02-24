@@ -57,7 +57,9 @@ NOTE
 	9.2  db.<collectionName>.insert([{},{}])
 
 
-
+10) Load a javascript file into mongodb shell
+	
+	nosql> load("D:/QSpiders/MONGO DB/MongoDB Data/data.js")
 
 <---------------Command Line------------------>
 

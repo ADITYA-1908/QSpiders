@@ -1,0 +1,30 @@
+NOTE:
+
+	1) what is Querry and Command 
+	2) what is projector
+	3) find({filter querry},{projection querry})
+
+1) WAQTD all emp details
+	nosql>db.emp.find()
+
+2) WAQTD How many emp are present in emp collections
+	nosql> db.emp.find().count()
+
+3) WAQTD emp details where emp name is smith
+	nosql> db.emp.find({ename:"smith"})
+
+4) WAQTD emp details whose job is clerk
+	nosql>db.emp.find({job:"clerk"})
+
+5) WAQTD How many emp working as a clerk
+	nosql> db.emp.find({job:"clerk"}).count()
+
+6)  WAQTD emp details whose job is salesman
+	nosql> db.emp.find({job:"salesman"})
+
+5) WAQTD How many emp working as a clerk
+	nosql> db.emp.find({job:"salesman"}).count()
+
+
+8) WAQTD All the emp names from emp
+	nosql> db.emp.find({},{ename:1,_id:0})

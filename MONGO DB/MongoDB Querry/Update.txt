@@ -17,6 +17,8 @@ it is created we can't change the _ID
 5) Update a key and value or remove it from the object
 	db.<collectionName>.updateOne({key:"value"},{$unset:{key:""}})
 
+6) Update value of many Data
+	db.<collectionName>.updateOne({Key:value},{$set:{key:value}})
 
 NOTE
 
@@ -131,5 +133,41 @@ aditya> db.aditya.find()
     _id: ObjectId('67b9a7568c1501aad44d7943'),
     budget: '10000',
     username: 'kashmir'
+  }
+]
+
+
+
+6)
+
+aditya> db.aditya.updateMany({name:"aditya"},{$set:{age:21}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 3,
+  modifiedCount: 3,
+  upsertedCount: 0
+}
+aditya> db.aditya.find()
+[
+  {
+    _id: ObjectId('67b9a7568c1501aad44d7943'),
+    budget: '10000',
+    username: 'kashmir'
+  },
+  {
+    _id: ObjectId('67bc3fb0096ceaf6a04d7942'),
+    name: 'aditya',
+    age: 21
+  },
+  {
+    _id: ObjectId('67bc3fbc096ceaf6a04d7943'),
+    name: 'aditya',
+    age: 21
+  },
+  {
+    _id: ObjectId('67bc3fbf096ceaf6a04d7944'),
+    name: 'aditya',
+    age: 21
   }
 ]
