@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #202124;
+}
+header {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 20px;
+  margin-top: 5px;
+  gap: 5px;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  margin-left: 15px;
+  font-size: larger;
+}
+
+.header-icons {
+  display: flex;
+  align-items: center;
+}
+
+.header-icons p {
+  width: 20px;
+  height: auto;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.header-profile p {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.container {
+  color: white;
+  font-family: "Product Sans", sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 89vh;
+  margin: 0;
+}
+
+.logo {
+  margin-top: 120px;
+}
+.logo span {
+  font-size: 120px;
+  font-weight: bold;
+}
+
+.logo span:nth-child(1) {
+  color: blue;
+}
+.logo span:nth-child(2) {
+  color: red;
+}
+.logo span:nth-child(3) {
+  color: yellow;
+}
+.logo span:nth-child(4) {
+  color: blue;
+}
+.logo span:nth-child(5) {
+  color: green;
+}
+.logo span:nth-child(6) {
+  color: red;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 15px 17px;
+  border-radius: 24px;
+  width: 850px;
+  max-width: 90%;
+  margin: 20px auto;
+}
+
+.search-box input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: white;
+  font-size: 16px;
+  padding: 5px;
+}
+
+.search-box span {
+  font-size: 18px;
+  margin: 0 10px;
+  cursor: pointer;
+  background-color: white;
+}
+
+#shortcuts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 100px;
+}
+
+.shortcut {
+  margin: 0 15px;
+  color: white;
+  margin-right: 30px;
+}
+
+.shortcut:hover {
+  background-color: #3c4043;
+}
+
+.shortcut .icon {
+  background-color: #303134;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+.shortcut .icon p {
+  background-color: #303134;
+}
+
+footer {
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+}
+
+.customize-button {
+  background-color: #303134;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}

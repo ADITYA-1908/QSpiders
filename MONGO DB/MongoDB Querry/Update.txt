@@ -10,7 +10,7 @@
 it is created we can't change the _ID
 
 
-4)update the kay of a field
+4)update the key of a field
 	db.<collectionName>.updateOne({key:value},{$rename:{"oldkey":"newkey"}})
 
 

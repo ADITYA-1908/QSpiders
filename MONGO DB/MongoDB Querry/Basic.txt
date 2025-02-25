@@ -3,6 +3,7 @@ NOTE:
 	1) what is Querry and Command 
 	2) what is projector
 	3) find({filter querry},{projection querry})
+	4)Inclusion(1), Exlusion(0) and Projection--> set of inclusion and exclusion
 
 1) WAQTD all emp details
 	nosql>db.emp.find()
