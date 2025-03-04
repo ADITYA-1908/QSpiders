@@ -1,0 +1,110 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-top: 20px;
+}
+
+/* Styling for Buttons */
+.buttons {
+  margin-top: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: #e4788f;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 10px;
+}
+
+.btn:hover {
+  background-color: #b25f73;
+  transform: scale(1.05);
+}
+
+/* Button Specific Classes */
+.around:hover ~ .parent {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.evenly:hover ~ .parent {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.between:hover ~ .parent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.flexstart:hover ~ .parent {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.flexend:hover ~ .parent {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.center:hover ~ .parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Parent and Child Elements */
+.parent {
+  display: block;
+  margin-top: 30px;
+  height: 250px;
+  border: 3px solid red;
+  border-radius: 20px;
+  background-color: aliceblue;
+  align-items: center;
+  padding: 10px;
+  transition: display 0.5s ease;
+}
+
+.child {
+  width: 25%;
+  height: 30%;
+  background-color: #ccc;
+  border-radius: 10px;
+  border: 2px solid blue;
+  margin: 5px;
+  transition: background-color 0.3s ease;
+}
+
+/* Different Background Colors for Child Elements */
+.child:nth-child(1) {
+  background-color: red;
+}
+
+.child:nth-child(2) {
+  background-color: green;
+}
+
+.child:nth-child(3) {
+  background-color: blue;
+}

@@ -1,0 +1,50 @@
+.class {
+  width: 200px;
+  height: 300px;
+  background-color: aqua;
+  transition: all 2s;
+}
+.class:hover {
+  background-color: blueviolet;
+}
+
+.class1 {
+  width: 200px;
+  height: 300px;
+  background-color: aqua;
+  transition: all 2s;
+}
+.class1:active {
+  background-color: blueviolet;
+}
+
+li {
+  color: red;
+}
+
+/* li:first-child {
+  color: blue;
+}
+
+li:last-child {
+  color: cyan;
+} */
+
+li:nth-child(odd) {
+  color: green;
+}
+
+li:nth-child(even) {
+  color: red;
+}
+
+a:visited {
+  color: red;
+}
+a {
+  color: gold;
+}
+
+a:active {
+  color: green;
+}

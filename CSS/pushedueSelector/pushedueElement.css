@@ -1,0 +1,36 @@
+* {
+  user-select: none;
+}
+p::first-line {
+  color: darkgreen;
+}
+p::first-letter {
+  font-size: larger;
+  font-weight: 200;
+  color: red;
+}
+
+h1::before {
+  content: "Headline: ";
+  font-weight: bold;
+  color: blue;
+}
+
+h1::after {
+  content: " Important";
+  font-weight: bold;
+  color: darkred;
+}
+
+::marker {
+  color: black;
+  background-color: yellow;
+  border: 1px solid black;
+  padding: 2px;
+  border-radius: 5px;
+}
+
+/* ::selection {
+  background-color: red;
+  color: yellow;
+} */
