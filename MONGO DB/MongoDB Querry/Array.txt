@@ -1,0 +1,123 @@
+						Array in MonogoDB
+NOTES
+
+1) $all
+	In monogDB the $all operator is used to match document where an array filed contains all the 	specified elements, regardless of their order.This operatir is typically used in the queries that 	need to find documents where an array contains multiple values.
+
+	syntax: db.<collectionNmae>.find({field:{$all:[value1,value2,...]})
+
+2) $in 
+	matches document where the array field contain at least one of the specified value.
+
+	syntax: db.<collectionNmae>.find({field:{$in:[value1,value2,...]})
+
+3) $nin
+	Matches documents where the array field does not contain any of the specified value.
+
+	syntax: db.<collectionName>.find({field:{$nin:[value1,value2,...]}})
+
+4) $size
+	In monogDB the $size operator is used to querry documents where an array filed has a specified 	number of elements.It is commonly used to check the exact size of an array in a document.
+
+	syntax: syntax: db.<collectionName>.find({arrayField:{$size: <number>}})
+
+
+
+MongoDB querry	
+
+Q1) WAQTD student name who has javascript.
+
+array> db.students.find({skills:"java"})
+[
+  {
+    _id: ObjectId('67c81ec0ebfc9d9ae04d7945'),
+    name: 'kanha',
+    skills: [ 'java', 'jdbc', 'spring' ]
+  }
+]
+
+
+Q2) WAQTD student name who has mongodb and css skills
+
+array> db.students.find({skills:{$all:["mongodb","css"]}})
+[
+  {
+    _id: ObjectId('67c81e4eebfc9d9ae04d7942'),
+    name: 'aditya',
+    skills: [ 'html', 'css', 'mongodb' ]
+  },
+  {
+    _id: ObjectId('67c81e8debfc9d9ae04d7944'),
+    name: 'adisubham',
+    skills: [ 'html', 'css', 'javascript', 'mongodb' ]
+  }
+]
+
+Q3) WAQTD students details how has either javascript or java.
+
+array> db.students.find({skills:{$in:["java","javascript"]}})
+[
+  {
+    _id: ObjectId('67c81e6eebfc9d9ae04d7943'),
+    name: 'subham',
+    skills: [ 'html', 'css', 'javascript' ]
+  },
+  {
+    _id: ObjectId('67c81e8debfc9d9ae04d7944'),
+    name: 'adisubham',
+    skills: [ 'html', 'css', 'javascript', 'mongodb' ]
+  },
+  {
+    _id: ObjectId('67c81ec0ebfc9d9ae04d7945'),
+    name: 'kanha',
+    skills: [ 'java', 'jdbc', 'spring' ]
+  }
+]
+
+
+Q4) WAQTD students details who don't have java, javascript skills.
+
+array> db.students.find({skills:{$nin:["java","javascript"]}})
+[
+  {
+    _id: ObjectId('67c81e4eebfc9d9ae04d7942'),
+    name: 'aditya',
+    skills: [ 'html', 'css', 'mongodb' ]
+  }
+]
+
+Q5) WAQTD students detailswho have minimum 3 skills
+array> db.students.find({skills:{$size:3}})
+[
+  {
+    _id: ObjectId('67c81e4eebfc9d9ae04d7942'),
+    name: 'aditya',
+    skills: [ 'html', 'css', 'mongodb' ]
+  },
+  {
+    _id: ObjectId('67c81e6eebfc9d9ae04d7943'),
+    name: 'subham',
+    skills: [ 'html', 'css', 'javascript' ]
+  },
+  {
+    _id: ObjectId('67c81ec0ebfc9d9ae04d7945'),
+    name: 'kanha',
+    skills: [ 'java', 'jdbc', 'spring' ]
+  }
+]
+
+Q6) WAQTD student details who have minimum 3 skills and in that skills javascript or css is present.
+
+array> db.students.find({$and:[{skills:{$size:3}},{skills:{$in:["css","javascript"]}}]})
+[
+  {
+    _id: ObjectId('67c81e4eebfc9d9ae04d7942'),
+    name: 'aditya',
+    skills: [ 'html', 'css', 'mongodb' ]
+  },
+  {
+    _id: ObjectId('67c81e6eebfc9d9ae04d7943'),
+    name: 'subham',
+    skills: [ 'html', 'css', 'javascript' ]
+  }
+]

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hover Animation</title>
+    <style>
+      .box {
+        height: 100px;
+        width: 100px;
+        position: relative;
+        background-color: aqua;
+        overflow: hidden;
+      }
+
+      .box::after {
+        content: "";
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background-color: brown;
+        transition: all 0.5s;
+      }
+
+      /* Hover animations */
+      .container:hover .box.hover-down::after {
+        top: 0;
+      }
+      .container:hover .box.hover-up::after {
+        bottom: 0;
+      }
+      .container:hover .box.hover-right::after {
+        left: 0;
+      }
+      .container:hover .box.hover-left::after {
+        right: 0;
+      }
+
+      .box.hover-down::after {
+        top: -100px;
+      }
+      .box.hover-up::after {
+        bottom: -100px;
+      }
+      .box.hover-right::after {
+        left: -100px;
+      }
+      .box.hover-left::after {
+        right: -100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container hover-down">
+      <div class="box hover-down"></div>
+    </div>
+    <br /><br />
+    <div class="container hover-up">
+      <div class="box hover-up"></div>
+    </div>
+    <br /><br />
+    <div class="container hover-right">
+      <div class="box hover-right"></div>
+    </div>
+    <br /><br />
+    <div class="container hover-left">
+      <div class="box hover-left"></div>
+    </div>
+  </body>
+</html>
