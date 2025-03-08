@@ -2,26 +2,40 @@
 NOTES
 
 1) $all
-	In monogDB the $all operator is used to match document where an array filed contains all the 	specified elements, regardless of their order.This operatir is typically used in the queries that 	need to find documents where an array contains multiple values.
+	In monogDB the $all operator is used to match document where an array 	filed contains all the 	specified elements, regardless of their 	order.This operatir is typically used in the queries that need to find 	documents where an array contains multiple values.
 
 	syntax: db.<collectionNmae>.find({field:{$all:[value1,value2,...]})
 
 2) $in 
-	matches document where the array field contain at least one of the specified value.
+	matches document where the array field contain at least one of the 	specified value.
 
 	syntax: db.<collectionNmae>.find({field:{$in:[value1,value2,...]})
 
 3) $nin
-	Matches documents where the array field does not contain any of the specified value.
+	Matches documents where the array field does not contain any of the 	specified value.
 
 	syntax: db.<collectionName>.find({field:{$nin:[value1,value2,...]}})
 
 4) $size
-	In monogDB the $size operator is used to querry documents where an array filed has a specified 	number of elements.It is commonly used to check the exact size of an array in a document.
+	In monogDB the $size operator is used to querry documents where an array 	filed has a specified 	number of elements.It is commonly used to check 	the exact size of an array in a document.
 
 	syntax: syntax: db.<collectionName>.find({arrayField:{$size: <number>}})
 
+5) $pull
+	Removes elements from an array that match a specified condition.You can 	remove element from anywhere in the array based on the value or 	conditionyou specify.
 
+6) Diffrence between $pop and $pull
+
+	$pop is for removing an element fron the beginning or the end of an 	array.
+	$pull id for removing elements that match a specified condition anywhere 	in the array
+
+7) $addTOSet
+	The $addToSet operator in mongoDB is used to add a value to an array onlt 	if it doesn't already exist in the array. This ensure that the array 	contains unique values
+	
+	Key Points about $addToSet:
+	1) IT ensure that only unique values are added to the array.
+	2) it will not add a value if it already exist in the array.
+	3) unlike $push, which appends the value regardless of wheather it 		    already exist, $addToSet ensure that duplicate are not added.
 
 MongoDB querry	
 
@@ -121,3 +135,159 @@ array> db.students.find({$and:[{skills:{$size:3}},{skills:{$in:["css","javascrip
     skills: [ 'html', 'css', 'javascript' ]
   }
 ]
+
+Q7) WAQ to add a friend name in the student object or document where student name is aditya nd friend name is sheela.
+
+
+array> db.students.updateOne({name:'aditya'},{$push:{friends:'sheela'}})
+
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+array> db.students.find({name:'sundari'})
+
+array> db.students.find({name:'aditya'})
+[
+  {
+    _id: ObjectId('67c81e4eebfc9d9ae04d7942'),
+    name: 'aditya',
+    skills: [ 'html', 'css', 'mongodb' ],
+    friends: [ 'sheela' ]
+  }
+]
+
+
+
+
+Q8) WAQ to add the friends in aditya documents and delete the mongodb skills in the single command 
+
+
+array> db.students.updateOne({name:'aditya'},{$push:{friends:'tinku'},$pop:{skills:1}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+array> db.students.find()
+[
+  {
+    _id: ObjectId('67c81e4eebfc9d9ae04d7942'),
+    name: 'aditya',
+    skills: [ 'html', 'css' ],
+    friends: [ 'sheela', 'sonali', 'nikhil', 'tinku' ]
+  },
+  {
+    _id: ObjectId('67c81e6eebfc9d9ae04d7943'),
+    name: 'subham',
+    skills: [ 'html', 'css', 'javascript' ],
+    friends: []
+  },
+  {
+    _id: ObjectId('67c81e8debfc9d9ae04d7944'),
+    name: 'adisubham',
+    skills: [ 'html', 'css', 'javascript', 'mongodb' ],
+    friends: []
+  },
+  {
+    _id: ObjectId('67c81ec0ebfc9d9ae04d7945'),
+    name: 'kanha',
+    skills: [ 'java', 'jdbc', 'spring' ],
+    friends: []
+  }
+]
+
+
+
+Q9) WATD students who have more then 2 skills.
+
+
+
+
+Q10) WAQT remove a skills from a student where student name is adi_subham skills name is jdbc
+
+array> db.students.updateOne({name:'adisubham'},{$pull:{skills:'jdbc'}})
+
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 0,
+  upsertedCount: 0
+}
+array> db.students.find()
+[
+  {
+    _id: ObjectId('67c81e4eebfc9d9ae04d7942'),
+    name: 'aditya',
+    skills: [ 'html', 'css' ],
+    friends: [ 'sheela', 'sonali', 'nikhil', 'tinku' ]
+  },
+  {
+    _id: ObjectId('67c81e6eebfc9d9ae04d7943'),
+    name: 'subham',
+    skills: [ 'html', 'css', 'javascript' ],
+    friends: []
+  },
+  {
+    _id: ObjectId('67c81e8debfc9d9ae04d7944'),
+    name: 'adisubham',
+    skills: [ 'html', 'css', 'javascript', 'mongodb' ],
+    friends: []
+  },
+  {
+    _id: ObjectId('67c81ec0ebfc9d9ae04d7945'),
+    name: 'kanha',
+    skills: [ 'java', 'jdbc', 'spring' ],
+    friends: []
+  }
+]
+
+
+
+Q11) WAQT add friends name as Aditya where name is not equal to Aditya 
+
+array> db.students.updateMany({name:{$nin:['aditya']}},{$addToSet:{friend:'aditya'}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 3,
+  modifiedCount: 3,
+  upsertedCount: 0
+}
+array> db.students.find()
+[
+  {
+    _id: ObjectId('67c81e4eebfc9d9ae04d7942'),
+    name: 'aditya',
+    skills: [ 'html', 'css' ],
+    friends: [ 'sheela', 'sonali', 'nikhil', 'tinku' ]
+  },
+  {
+    _id: ObjectId('67c81e6eebfc9d9ae04d7943'),
+    name: 'subham',
+    skills: [ 'html', 'css', 'javascript' ],
+    friends: [],
+    friend: [ 'aditya' ]
+  },
+  {
+    _id: ObjectId('67c81e8debfc9d9ae04d7944'),
+    name: 'adisubham',
+    skills: [ 'html', 'css', 'javascript', 'mongodb' ],
+    friends: [ 'tinku', 'aditya' ],
+    friend: [ 'aditya' ]
+  },
+  {
+    _id: ObjectId('67c81ec0ebfc9d9ae04d7945'),
+    name: 'kanha',
+    skills: [ 'java', 'jdbc', 'spring' ],
+    friends: [],
+    friend: [ 'aditya' ]
+  }
+]
+

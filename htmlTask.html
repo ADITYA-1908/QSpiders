@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        background-color: rgba(42, 7, 241, 0.922);
+      }
+
+      .parent_nav {
+        margin-top: 40px;
+        height: 85px;
+        width: 80%;
+        margin-inline: auto;
+        background-color: rgb(247, 247, 250);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 9px;
+      }
+      .nav {
+        font-size: 22px;
+      }
+      section {
+        width: 100%;
+        height: 400px;
+        display: flex;
+        margin-top: 70px;
+        margin-bottom: 60px;
+      }
+
+      .left_hero_style {
+        display: flex;
+        justify-content: space-evenly;
+
+        width: 70%;
+        height: 100%;
+      }
+      .left_hero_style_child {
+        width: 60px;
+        height: 15%;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .left_hero_style_child > i {
+        font-size: 24px;
+
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+      }
+      .left_hero_style_child1 {
+        width: 150px;
+        height: 100%;
+        background-color: rgb(241, 241, 240);
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+      }
+      .left_hero_style_child1 > i {
+        font-size: 28px;
+      }
+      .left_hero_style_child2 {
+        width: 500px;
+        height: 100%;
+        background-color: rgb(241, 241, 240);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+      .left_hero_style_child2 > div {
+        font-size: 24px;
+      }
+
+      footer {
+        height: 60px;
+        width: 790px;
+        margin-left: 70px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .bb {
+        height: 90%;
+        width: 140px;
+        border-radius: 8px;
+        font-size: 20px;
+        border: none;
+        background-color: transparent;
+        box-shadow: 4px 7px 9px 0px grey;
+      }
+      .bb:focus {
+        background-color: rgb(241, 241, 240);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- for nav  -->
+    <div class="parent_nav">
+      <div class="nav nav_child1"><i class="ri-home-3-line"></i> Home</div>
+
+      <div class="nav nav_child2">
+        <i class="ri-dashboard-line"></i> Dashboard
+      </div>
+
+      <div class="nav nav_child3"><i class="ri-group-line"></i> Segment</div>
+
+      <div class="nav nav_child4"><i class="ri-user-line"></i> Account</div>
+
+      <div class="nav nav_child5">
+        <i class="ri-settings-2-line"></i> Setting
+      </div>
+    </div>
+    <!-- for nav end -->
+
+    <section>
+      <div class="hero left_hero_style">
+        <div class="left_hero_style_child"><i class="ri-menu-fill"></i></div>
+        <div class="left_hero_style_child1">
+          <i class="ri-home-3-line"></i>
+          <i class="ri-dashboard-line"></i>
+          <i class="ri-group-line"></i>
+          <i class="ri-user-line"></i>
+          <i class="ri-settings-2-line"></i>
+        </div>
+        <div class="left_hero_style_child2">
+          <div><i class="ri-home-3-line"></i> Home</div>
+          <div><i class="ri-dashboard-line"></i> Dashboard</div>
+          <div><i class="ri-group-line"></i> Segment</div>
+          <div><i class="ri-user-line"></i> Account</div>
+          <div><i class="ri-settings-2-line"></i> Setting</div>
+        </div>
+      </div>
+      <div class="hero right_hero_style"></div>
+    </section>
+
+    <footer>
+      <button class="bb bb1">Home</button>
+      <button class="bb bb2">Dashboard</button>
+      <button class="bb bb3">Segments</button>
+      <button class="bb bb4">Account</button>
+      <button class="bb bb5">Setting</button>
+    </footer>
+  </body>
+</html>
