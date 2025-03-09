@@ -291,3 +291,21 @@ array> db.students.find()
   }
 ]
 
+
+12) WAQTD all the students name  in a alphabetical ascending order 
+array> db.students.find({},{name:1,_id:0}).sort({name:1})
+[
+  { name: 'adisubham' },
+  { name: 'aditya' },
+  { name: 'kanha' },
+  { name: 'subham' }
+]
+
+13) WAQTD all the students name  in a alphabetical descending order 
+array> db.students.find({},{name:1,_id:0}).sort({name:-1})
+[
+  { name: 'subham' },
+  { name: 'kanha' },
+  { name: 'aditya' },
+  { name: 'adisubham' }
+]
