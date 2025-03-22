@@ -12,7 +12,7 @@ while (i < 5) {
   i++;
 }
 
-//for of loop
+//for of loop best for the array
 
 for (var i of arr) {
   console.log(i);
@@ -27,7 +27,7 @@ for (let index = 0; index < array.length; index++) {
   console.log(obj.i);
 }
 
-//for in loop
+//for in loop besy for the object
 for (var j in obj) {
   console.log(obj[i]);
 }

@@ -1,0 +1,26 @@
+WAQTD how many emps are hiared in the year of 1981
+nosql> db.emp.aggregate([{$match:{$and:[{hiredate:{$gte:new Date('01-jan-1981')}},{hiredate:{$lte:new Date('31-dec-1981')}}]}}])
+
+
+
+WAQTD emp names in a assending order
+nosql> db.emp.aggregate([{$sort:{ename:-1}},{$project:{_id:0,ename:1}}]) 
+
+
+WAQTD emp names in a decending order
+nosql> db.emp.aggregate([{$sort:{ename:1}},{$project:{_id:0,ename:1}}]) 
+
+
+WAQTD how many emps are present in each dept who are hired in 1981
+nosql> db.emp.aggregate([{$addFields:{hiretear:{$year:'$hiredate'}}},{$match:{hireyear:1981}},{$group:{_id:'$deptno',no_of_emps:{$sum:1}}}])
+
+
+
+
+WAQTD the average salary for each dept for each year.
+WAQTD the highest salary in each dept for each year.
+WAQTD the total salary paid by each dept in each year.
+WAQTD how many employes had a non null commission.
+WAQTD average commission for employes in each department.
+WAQTD how manu employes were hired in each year who have no manager.
+WAQTD the oldeste emp in each dept and in each year.
