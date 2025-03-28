@@ -115,7 +115,7 @@ d)field
 	viii)$nin
 
  b)Logical
-	I)$and
+	I)$andss
 	ii)$or
 	iii)not
 	iv)$nor
