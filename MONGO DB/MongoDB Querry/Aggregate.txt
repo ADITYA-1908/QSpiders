@@ -1,0 +1,31 @@
+Q1) find all the details of the emp
+ db.emp.aggregate()
+
+
+//$match- it will match the condition and give the 
+
+Q2) WAQTD emp details who are working in the dept no 20 
+ db.emp.aggregate([{$match:{deptno:20}}])
+
+Q3) WAQTD emp details who are working in the dept no 20 and job = clerk
+db.emp.aggregate([{$match:{deptno:20,job:'clerk'}}])
+
+Q4) WAQTD emp details who are working in the dept no 20 sal > 2000
+ db.emp.aggregate([{$match:{deptno:20,sal:{$gt:2000}}}])
+
+//$project 
+
+Q5) WAQTD all the ename with their sal and comm
+ db.emp.aggregate([{$project:{_id:0,ename:1,sal:1,comm:1}}])
+
+Q6) WAQTD to rename the ename as empname and show it.
+db.emp.aggregate([{$project:{_id:0,empName:'$ename'}}])
+
+Q7)WAQTD emp details who are earning more sal > comm
+ db.emp.aggregate([{$match:{$expr:{$gt:['$sal','$comm']}}}])
+
+Q8)WAQTD the ename name and hiredate who are hired in the year 1981.
+db.emp.aggregate([{$match:{hiredate:{$gt:new Date('31-dec-1980'),$lt:new Date('01-jan-1982')}}}])
+
+
+

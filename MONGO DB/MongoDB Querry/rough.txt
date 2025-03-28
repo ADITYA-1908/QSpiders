@@ -17,6 +17,8 @@ nosql> db.emp.aggregate([{$addFields:{hiretear:{$year:'$hiredate'}}},{$match:{hi
 
 
 
+
+
 WAQTD the average salary for each dept for each year.
 WAQTD the highest salary in each dept for each year.
 WAQTD the total salary paid by each dept in each year.
@@ -24,3 +26,12 @@ WAQTD how many employes had a non null commission.
 WAQTD average commission for employes in each department.
 WAQTD how manu employes were hired in each year who have no manager.
 WAQTD the oldeste emp in each dept and in each year.
+
+
+
+
+
+WAQTD Details of all the employes and their managers.
+WAQTD employe name manager name managers managers name of all the employees.
+WAQTD emp name manager name if emp and manager both earn more then 2300rs salary.
+WA

@@ -1,0 +1,143 @@
+1) Basic
+	
+-DataBase
+-Data
+-Information	
+-Type of DB
+    a)SQL
+    b)NoSQL
+-what is NoSQL
+-Advantages of SQL
+-Diffrence sql and NoSQL
+-MongoDB
+-Features of Mongo DB
+-vertical scalling 
+-Horizontal scalling
+-Installition o mongo DB
+
+
+2)Prerequisite's of JS
+
+-Js Datatype
+-primitive
+-Non-primitive
+-JSON
+-difference between the JS object and JSON
+- Array and Object
+
+3) Terminology
+
+	a) SQL
+	-DB
+	-Table
+	-Row
+	-column
+	-cell
+	-PK
+
+	b)MonogoDB
+	-DB
+	-Collection
+	-Document
+	-Field
+	-_id
+
+4)CRUD Operation
+---------- C-Create-----------------
+ a)DataBase
+ use <DatabaseName>
+
+ b)Collection
+ db.createCollection('<collectionName>')
+
+ c)Document (db.collectionName.method)
+	insertOne({})
+	insertMany([{},{}])
+	insert([])
+d) field{
+          key:value
+	}
+
+----------R-Read---------------
+
+a)DataBase
+show dbs
+
+b)collection
+show collection
+
+c)Document
+db.collectionName.find()
+
+d)field
+db.collectionName.find({fields})
+
+--------------U-Update----------------
+a)DataBase
+Not possible by direct method
+
+b)collection
+db.collectionName.rename('')
+
+c)document
+  db.collectionName.updateOne({M},{U})
+  db.collectionName.updateMany({M},{U})
+
+d)Field
+ -$set{name:"value"}
+ -$rename:{oldfieldName:'newFieldName'}
+
+
+------------------D Delete----------------
+a) DataBase
+ db.dropDatabase()
+
+b) collection
+db.collection.drop()
+
+c)Document
+ -deleteOne({m})
+ -deleteMany({m})
+
+d)field
+ -$uset({fieldNAme:1})
+
+
+5) Opetator
+ a)Comparison
+ 	I)$gt
+	ii)$gte
+	iii)$lt
+ 	iv)$lte
+	v)$eq
+	vi)$ne
+	vii)$in
+	viii)$nin
+
+ b)Logical
+	I)$and
+	ii)$or
+	iii)not
+	iv)$nor
+
+ c)Eval
+	I)$expr
+	ii)$mod
+	iii)$regex
+	iv)$where
+
+ d)Array
+	I)querry
+	-$all
+	-in
+	-$nin
+	-$size
+	-$elematch
+
+	II)Update
+	-$push
+	-$pop
+	-$pull
+	-$addToset
+	-$each
+	-position
