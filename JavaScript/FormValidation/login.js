@@ -19,9 +19,9 @@ loginForm.addEventListener("submit", (e) => {
   e.preventDefault();
   const userData = JSON.parse(localStorage.getItem("userdata"));
   if (userData.email === email.value && userData.password === password.value) {
-    console.log("sucessfully login");
+    errorMesg.innerText = "";
     window.location = "./dashboard.html";
   } else {
-    console.log("invalid password");
+    errorMesg.innerText = "Invalid email or password.";
   }
 });

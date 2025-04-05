@@ -1,6 +1,8 @@
 const loginButton = document.getElementById("login-btn");
 const modalOverlay = document.querySelector(".modal-overlay");
 const closeButton = document.querySelector(".close-button");
+const togglePassword = document.getElementById("togglePassword");
+const passwordField = document.getElementById("password");
 
 if (loginButton && modalOverlay && closeButton) {
   loginButton.addEventListener("click", () => {
@@ -12,12 +14,10 @@ if (loginButton && modalOverlay && closeButton) {
   });
 }
 
-// const loginForm = document.querySelector("#login-form");
-// const username = document.querySelector("#username");
-// const password = document.querySelector("#password");
-// function demo(e) {
-//   e.prevent.Default();
-//   console.log(username.value);
-//   console.log(password.value);
-//   username.value = "";
-// }
+togglePassword.addEventListener("click", () => {
+  const type =
+    passwordField.getAttribute("type") === "password" ? "text" : "password";
+  passwordField.setAttribute("type", type);
+  togglePassword.classList.toggle("fa-eye");
+  togglePassword.classList.toggle("fa-eye-slash");
+});

@@ -6,9 +6,6 @@ const errorMesg = document.querySelector("#error");
 const showbtn = document.querySelector("#showbtn");
 loginForm.addEventListener("submit", (e) => {
   e.preventDefault(); //to stop reloading page
-  //   console.log(username.value);
-  //   console.log(email.value);
-  //   console.log(password.value);
   if (password.value.length > 6) {
     errorMesg.innerText = "";
     const userdetails = {
