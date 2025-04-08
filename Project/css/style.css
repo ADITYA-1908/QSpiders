@@ -1,0 +1,26 @@
+nav {
+  background-color: #7432f9;
+}
+
+.nav-link {
+  color: white;
+  font-size: large;
+}
+
+.nav-link:hover {
+  color: yellow;
+}
+
+.nav-btn {
+  background-color: yellow;
+  color: blue;
+}
+
+.nav-btn:hover {
+  background-color: red;
+  color: white;
+}
+
+.card:hover {
+  box-shadow: 2px 5px 10px -2px black;
+}
