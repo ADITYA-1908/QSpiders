@@ -1,87 +1,407 @@
-<!-- m-auto flex-column flex-md-row -->
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bootstrap demo</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
-      crossorigin="anonymous"
-    />
-    <script
-      defer
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="./css/style.css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap_project</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
     <script defer src="./js/script.js"></script>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    
+
   </head>
   <body>
-    <!-- navigation bar code start -->
-    <nav class="navbar navbar-expand-lg">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#"
-          ><img
-            src="./assets//images//logo-meditation.jfif"
-            width="50px"
-            height="50px"
-            alt=""
-        /></a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="nav justify-content-center m-auto flex-column flex-md-row">
+
+
+
+
+<!-- navigation bar -->
+<nav class="navbar upper_nav  navbar-expand-lg border rounded ">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="nav justify-content-center m-auto flex-column flex-lg-row">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./pages/About.html">About</a>
+              <a class="nav-link active" aria-current="page" href="./pages/contact.html">Contact</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="./pages/about.html">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./pages/contact.html">Contact</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./pages/Services.html">Services</a>
+              <a class="nav-link" href="./pages/service.html">Service</a>
             </li>
           </ul>
-          <form class="d-flex" role="search">
-            <a
-              class="nav-btn btn-primary me-2"
-              href="./pages/Login.html"
-              role="button"
-              >Login</a
-            >
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="nav-btn btn-outline-success" type="submit">
-              Search
-            </button>
-          </form>
+        <form class="d-flex" role="search">
+            <a class="btn login_btn me-2" href="./pages/login.html" role="button">Login</a>
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn search_btn btn-outline-danger" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+<!-- navigation ends -->
+
+
+
+<section>
+<!-- main body tags -->
+
+<main class=" mt-5 ms-3 row justify-content-md-center col-lg-12 col-md-6 col-sm-1 gap-2">
+
+</main>
+<!-- main body tag ends  -->
+
+
+ <!-- second main starts -->
+<div class="main_second mt-5 ms-5">
+  <div class="row">
+    <div class="col-4">
+      <nav id="navbar-example3" class="h-100 flex-column align-items-stretch pe-4 border-end">
+        <nav class="nav nav-pills flex-column">
+          <a class="nav-link" href="#item-1">Item 1</a>
+          <nav class="nav nav-pills flex-column">
+            <a class="nav-link ms-3 my-1" href="#item-1-1">Item 1-1</a>
+            <a class="nav-link ms-3 my-1" href="#item-1-2">Item 1-2</a>
+          </nav>
+          <a class="nav-link" href="#item-2">Item 2</a>
+          <a class="nav-link" href="#item-3">Item 3</a>
+          <nav class="nav nav-pills flex-column">
+            <a class="nav-link ms-3 my-1" href="#item-3-1">Item 3-1</a>
+            <a class="nav-link ms-3 my-1" href="#item-3-2">Item 3-2</a>
+          </nav>
+        </nav>
+      </nav>
+    </div>
+  
+    <div class="col-8">
+      <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true" class="scrollspy-example-2" tabindex="0">
+        <div id="item-1">
+          <h4>C</h4>
+          <p> 
+            Procedural Language: C follows a procedural programming paradigm, meaning it focuses on functions and procedures to operate on data.
+            
+            No Object-Oriented Programming (OOP): There’s no concept of classes, objects, inheritance, etc.
+            
+            Low-Level Operations: C gives more direct access to memory and hardware (great for system-level programming).
+            
+            Standard Input/Output: Uses functions like printf() and scanf() from stdio.h.
+            
+            No Function Overloading: You can’t have multiple functions with the same name (even if parameters differ).
+            
+            </p>
+        </div>
+        <div id="item-1-1">
+          <h5>C Code</h5>
+          <p>#include <stdio.h>
+
+            int main() {
+                printf("Hello from C!\n");
+                return 0;
+            }</p>
+        </div>
+        <div id="item-1-2">
+          <h5>History</h5>
+          <p>🧱 1. Origin
+            Developed By: Dennis Ritchie
+            
+            Year: 1972
+            
+            Place: Bell Labs (AT&T, USA)
+            
+            ⚙️ 2. Purpose
+            Created to develop the UNIX operating system.
+            
+            Designed to be powerful, efficient, and close to hardware but with the flexibility of a high-level language.
+            
+            </p>
+        </div>
+        <div id="item-2">
+          <h4>C++</h4>
+          <p> C++
+            Multi-Paradigm Language: C++ supports procedural, object-oriented, and even some functional programming styles.
+            
+            Object-Oriented Programming: Supports concepts like classes, objects, inheritance, polymorphism, encapsulation, and abstraction.
+            
+            Standard Template Library (STL): Offers powerful data structures and algorithms out of the box.
+            
+            Function Overloading & Operator Overloading: You can have multiple functions with the same name (different parameters), and even redefine how operators work.
+            
+            Stronger Type Checking: C++ is stricter in type checking compared to C.</p>
+        </div>
+        <div id="item-3">
+          <h4>C++ History</h4>
+          <p> History of C++ Programming Language
+            👨‍🔬 1. Inventor
+            Developed By: Bjarne Stroustrup
+            
+            Year: Started in 1979, first release in 1985
+            
+            Place: Bell Labs (AT&T, USA)
+            
+            🎯 2. Purpose
+            Bjarne wanted to combine the efficiency of C with features for large-scale software development.
+            
+            He added object-oriented features like classes and inheritance to C.
+            
+            </p>
+        </div>
+        <div id="item-3-1">
+          <h5>comparison between JavaScript and Java in 10 sentences:
+
+          </h5>
+          <p>Java is a statically typed, object-oriented programming language used mainly for building standalone applications.
+
+            JavaScript is a dynamically typed, interpreted scripting language primarily used for web development.
+            
+            Java code needs to be compiled using a compiler, while JavaScript runs directly in web browsers.
+            
+            Java is commonly used in Android apps, enterprise applications, and backend systems.
+            
+            JavaScript is mostly used for adding interactivity to websites (like buttons, animations, etc.).
+            
+            Java runs on the Java Virtual Machine (JVM), while JavaScript runs in a browser or on Node.js.
+            
+            Java is class-based and supports multithreading and concurrency.
+            
+            JavaScript is prototype-based and single-threaded (but supports async behavior using events/promises).
+            
+            Java uses strong type-checking, whereas JavaScript allows more flexibility with variable types.
+            
+            Despite similar names, Java and JavaScript are completely different languages with different use cases.
+            
+            </p>
+        </div>
+        <div id="item-3-2">
+          <h5>Static Website and Dynamic Website</h5>
+          <p> Static Website
+            The content is fixed and does not change unless manually updated.
+            
+            Built using HTML, CSS, and sometimes basic JavaScript.
+            
+            No database is required.
+            
+            Loads faster due to simpler structure.
+            
+            Suitable for small websites like portfolios, blogs, or info pages.
+            
+            Example: A personal resume website with fixed text and images.
+            
+            🔄 Dynamic Website
+            The content is generated in real-time, often based on user interaction.
+            
+            Built using server-side languages like PHP, Python, Node.js, or frameworks like Django.
+            
+            Requires a database (e.g., MySQL, MongoDB) to store and retrieve data.
+            
+            More interactive and functional (e.g., user login, shopping cart).
+            
+            Suitable for large websites like e-commerce, social networks, etc.
+            
+            Example: Amazon, Facebook, or any site that shows personalized conten</p>
         </div>
       </div>
-    </nav>
-    <!-- navigation bar code end -->
+    </div>
+  </div>
+</div>
+ <!-- second main ends -->
 
-    <!-- main body code start  -->
-    <main class="row"></main>
-    <!-- main body code end  -->
+
+
+
+<!-- pagination -->
+<nav aria-label="Page example">
+  <ul class="pagination justify-content-center">
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+<!-- paginations ends  -->
+
+
+
+<div class="timer rounded-2 card_shadow">
+  <p id="time" class="fs-3  p-4"></p>
+</div>
+</section>
+
+<!-- <footer> -->
+  <!-- Remove the container if you want to extend the Footer to full width. -->
+<div class="rounded">
+  <!-- Footer -->
+  <footer
+          class="text-center text-lg-start text-dark"
+          style="background-color: #ECEFF1"
+          >
+    <!-- Section: Social media -->
+    <section
+             class="d-flex justify-content-between p-4 text-white"
+             style="background-color: #d12121"
+             >
+      <!-- Left -->
+      <div class="me-5">
+        <span>Get connected with us on social networks:</span>
+      </div>
+      <!-- Left -->
+
+      <!-- Right -->
+      <div>
+        <a href="" class="footer_anchor text-white me-4">
+          <i class="ri-facebook-fill"></i>
+        </a>
+        <a href="" class="footer_anchor text-white me-4">
+          <i class="ri-twitter-line"></i>
+        </a>
+        <a href="" class="footer_anchor text-white me-4">
+          <i class="ri-google-line"></i>
+        </a>
+        <a href="" class="footer_anchor text-white me-4">
+          <i class="ri-instagram-line"></i>
+        </a>
+        <a href="" class="footer_anchor text-white me-4">
+          <i class="ri-linkedin-line"></i>
+        </a>
+        <a href="" class="footer_anchor text-white me-4">
+          <i class="ri-github-line"></i>
+        </a>
+      </div>
+      <!-- Right -->
+    </section>
+    <!-- Section: Social media -->
+
+    <!-- Section: Links  -->
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <h6 class="text-uppercase fw-bold">Company name</h6>
+            <hr
+                class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: #7c4dff; height: 2px"
+                />
+            <p>
+              Here you can use rows and columns to organize your footer
+              content. Lorem ipsum dolor sit amet, consectetur adipisicing
+              elit.
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold">Products</h6>
+            <hr
+                class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: #7c4dff; height: 2px"
+                />
+            <p>
+              <a href="#!" class="text-dark">MDBootstrap</a>
+            </p>
+            <p>
+              <a href="#!" class="text-dark">MDWordPress</a>
+            </p>
+            <p>
+              <a href="#!" class="text-dark">BrandFlow</a>
+            </p>
+            <p>
+              <a href="#!" class="text-dark">Bootstrap Angular</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold">Useful links</h6>
+            <hr
+                class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: #7c4dff; height: 2px"
+                />
+            <p>
+              <a href="#!" class="text-dark">Your Account</a>
+            </p>
+            <p>
+              <a href="#!" class="text-dark">Become an Affiliate</a>
+            </p>
+            <p>
+              <a href="#!" class="text-dark">Shipping Rates</a>
+            </p>
+            <p>
+              <a href="#!" class="text-dark">Help</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold">Contact</h6>
+            <hr
+                class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: #7c4dff; height: 2px"
+                />
+            <p><i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
+            <p><i class="fas fa-envelope mr-3"></i> info@example.com</p>
+            <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+            <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+    </section>
+    <!-- Section: Links  -->
+
+    <!-- Copyright -->
+    <div
+         class="text-center p-3"
+         style="background-color: rgba(0, 0, 0, 0.2)"
+         >
+      © 2025 Copyright:
+      <a class="text-dark" href="https://mdbootstrap.com/"
+         >Halalu.com</a
+        >
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+</div>
+<!-- End of .container -->
+  
+<!-- </footer> -->
+
+
+  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
   </body>
 </html>
