@@ -1,16 +1,20 @@
-const currentItem = JSON.parse(localStorage.getItem("product"));
+const currentitem=JSON.parse(localStorage.getItem("currentitem"))
+console.log(currentitem)
 
-const img = document.querySelector(".imimage_containerg");
-const dtls = document.querySelector(".details");
-img.innerHTML = `<img src=${currentItem.image} alt="product" width="80%" height="500px" />`;
-dtls.innerHTML = `<h1>${currentItem.title}</h1>
-<p>${currentItem.description}</p>
-<p>${currentItem.price}$</p>
-<p>Rating: ${currentItem.rating.rate} (${currentItem.rating.count})</p>
-<button type="button" class="btn btn-warning">Buy now</button>`;
+const image_container=document.querySelector(".image_container")
+const details=document.querySelector(".details")
+image_container.innerHTML=`<img width="80%" height="500px" src=${currentitem.image}>`
+details.innerHTML=`
+<h1>${currentitem.title}</h1>
+<p>${currentitem.description}</p>
+<h3>${currentitem.price}$</h3>
+<h4>Rating :${currentitem.rating.rate}⭐</h4>
+<button class="btn btn-warning">Buy Now</button>
 
-const back = document.querySelector(".backbtn");
-back.addEventListener("click", () => {
-  localStorage.removeItem("currentItem");
-  window.location = "../pages/index.html";
-});
+`
+
+const backbtn=document.querySelector(".backbtn")
+backbtn.addEventListener("click",()=>{
+    localStorage.removeItem("currentitem")
+    window.location="../index.html"
+})

@@ -1,0 +1,38 @@
+nav{
+    background-color: #7432F9 !important;
+}
+.nav-link{
+    font-size: large;
+    color: white;
+}
+.nav-link:hover{
+    color: yellow;
+}
+.login_btn{
+    background: linear-gradient(to right,red,orange,yellow);
+}
+.card:hover{
+    box-shadow: 2px 5px 10px -2px gainsboro;
+}
+
+.timer{
+    width: 300px;
+    height: 100px;
+    position: fixed;
+    bottom: 0;
+    right: 10px;
+    z-index: 200;
+    background-color: rgba(255, 255, 255, 0.545);
+}
+.cart{
+    width: 100px;
+    height: 100%;
+    padding: 10px;
+    /* background-color: red; */
+}
+.cart>sup{
+    font-size: 20px;
+    background-color: yellow;
+    padding: 4px 4PX;
+    border-radius: 50%;
+}
