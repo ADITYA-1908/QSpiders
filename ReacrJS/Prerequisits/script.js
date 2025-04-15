@@ -46,11 +46,23 @@
 //!Array Destructuring
 // LHS=RHS   ------------ Rest=spread
 // NOTE- rest parameter should be the last parameter
-const arr = ["adi", "aditya", "subham", "adi_subham"];
-const [a, b, c, d] = arr;
-console.log(a, b, c);
-const [, , , z] = arr;
-console.log(z);
-const [h, ...x] = arr;
-console.log(a);
-console.log(x);
+// const arr = ["adi", "aditya", "subham", "adi_subham"];
+// const [a, b, c, d] = arr;
+// console.log(a, b, c);
+// const [, , , z] = arr;
+// console.log(z);
+// const [h, ...x] = arr;
+// console.log(a);
+// console.log(x);
+
+// //!object destructuring
+// const obj = {
+//   useName: "aditya",
+//   age: 21,
+//   class: 12,
+//   section: "b",
+// };
+// const { useName, age, ...x } = obj;
+// console.log(useName, age);
+// console.log(x);
+
