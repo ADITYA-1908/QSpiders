@@ -141,16 +141,16 @@
 //   console.log(result);
 // }
 
-for (let i = 1; i < 5; i++) {
-  let res = "";
-  let c = 0;
-  if (i % 2 === 0) {
-    res = "*".repeat(5);
-  } else {
-    res = " ".repeat(5).replace(/./g, () => `${++c}`);
-  }
-  console.log(res);
-}
+// for (let i = 1; i < 5; i++) {
+//   let res = "";
+//   let c = 0;
+//   if (i % 2 === 0) {
+//     res = "*".repeat(5);
+//   } else {
+//     res = " ".repeat(5).replace(/./g, () => `${++c}`);
+//   }
+//   console.log(res);
+// }
 
 //! 1
 //! 1 2
@@ -162,6 +162,7 @@ for (let i = 1; i < 5; i++) {
 //! 1 2
 //! 1
 
+//1-->way
 // for (let i = 1; i <= 5; i++) {
 //   let result = "";
 //   for (let j = 1; j <= i; j++) {
@@ -176,6 +177,40 @@ for (let i = 1; i < 5; i++) {
 //   }
 //   console.log(result);
 // }
+
+//2--> way
+// let n = 5;
+// for (let i = 1; i <= 2 * n - 1; i++) {
+//   let res = "";
+//   if (i <= n) {
+//     for (let j = 1; j <= i; j++) {
+//       res += j + "";
+//     }
+//   } else {
+//     for (let j = 1; j <= 2 * n - i; j++) {
+//       res += j + "";
+//     }
+//   }
+//   console.log(res);
+// }
+
+//    1
+//   12
+//  123
+// 1234
+//12345
+
+let n = 5;
+for (let i = 1; i <= n; i++) {
+  let res = "";
+  for (let j = i; j <= n; j++) {
+    console.log(" ");
+  }
+  for (let s = 1; s <= i; s++) {
+    res += s;
+    console.log(res);
+  }
+}
 
 //Q1) how memory allocation happensa in JS
 
