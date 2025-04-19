@@ -25,7 +25,7 @@
 
 // //!Rest parameter
 // function getCalculate() {
-//   let result = 0;
+//   let result = 0;s
 //   for (const element of arguments) {
 //     result += element;
 //   }
