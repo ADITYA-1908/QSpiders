@@ -200,17 +200,54 @@
 // 1234
 //12345
 
-let n = 5;
-for (let i = 1; i <= n; i++) {
-  let res = "";
-  for (let j = i; j <= n; j++) {
-    console.log(" ");
-  }
-  for (let s = 1; s <= i; s++) {
-    res += s;
-    console.log(res);
-  }
-}
+// let n = 5;
+// for (let i = 1; i <= n; i++) {
+//   let res = "";
+
+//   for (let j = 1; j <= n - i; j++) {
+//     res += " ";
+//   }
+
+//   for (let s = 1; s <= i; s++) {
+//     res += s;
+//   }
+
+//   console.log(res);
+// }
+
+//    1
+//   21
+//  321
+// 4321
+//54321
+// 4321
+//  321
+//   21
+//    1
+// let n = 5;
+// for (let i = 1; i < 2 * n; i++) {
+//   let r = "";
+//   if (i <= n) {
+//     for (let j = 1; j <= n - i; j++) {
+//       r += " ";
+//     }
+//     for (let k = i; k >= 1; k--) {
+//       r += k;
+//     }
+//   } else {
+//     for (let j = 1; j <= i - n; j++) {
+//       r += " ";
+//     }
+
+//     for (let k = 2 * n - i; k >= 1; k--) {
+//       r += k;
+//     }
+//   }
+//   console.log(r);
+// }
+
+//find all inbuilt array method in js with example
+//find all inbuilt string method in js with example
 
 //Q1) how memory allocation happensa in JS
 
