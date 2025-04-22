@@ -246,11 +246,65 @@
 //   console.log(r);
 // }
 
+//) how memory allocation happensa in JS
 //find all inbuilt array method in js with example
+//push-pop-shift-unshift-sort-reverse-slice-splice-concat-joinindexOf-lastIndexOf
+let arr = [1, 2, 3, 4];
+// let index1 = arr.indexOf(2);
+// console.log(index1);
+// arr.push(5);
+// console.log(arr);
+// arr.pop();
+// console.log(arr);
+// arr.shift();
+// console.log(arr);
+// arr.unshift(1);
+// console.log(arr);
+// arr.sort();
+// console.log(arr)
+// arr.reverse();
+// console.log(arr);
+// let sl = arr.slice(0, 3);
+// console.log(sl);
+// let sp = arr.splice(1, 2);
+// console.log(sp);
+// let a = [1, 2];
+// let b = [3, 4];
+// let result = a.concat(b);
+// console.log(result);
+// let arr2 = [1, 2, 3, 2];
+// let index2 = arr2.lastIndexOf(2);
+// console.log(index2);
+// let ar = ["a", "b", "c"];
+// let result = ar.join("-");
+// console.log(result)
+
 //find all inbuilt string method in js with example
-
-//Q1) how memory allocation happensa in JS
-
+let str = "Hello";
+// console.log(str.length);
+// console.log(str.charAt(3));
+// console.log(str.indexOf("o"));
+// console.log("A".charCodeAt(0));
+// console.log(str.at(-1));
+// console.log(str.concat(" World"));
+// console.log(str.includes("l"));
+// console.log(str.startsWith("H"));
+// console.log(str.endsWith("o"));
+// console.log(str.slice(1, 4));
+// console.log(str.substring(0, 3));
+// console.log(str.toUpperCase());
+// console.log(str.toLowerCase());
+// let s = "   hello     ";
+// console.log(s.trim());
+// let s1 = "hello       ";
+// console.log(s1.trimStart());
+// let ss = "hello       ";
+// console.log(ss.trimEnd());
+// let sen = "hello aditya";
+// console.log(sen.replace("aditya", "subham"));
+// let obj = "apple,banana,grape";
+// console.log(obj.split(","));
+console.log(str.repeat(5));
 // A
 // A B
 // A B C
