@@ -303,7 +303,7 @@ let str = "Hello";
 // let sen = "hello aditya";
 // console.log(sen.replace("aditya", "subham"));
 // let obj = "apple,banana,grape";
-// console.log(obj.split(","));
+// console.log(obj.s`plit(","));
 console.log(str.repeat(5));
 // A
 // A B
