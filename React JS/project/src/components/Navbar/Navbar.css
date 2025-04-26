@@ -11,7 +11,6 @@ nav {
   height: 60px;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
 }
 .img {
   margin-left: 20px;
@@ -25,6 +24,10 @@ a {
   text-decoration: none;
   margin-left: 50px;
   text-decoration: none;
+}
+li {
+  text-align: center;
+  list-style: none;
 }
 
 button {

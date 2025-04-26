@@ -1,0 +1,68 @@
+.login-form {
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+.right-section {
+  background: linear-gradient(to right, rgb(70, 216, 136), rgb(25, 206, 176));
+
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.inner-right {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.line-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.line {
+  flex-grow: 1;
+  border-top: 0.1px solid #6c757d;
+  margin: 0 10px;
+  width: 30px;
+}
+
+.circle {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+
+/* Small circle */
+.small-circle {
+  width: 70px;
+  height: 70px;
+  bottom: 130px;
+  left: 30px;
+}
+
+/* Big circle */
+.big-circle {
+  width: 150px;
+  height: 150px;
+  bottom: 20px;
+  right: -50px;
+}
+
+/* Triangle */
+.triangle {
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 20px;
+  left: -40px;
+  border-left: 80px solid transparent;
+  border-right: 80px solid transparent;
+  border-bottom: 120px solid rgba(255, 255, 255, 0.1); /* low opacity */
+  transform: rotate(100de eg);
+}

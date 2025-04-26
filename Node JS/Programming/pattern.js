@@ -245,66 +245,83 @@
 //   }
 //   console.log(r);
 // }
+//     *
+//    ***
+//   *****
+// let r = 5;
+// for (let i = 1; i <= r; i++) {
+//   let l = "";
 
-//) how memory allocation happensa in JS
-//find all inbuilt array method in js with example
-//push-pop-shift-unshift-sort-reverse-slice-splice-concat-joinindexOf-lastIndexOf
-let arr = [1, 2, 3, 4];
-// let index1 = arr.indexOf(2);
-// console.log(index1);
-// arr.push(5);
-// console.log(arr);
-// arr.pop();
-// console.log(arr);
-// arr.shift();
-// console.log(arr);
-// arr.unshift(1);
-// console.log(arr);
-// arr.sort();
-// console.log(arr)
-// arr.reverse();
-// console.log(arr);
-// let sl = arr.slice(0, 3);
-// console.log(sl);
-// let sp = arr.splice(1, 2);
-// console.log(sp);
-// let a = [1, 2];
-// let b = [3, 4];
-// let result = a.concat(b);
-// console.log(result);
-// let arr2 = [1, 2, 3, 2];
-// let index2 = arr2.lastIndexOf(2);
-// console.log(index2);
-// let ar = ["a", "b", "c"];
-// let result = ar.join("-");
-// console.log(result)
+//   l += " ".repeat(r - i);
+//   l += "*".repeat(2 * i - 1);
 
-//find all inbuilt string method in js with example
-let str = "Hello";
-// console.log(str.length);
-// console.log(str.charAt(3));
-// console.log(str.indexOf("o"));
-// console.log("A".charCodeAt(0));
-// console.log(str.at(-1));
-// console.log(str.concat(" World"));
-// console.log(str.includes("l"));
-// console.log(str.startsWith("H"));
-// console.log(str.endsWith("o"));
-// console.log(str.slice(1, 4));
-// console.log(str.substring(0, 3));
-// console.log(str.toUpperCase());
-// console.log(str.toLowerCase());
-// let s = "   hello     ";
-// console.log(s.trim());
-// let s1 = "hello       ";
-// console.log(s1.trimStart());
-// let ss = "hello       ";
-// console.log(ss.trimEnd());
-// let sen = "hello aditya";
-// console.log(sen.replace("aditya", "subham"));
-// let obj = "apple,banana,grape";
-// console.log(obj.s`plit(","));
-console.log(str.repeat(5));
+//   console.log(l);
+// }
+
+//     *
+//    ***
+//   *****
+//    ***
+//     *
+// let r = 5;
+// let m = Math.ceil(r / 2);
+
+// for (let i = 1; i <= r; i++) {
+//   let l = "";
+
+//   if (i <= m) {
+//     l += " ".repeat(m - i);
+//     l += "*".repeat(2 * i - 1);
+//   } else {
+//     let j = r - i + 1;
+//     l += " ".repeat(m - j);
+//     l += "*".repeat(2 * j - 1);
+//   }
+
+//   console.log(l);
+// }
+// *
+// ***
+// *****
+// *******
+// *******
+// *****
+// ***
+// *
+// let r = 8;
+// let m = Math.ceil(r / 2);
+
+// for (let i = 1; i <= r; i++) {
+//   let l = "";
+
+//   if (i <= m) {
+//     l += "*".repeat(2 * i - 1);
+//   } else {
+//     let j = r - i + 1;
+
+//     l += "*".repeat(2 * j - 1);
+//   }
+
+//   console.log(l);
+// }
+
+let r = 8;
+let m = Math.ceil(r / 2);
+
+for (let i = 1; i <= r; i++) {
+  let l = "";
+
+  if (i <= m) {
+    l += "*".repeat(2 * i - 1);
+  } else {
+    let j = r - i + 1;
+
+    l += "*".repeat(2 * j);
+  }
+
+  console.log(l);
+}
+
 // A
 // A B
 // A B C

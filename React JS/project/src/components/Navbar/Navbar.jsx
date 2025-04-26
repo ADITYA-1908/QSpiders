@@ -10,16 +10,16 @@ const Navbar = () => {
         <div className="links">
           <ul className="ull">
             <li>
-              <a href="#">About</a>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">Blogs</a>
             </li>
             <li>
               <a href="#">About</a>
             </li>
             <li>
-              <a href="#">About</a>
-            </li>
-            <li>
-              <a href="#">About</a>
+              <a href="#">Contact US</a>
             </li>
           </ul>
         </div>

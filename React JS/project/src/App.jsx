@@ -1,9 +1,12 @@
+import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
-import Navbar from "./components/Navbar";
+import LoginPage from "./LoginPage";
 const App = () => {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
+      <LoginPage />
+      {/* <Footer /> */}
     </>
   );
 };
