@@ -305,23 +305,78 @@
 //   console.log(l);
 // }
 
-let r = 8;
+// *
+// **
+// ***
+// ****
+// *****
+// ****
+// ***
+// **
+// *
+// let r = 9;
+
+// for (let i = 1; i <= 2 * r - 1; i++) {
+//   let l = "";
+
+//   if (i <= r) {
+//     l += "*".repeat(i);
+//   } else {
+//     l += "*".repeat(2 * r - i);
+//   }
+
+//   console.log(l);
+// }
+//     *
+//    **
+//   ***
+//  ****
+// *****
+//  ****
+//   ***
+//    **
+//     *
+// let r = 9;
+// let m = Math.ceil(r / 2);
+
+// for (let i = 1; i <= r; i++) {
+//   let l = "";
+//   if (i <= m) {
+//     l += " ".repeat(m - i);
+//     l += "*".repeat(i);
+//   } else {
+//     l += " ".repeat(i - m);
+//     l += "*".repeat(r - i + 1);
+//   }
+//   console.log(l);
+// }
+// *               *
+// * *           * *
+// * * *       * * *
+// * * * *   * * * *
+// * * * * * * * * *
+// * * * *   * * * *
+// * * *       * * *
+// * *           * *
+// *               *
+
+let r = 9;
 let m = Math.ceil(r / 2);
 
 for (let i = 1; i <= r; i++) {
   let l = "";
+  let s = i <= m ? i : r - i + 1;
 
-  if (i <= m) {
-    l += "*".repeat(2 * i - 1);
-  } else {
-    let j = r - i + 1;
+  l += "* ".repeat(s);
 
-    l += "*".repeat(2 * j);
-  }
+  l += "  ".repeat((m - s) * 2);
+
+  l += "* ".repeat(s);
 
   console.log(l);
 }
 
+// }
 // A
 // A B
 // A B C

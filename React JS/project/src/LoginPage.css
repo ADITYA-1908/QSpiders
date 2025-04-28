@@ -2,10 +2,20 @@
   max-width: 450px;
   margin: 0 auto;
 }
+.line-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.line {
+  flex-grow: 1;
+  border-top: 2px solid #6c757d;
+  margin: 0 10px;
+  width: 30px;
+}
 .right-section {
-  background: linear-gradient(to right, rgb(70, 216, 136), rgb(25, 206, 176));
-
+  background: linear-gradient(to right, #39b693, #3aa8ac);
   min-height: 100vh;
   position: relative;
   overflow: hidden;
@@ -17,19 +27,6 @@
   right: 20px;
   cursor: pointer;
   font-size: 24px;
-}
-
-.line-main {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.line {
-  flex-grow: 1;
-  border-top: 0.1px solid #6c757d;
-  margin: 0 10px;
-  width: 30px;
 }
 
 .circle {
@@ -64,5 +61,5 @@
   border-left: 80px solid transparent;
   border-right: 80px solid transparent;
   border-bottom: 120px solid rgba(255, 255, 255, 0.1); /* low opacity */
-  transform: rotate(100de eg);
+  transform: rotate(1deg);
 }
