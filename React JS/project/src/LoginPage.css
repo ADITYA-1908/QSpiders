@@ -10,7 +10,7 @@
 
 .line {
   flex-grow: 1;
-  border-top: 2px solid #6c757d;
+  border-top: 1px solid #6c757d;
   margin: 0 10px;
   width: 30px;
 }
@@ -33,9 +33,9 @@
   position: absolute;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
+  color: #49b8a0;
 }
 
-/* Small circle */
 .small-circle {
   width: 70px;
   height: 70px;
@@ -43,7 +43,6 @@
   left: 30px;
 }
 
-/* Big circle */
 .big-circle {
   width: 150px;
   height: 150px;
@@ -51,15 +50,15 @@
   right: -50px;
 }
 
-/* Triangle */
 .triangle {
   position: absolute;
   width: 0;
   height: 0;
+  color: #49b8a0;
   top: 20px;
   left: -40px;
   border-left: 80px solid transparent;
   border-right: 80px solid transparent;
-  border-bottom: 120px solid rgba(255, 255, 255, 0.1); /* low opacity */
+  border-bottom: 120px solid rgba(255, 255, 255, 0.1);
   transform: rotate(1deg);
 }

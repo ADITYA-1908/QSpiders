@@ -360,23 +360,69 @@
 // * *           * *
 // *               *
 
-let r = 9;
-let m = Math.ceil(r / 2);
+// let r = 9;
+// let m = Math.ceil(r / 2);
 
-for (let i = 1; i <= r; i++) {
-  let l = "";
-  let s = i <= m ? i : r - i + 1;
+// for (let i = 1; i < r; i++) {
+//   let l = "";
+//   if (i == m) {
+//     l += "* ".repeat(r) + "\n";
+//   }
+//   let s = i < m ? i : r - i;
 
-  l += "* ".repeat(s);
+//   l += "* ".repeat(s);
 
-  l += "  ".repeat((m - s) * 2);
+//   l += "  ".repeat((m - s) * 2 - 1);
 
-  l += "* ".repeat(s);
+//   l += "* ".repeat(s);
 
-  console.log(l);
-}
-
+//   console.log(l);
 // }
+
+// *   *   *   *   *   *   *
+//   *   *   *   *   *   *
+//     *   *   *   *   *
+//       *   *   *   *
+//         *   *   *
+//           *   *
+//             *
+//           *   *
+//         *   *   *
+//       *   *   *   *
+//     *   *   *   *   *
+//   *   *   *   *   *   *
+// *   *   *   *   *   *   *
+
+// let r = 7;
+// for (let i = 1; i <= 2 * r - 1; i++) {
+//   let row = i <= r ? i : 2 * r - i;
+//   let spaces = "  ".repeat(row - 1);
+//   let stars = "*   ".repeat(r - row + 1);
+//   console.log(spaces + stars);
+// }
+
+// * * * * * * *
+//   * * * * *
+//     * * *
+//       *
+//     * * *
+//   * * * * *
+// * * * * * * *
+// let r = 4;
+// for (let i = 1; i <= 2 * r - 1; i++) {
+//   let row = i <= r ? r - i + 1 : i - r + 1;
+//   let stars = 2 * row - 1;
+//   let spaces = "  ".repeat(r - row);
+//   console.log(spaces + "* ".repeat(stars));
+// }
+let str = "ADITYA";
+for (let i = 0; i <= 5; i++) {
+  let res = "";
+  for (let j = 0; j < i; j++) {
+    res += str[j] + " ";
+  }
+  console.log(res);
+}
 // A
 // A B
 // A B C

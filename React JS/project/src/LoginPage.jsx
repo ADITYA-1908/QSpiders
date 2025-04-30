@@ -100,23 +100,17 @@ const LoginPage = () => {
             </div>
 
             <div className="text-center mb-4">
-              <span className="text-secondary">
+              <span className="text-secondary line-main ">
                 <span className="line"></span> OR <span className="line"></span>
               </span>
             </div>
 
             <form>
-              <InputField
-                type="email"
-                placeholder="Email"
-                name="email"
-                className="mb-3"
-              />
+              <InputField type="email" placeholder="Email" className="mb-3" />
 
               <InputField
                 type="password"
                 placeholder="Password"
-                name="password"
                 className="mb-6"
               />
 
