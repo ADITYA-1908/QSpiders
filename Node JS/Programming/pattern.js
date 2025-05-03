@@ -415,14 +415,14 @@
 //   let spaces = "  ".repeat(r - row);
 //   console.log(spaces + "* ".repeat(stars));
 // }
-let str = "ADITYA";
-for (let i = 0; i <= 5; i++) {
-  let res = "";
-  for (let j = 0; j < i; j++) {
-    res += str[j] + " ";
-  }
-  console.log(res);
-}
+// let str = "ADITYA";
+// for (let i = 0; i <= 5; i++) {
+//   let res = "";
+//   for (let j = 0; j < i; j++) {
+//     res += str[j] + " ";
+//   }
+//   console.log(res);
+// }
 // A
 // A B
 // A B C
@@ -448,3 +448,4 @@ for (let i = 0; i <= 5; i++) {
 //   }
 //   console.log(res);
 // }
+

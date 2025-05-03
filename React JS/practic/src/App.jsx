@@ -1,10 +1,9 @@
 import "./App.css";
-import Parent from "./ParentProps.jsx";
-
+import Map from "./Components/Map";
 function App() {
   return (
     <>
-      <Parent />
+      <Map />
     </>
   );
 }
