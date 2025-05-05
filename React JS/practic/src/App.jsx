@@ -1,9 +1,9 @@
 import "./App.css";
-import Map from "./Components/Map";
+import Parent from "./Components/Props/Parent";
 function App() {
   return (
     <>
-      <Map />
+      <Parent />
     </>
   );
 }
