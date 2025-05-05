@@ -1,6 +1,12 @@
 import "bootstrap/dist/css/bootstrap.min.css";
+// Make sure Bootstrap JS is also included in your project for the collapse functionality to work.
+// You might need to install bootstrap and @popperjs/core:
+// npm install bootstrap @popperjs/core
+// and import bootstrap's JS somewhere in your main index.js or App.js:
+// import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import React from "react";
-import "./Navbar.css";
+import "./Navbar.css"; // Assuming you have custom styles here
+
 const Navbar = () => {
   const navLinks = [
     "falcon 9",
@@ -13,9 +19,17 @@ const Navbar = () => {
     "starlink",
   ];
 
+  // Unique ID for the collapsible content
+  const navbarNavId = "navbarNavContent";
+
   return (
+    // navbar-expand-md: Expand on medium screens and wider
+    // fixed-top: Keep navbar at the top
+    // navbar-dark: For dark background (text is light) - works with bg-transparent too for text color
+    // px-3: Horizontal padding
     <nav className="navbar navbar-expand-md navbar-dark bg-transparent fixed-top px-3">
       <div className="container-fluid">
+        {/* Brand Logo */}
         <a className="navbar-brand me-4" href="#">
           <svg
             version="1.1"
@@ -26,18 +40,17 @@ const Navbar = () => {
             aria-hidden="true"
           >
             <title>SpaceX Logo</title>
+            {/* SVG paths remain the same */}
             <g className="letter_s">
               <path
                 className="fill-white"
-                d="M37.5,30.5H10.9v-6.6h34.3c-0.9-2.8-3.8-5.4-8.9-5.4H11.4c-5.7,0-9,2.1-9,6.7v4.9c0,4,3.4,6.3,8.4,6.3h26.9v7H1.5
-              c0.9,3.8,3.8,5.8,9,5.8h27.1c5.7,0,8.5-2.2,8.5-6.9v-4.9C46.1,33.1,42.8,30.8,37.5,30.5z"
+                d="M37.5,30.5H10.9v-6.6h34.3c-0.9-2.8-3.8-5.4-8.9-5.4H11.4c-5.7,0-9,2.1-9,6.7v4.9c0,4,3.4,6.3,8.4,6.3h26.9v7H1.5 c0.9,3.8,3.8,5.8,9,5.8h27.1c5.7,0,8.5-2.2,8.5-6.9v-4.9C46.1,33.1,42.8,30.8,37.5,30.5z"
               ></path>
             </g>
             <g className="letter_p">
               <path
                 className="fill-white"
-                d="M91.8,18.6H59v30.7h9.3V37.5h24.2c6.7,0,10.4-2.3,10.4-7.7v-3.4C102.8,21.4,98.6,18.6,91.8,18.6z M94.8,28.4
-              c0,2.2-0.4,3.4-4,3.4H68.3l0.1-8h22c4,0,4.5,1.2,4.5,3.3V28.4z"
+                d="M91.8,18.6H59v30.7h9.3V37.5h24.2c6.7,0,10.4-2.3,10.4-7.7v-3.4C102.8,21.4,98.6,18.6,91.8,18.6z M94.8,28.4 c0,2.2-0.4,3.4-4,3.4H68.3l0.1-8h22c4,0,4.5,1.2,4.5,3.3V28.4z"
               ></path>
             </g>
             <g className="letter_a">
@@ -49,8 +62,7 @@ const Navbar = () => {
             <g className="letter_c">
               <path
                 className="fill-white"
-                d="M171.4,23.9h34.8c-0.9-3.6-4.4-5.4-9.4-5.4h-26c-4.5,0-8.8,1.8-8.8,6.7v17.2c0,4.9,4.3,6.7,8.8,6.7h26.3
-              c6,0,8.1-1.7,9.1-5.8h-34.8V23.9z"
+                d="M171.4,23.9h34.8c-0.9-3.6-4.4-5.4-9.4-5.4h-26c-4.5,0-8.8,1.8-8.8,6.7v17.2c0,4.9,4.3,6.7,8.8,6.7h26.3 c6,0,8.1-1.7,9.1-5.8h-34.8V23.9z"
               ></path>
             </g>
             <g className="letter_e">
@@ -85,17 +97,49 @@ const Navbar = () => {
           </svg>
         </a>
 
-        <div className="collapse navbar-collapse justify-content-between align-content-center">
-          <div className="d-flex gap-3 text-white fw-semibold text-uppercase">
+        {/* Hamburger Button - visible only on smaller screens (below md) */}
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target={`#${navbarNavId}`} // Target the collapsible div
+          aria-controls={navbarNavId}
+          aria-expanded="false" // Initially collapsed
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span> {/* The 3 lines */}
+        </button>
+
+        {/* Collapsible Content */}
+        <div className="collapse navbar-collapse" id={navbarNavId}>
+          {/* Use navbar-nav for standard Bootstrap nav items */}
+          {/* ms-auto pushes the nav items to the right on larger screens */}
+          <ul className="navbar-nav ms-auto mb-2 mb-md-0">
+            {" "}
+            {/* Use ul/li structure */}
             {navLinks.map((link, index) => (
-              <a key={index} href="#" className="nav-link p-0">
-                {link}
-              </a>
+              <li key={index} className="nav-item mx-2">
+                {" "}
+                {/* Add some margin */}
+                <a
+                  href="#"
+                  className="nav-link p-0 text-white fw-semibold text-uppercase"
+                >
+                  {link}
+                </a>
+              </li>
             ))}
-            <a href="#" className="nav-link fw-bold p-0">
-              SHOP
-            </a>
-          </div>
+            <li className="nav-item mx-2">
+              {" "}
+              {/* Add some margin */}
+              <a
+                href="#"
+                className="nav-link p-0 text-white fw-bold text-uppercase"
+              >
+                SHOP
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>

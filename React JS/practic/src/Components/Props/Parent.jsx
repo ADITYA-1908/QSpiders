@@ -1,5 +1,5 @@
 import React from "react";
-import Child from "./Child";
+import DefaultProps from "./DefaultProps.jsx";
 
 const Parent = () => {
   const userData = {
@@ -10,9 +10,20 @@ const Parent = () => {
       place: "nayapali",
     },
   };
+  const arr = ["adi", "aditya", "subham"];
 
-  return <Child data={userData} />;
-  //   without prop key how to send the data
+  return (
+    <div>
+      {/* <Child data={userData} /> */}
+      {/* without prop key how to send the data */}
+      {/* <Child1 {...userData} /> */}
+      {/* <Child1 data={arr} /> */}
+
+      {/* defoult props */}
+      <DefaultProps {...userData} />
+      <DefaultProps />
+    </div>
+  );
 };
 
 export default Parent;

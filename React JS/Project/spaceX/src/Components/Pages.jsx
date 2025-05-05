@@ -1,5 +1,7 @@
 import React from "react";
-import "./Pages.css";
+// Assuming Bootstrap CSS is imported globally or in a parent component
+// import "bootstrap/dist/css/bootstrap.min.css";
+
 const PageComponent = ({
   isVideo,
   backgroundMedia,
@@ -8,23 +10,30 @@ const PageComponent = ({
   line3,
   btn,
 }) => {
+  // Responsive font size classes remain the same
+  const line1Classes = "fs-6 fs-md-5";
+  const line2Classes = "display-6 display-md-4 fw-bold";
+  const line3Classes = "fs-6 fs-md-5 mb-4"; // Added mb-4 for spacing
+  const buttonClasses = "btn btn-outline-light btn-sm py-md-2 px-md-4";
+
   return (
     <div
       className="page-section"
       style={{
         height: "100vh",
         width: "100%",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
         display: "flex",
-        alignItems: "center",
-        paddingLeft: "5%",
+        alignItems: "flex-end", // Align content block to the bottom
+        // Adjust padding: using 10px fixed padding on left/right
+        paddingLeft: "10px",
+        paddingRight: "10px",
+        paddingBottom: "15vh", // Keep padding from the bottom
         color: "white",
         position: "relative",
         overflow: "hidden",
       }}
     >
+      {/* Background Video or Image (remains the same) */}
       {isVideo ? (
         <video
           src={backgroundMedia}
@@ -41,6 +50,7 @@ const PageComponent = ({
             objectFit: "cover",
             zIndex: -1,
           }}
+          aria-hidden="true"
         />
       ) : (
         <div
@@ -55,34 +65,39 @@ const PageComponent = ({
             height: "100%",
             zIndex: -1,
           }}
+          role="img"
+          aria-label={line2 || "Background image"}
         />
       )}
 
+      {/* Text Content */}
       <div
+        // Removed text-center text-md-start. Text will now naturally align left
+        // within this block due to default browser behavior.
         className="text-content"
         style={{
-          zIndex: 2,
+          zIndex: 1,
           position: "relative",
           color: "white",
-          textAlign: "center",
-          top: "30%",
-          transform: "translateY(-50%)",
+          // width: "100%", // Let it size naturally or set a max-width if needed
         }}
       >
-        <p>{line1}</p>
-        <h2>{line2}</h2>
-        {line3 && <p>{line3}</p>}
-        <button
-          style={{
-            background: "none",
-            color: "white",
-            height: "40px",
-            width: "100px",
-            border: "2px solid white",
-          }}
-        >
-          {btn}
-        </button>
+        {/* Apply responsive classes */}
+        {/* Added text-uppercase for consistency with potential SpaceX style */}
+        {line1 && (
+          <p className={`${line1Classes} text-uppercase mb-1`}>{line1}</p>
+        )}
+
+        {line2 && <h2 className={`${line2Classes} text-uppercase`}>{line2}</h2>}
+
+        {/* Render line3 only once */}
+        {line3 && <p className={`${line3Classes}`}>{line3}</p>}
+
+        {btn && (
+          <button type="button" className={buttonClasses}>
+            {btn}
+          </button>
+        )}
       </div>
     </div>
   );
