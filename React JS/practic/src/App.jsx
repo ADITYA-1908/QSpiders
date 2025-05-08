@@ -1,9 +1,10 @@
 import "./App.css";
-import Parent from "./Components/Props/Parent";
+import Crendering from "./Components/ConditionalRendering/Crendering";
 function App() {
   return (
     <>
-      <Parent />
+      {/* <Parent /> */}
+      <Crendering />
     </>
   );
 }
