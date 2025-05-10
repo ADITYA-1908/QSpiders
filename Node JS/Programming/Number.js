@@ -42,23 +42,44 @@
 // isPositive(-10);
 // isPositive(-7);
 
-//6) WAP to count how many digit presnt in a number
-function countDigit(n) {
-  let c = 0;
-  while (n !== 0) {
-    n = Math.floor(n / 10);
-    c++;
-  }
-  console.log(`Number of digits is ${c}`);
-}
-countDigit(1271);
-
-//*)Reverse a number
-// function reverseNumber(n) {
-//     let d = n % 10;
-//     r = r * 10 + d;
+// //6) WAP to count how many digit presnt in a number
+// function countDigit(n) {
+//   let c = 0;
+//   while (n !== 0) {
 //     n = Math.floor(n / 10);
+//     c++;
 //   }
-//   console.log(`Reversed number is ${r}`);
+//   console.log(`Number of digits is ${c}`);
 // }
-// reverseNumber(1219);
+// countDigit(1271);
+
+//7)Reverse a number
+function reverseNumber(n) {
+  let r = 0;
+  while (n !== 0) {
+    let d = n % 10;
+    r = r * 10 + d;
+    n = Math.floor(n / 10);
+  }
+  console.log(`Reversed number is ${r}`);
+}
+reverseNumber(1219);
+
+// 8) find even and odd number
+function evenOdd(n) {
+  let r = 0;
+  let even = 0;
+  let odd = 0;
+  while (n !== 0) {
+    let d = n % 10;
+    if (d % 2 == 0) {
+      even += 1;
+    } else {
+      odd += 1;
+    }
+    n = Math.floor(n / 10);
+  }
+  console.log(`Total even number is ${even}`);
+  console.log(`Total odd number is ${odd}`);
+}
+evenOdd(1229);

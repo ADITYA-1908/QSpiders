@@ -1,13 +1,14 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
-import TheamColor from "./Pages/TheamColor";
+import Resume from "./Pages/ResumeCR";
 const App = () => {
   return (
     <>
       {/* <Navbar /> */}
       {/* <LoginPage /> */}
       {/* <Footer /> */}
-      <TheamColor />
+      {/* <TheamColor /> */}
+      <Resume />
     </>
   );
 };
