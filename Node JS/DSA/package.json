@@ -1,0 +1,19 @@
+{
+  "name": "dsa",
+  "version": "1.0.0",
+  "description": "javascript programming class",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node index.js",
+    "start": "node demo.js"
+  },
+  "keywords": [
+    "javascript",
+    "dsa",
+    "mern",
+    "programming",
+    "backend"
+  ],
+  "author": "aditya",
+  "license": "ISC"
+}

@@ -1,10 +1,12 @@
 import "./App.css";
-import Crendering from "./Components/ConditionalRendering/Crendering";
+import Forms from "./Components/Forms";
 function App() {
   return (
     <>
       {/* <Parent /> */}
-      <Crendering />
+      {/* <Crendering /> */}
+      {/* <Calculator /> */}
+      <Forms />
     </>
   );
 }

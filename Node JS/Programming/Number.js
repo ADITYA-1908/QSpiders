@@ -1,3 +1,5 @@
+var prompt = require("prompt-sync")();
+
 // //1) Even or odd number
 // function evenOdd(n) {
 //   console.log(n % 2 === 0 ? `${n} is a even` : `${n} is a odd`);
@@ -54,32 +56,108 @@
 // countDigit(1271);
 
 //7)Reverse a number
-function reverseNumber(n) {
-  let r = 0;
-  while (n !== 0) {
-    let d = n % 10;
-    r = r * 10 + d;
-    n = Math.floor(n / 10);
-  }
-  console.log(`Reversed number is ${r}`);
-}
-reverseNumber(1219);
+// function reverseNumber(n) {
+//   let r = 0;
+//   while (n !== 0) {
+//     let d = n % 10;
+//     r = r * 10 + d;
+//     n = Math.floor(n / 10);
+//   }
+//   console.log(`Reversed number is ${r}`);
+// }
+// reverseNumber(1219);
 
-// 8) find even and odd number
-function evenOdd(n) {
-  let r = 0;
-  let even = 0;
-  let odd = 0;
+// // 8) find even and odd number
+// function evenOdd(n) {
+//   let r = 0;
+//   let even = 0;
+//   let odd = 0;
+//   while (n !== 0) {
+//     let d = n % 10;
+//     if (d % 2 == 0) {
+//       even += 1;
+//     } else {
+//       odd += 1;
+//     }
+//     n = Math.floor(n / 10);
+//   }
+//   console.log(`Total even number is ${even}`);
+//   console.log(`Total odd number is ${odd}`);
+// }
+// evenOdd(1229);
+
+// 9)Armstrong number
+// function ArmstrongNumber(n) {
+//   let act = n;
+//   let r = 0;
+//   let p = 0;
+//   let temp = n;
+//   while (temp > 0) {
+//     p++;
+//     temp = Math.floor(temp / 10);
+//   }
+//   temp = n;
+//   while (temp !== 0) {
+//     let d = temp % 10;
+//     r += d ** p;
+//     temp = Math.floor(temp / 10);
+//   }
+
+//   if (act == r) {
+//     console.log(`${r} is armstrong number `);
+//   } else {
+//     console.log(`${r} is not armstrong number `);
+//   }
+// }
+// ArmstrongNumber(153);
+
+// 10) prime number or not
+// function PrimeOrNot(n) {
+//   let c = 0;
+//   let arr = [1, n];
+//   for (let i = 1; i <= Math.floor(n / 2); i++) {
+//     if (n % i == 0) {
+//       arr.push(i);
+//       c += 1;
+//     }
+//   }
+//   if (c == 2) {
+//     console.log(`${n} is prime number `);
+//     console.log(`factors of ${n} is ${arr} `);
+//   } else {
+//     console.log(`${n} is not prime number `);
+//   }
+// }
+// PrimeOrNot(3);
+// PrimeOrNot(10);
+
+//11)Strong mumber
+
+function strongNumber(n) {
+  let act = n;
+  let s = 0;
+
+  function factorial(d) {
+    if (d == 0 || d == 1) {
+      return 1;
+    }
+    return d * factorial(d - 1);
+  }
+
   while (n !== 0) {
     let d = n % 10;
-    if (d % 2 == 0) {
-      even += 1;
-    } else {
-      odd += 1;
-    }
-    n = Math.floor(n / 10);
+    s += factorial(d);
+    n = parseInt(n / 10);
   }
-  console.log(`Total even number is ${even}`);
-  console.log(`Total odd number is ${odd}`);
+
+  if (s === act) {
+    console.log(`${act} is a Strong Number`);
+  } else {
+    console.log(`${act} is not a Strong Number`);
+  }
 }
-evenOdd(1229);
+let p = prompt("enter some data: ");
+strongNumber(Number(p));
+
+//find a given number weak numbers
+//find a given number happy numbers

@@ -1,0 +1,17 @@
+{
+  "name": "programming",
+  "version": "1.0.0",
+  "description": "programming class",
+  "main": "basic.js",
+  "scripts": {
+    "numbers": "node Number.js"
+  },
+  "keywords": [
+    "MERN"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
+}
