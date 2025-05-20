@@ -131,33 +131,129 @@ var prompt = require("prompt-sync")();
 // PrimeOrNot(3);
 // PrimeOrNot(10);
 
-//11)Strong mumber
+// 11)Strong mumber
 
-function strongNumber(n) {
-  let act = n;
-  let s = 0;
+// function strongNumber(n) {
+//   let act = n;
+//   let s = 0;
 
-  function factorial(d) {
-    if (d == 0 || d == 1) {
-      return 1;
-    }
-    return d * factorial(d - 1);
-  }
+//   function factorial(d) {
+//     if (d == 0 || d == 1) {
+//       return 1;
+//     }
+//     return d * factorial(d - 1);
+//   }
 
-  while (n !== 0) {
-    let d = n % 10;
-    s += factorial(d);
-    n = parseInt(n / 10);
-  }
+//   while (n !== 0) {
+//     let d = n % 10;
+//     s += factorial(d);
+//     n = parseInt(n / 10);
+//   }
 
-  if (s === act) {
-    console.log(`${act} is a Strong Number`);
-  } else {
-    console.log(`${act} is not a Strong Number`);
-  }
-}
-let p = prompt("enter some data: ");
-strongNumber(Number(p));
+//   if (s === act) {
+//     console.log(`${act} is a Strong Number`);
+//   } else {
+//     console.log(`${act} is not a Strong Number`);
+//   }
+// }
+// let p = prompt("enter some data: ");
+// strongNumber(Number(p));
 
-//find a given number weak numbers
-//find a given number happy numbers
+// //find a given number happy numbers
+// function happyNumber(n) {
+//   let num = n;
+
+//   let s = 0;
+//   let r;
+
+//   while (n > 9) {
+//     while (n > 0) {
+//       r = n % 10;
+//       s = s + r * r;
+//       n = Math.floor(n / 10);
+//     }
+//     n = s;
+//     s = 0;
+//   }
+
+//   if (n === 1) {
+//     console.log(num + " is a happy number");
+//   } else {
+//     console.log(num + " is not a happy number");
+//   }
+// }
+// let n = parseInt(prompt("Enter the number: "));
+
+// happyNumber(n);
+
+//find all the happy number between the range
+// function happyNumber(n) {
+//   let arr = [];
+//   let s = 0;
+//   let r;
+
+//   for (let i = 1; i < n; i++) {
+//     let temp = i;
+//     let original = i;
+
+//     for (let j = 0; j < 1000; j++) {
+//       s = 0;
+//       while (temp > 0) {
+//         r = temp % 10;
+//         s = s + r * r;
+//         temp = Math.floor(temp / 10);
+//       }
+
+//       if (s === 1) {
+//         arr.push(original);
+//         break;
+//       }
+
+//       temp = s;
+//     }
+//   }
+
+//   console.log(`All the happy numbers are ${arr}`);
+// }
+
+// let n = parseInt(prompt("Enter the number: "));
+// happyNumber(n);
+
+// //find all the strong number between a range
+// function strongNumber(n) {
+//   let arr = [];
+//   function factorial(d) {
+//     if (d === 0 || d === 1) return 1;
+//     return d * factorial(d - 1);
+//   }
+
+//   for (let i = 1; i <= n; i++) {
+//     let n = i;
+//     let s = 0;
+
+//     while (n !== 0) {
+//       let d = n % 10;
+//       s += factorial(d);
+//       n = Math.floor(n / 10);
+//     }
+
+//     if (s === i) {
+//       arr.push(i);
+//     }
+//   }
+
+//   console.log(`All strong numbers between 1 and ${n}: ${arr.join(", ")}`);
+// }
+
+// let p = prompt("Enter a number: ");
+// strongNumber(Number(p));
+
+//HOME TASK
+//Disarium number
+//find Disarium number in a range
+//Hashed humber 18=9 9 is 9/9=0
+//find Hashed humber in a range
+//factors of a given number
+//Deficient Number 8=1,2,4  sum is 7   so 7<8 true
+//find Deficient Number in a range
+// Abundent Number 12   1,2,3,4,6 =16 16>12 true

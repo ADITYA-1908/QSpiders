@@ -1,12 +1,14 @@
 import "./App.css";
-import Forms from "./Components/Forms";
+import SpecialCases from "./Components/specialCases/specialCases.jsx";
+
 function App() {
   return (
     <>
       {/* <Parent /> */}
       {/* <Crendering /> */}
       {/* <Calculator /> */}
-      <Forms />
+      {/* <Forms /> */}
+      <SpecialCases />
     </>
   );
 }
