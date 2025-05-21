@@ -1,6 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import React from "react";
-import Resume from "./Pages/ResumeCR";
+import LoginAuth from "./Pages/LoginAuth";
 const App = () => {
   return (
     <>
@@ -8,7 +7,8 @@ const App = () => {
       {/* <LoginPage /> */}
       {/* <Footer /> */}
       {/* <TheamColor /> */}
-      <Resume />
+      {/* <Resume /> */}
+      <LoginAuth />
     </>
   );
 };

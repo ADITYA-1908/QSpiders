@@ -257,3 +257,82 @@ var prompt = require("prompt-sync")();
 //Deficient Number 8=1,2,4  sum is 7   so 7<8 true
 //find Deficient Number in a range
 // Abundent Number 12   1,2,3,4,6 =16 16>12 true
+// const disarum=(num)=>{
+//     let digits=num.toString().length;
+//     let sum=0;
+//     let ans=num;
+//     if(num==0){
+//         return 0
+//     }
+
+//     while(num>0){
+//         let rem=num%10
+//         sum+=rem**digits;
+//         digits--
+//         num=Math.floor(num/10);
+//     }
+//     return sum==ans?true:false;
+// }
+// let size = parseInt(prompt("Enter the number:"));
+
+// let count=0
+// let arr=[]
+// for(let i=1;i<=size;i++){
+//     if(disarum(i)){
+//         arr.push(i)
+//         count++;
+
+//     }
+// }
+
+// console.log(count)
+// console.log(arr)
+
+// const factors=(n)=>{
+//     let arr=[]
+//     let count=0;
+//     for(let i=1;i<=n;i++){
+//         if(n%i==0){
+//             arr.push(i)
+//             count++;
+//         }
+//     }
+//     console.log(count)
+//     console.log(arr)
+// }
+
+// factors(200);
+
+// const isHashed=(n)=>{
+//     if(n<0){
+//         return false;
+//     }
+//     let dummy=n
+//     let sum=0
+
+//     while(n>0){
+//         let rem=n%10
+//         sum+=rem
+//         n=parseInt(n/10)
+//     }
+
+//     return dummy%sum==0?true:false
+// }
+
+// console.log(isHashed(23))
+
+// const isdefficient=(n)=>{
+//     let arr=[]
+//     let count=0;
+//     let sum=0
+//     for(let i=1;i<=n;i++){
+//         if(n%i==0){
+//             arr.push(i)
+//             count++;
+//             sum+=i
+//         }
+//     }
+//     return sum<n?true:false
+
+// }
+// console.log(isdefficient(8))

@@ -1,5 +1,5 @@
 import "./App.css";
-import SpecialCases from "./Components/specialCases/specialCases.jsx";
+import Forms from "./Components/Forms.jsx";
 
 function App() {
   return (
@@ -7,8 +7,8 @@ function App() {
       {/* <Parent /> */}
       {/* <Crendering /> */}
       {/* <Calculator /> */}
-      {/* <Forms /> */}
-      <SpecialCases />
+      <Forms />
+      {/* <SpecialCases /> */}
     </>
   );
 }
