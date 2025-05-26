@@ -1,14 +1,16 @@
 import "./App.css";
-import Forms from "./Components/Forms.jsx";
-
+import PeropleTask from "./Components/FetchMethod/Task/PeropleTask.jsx";
 function App() {
   return (
     <>
       {/* <Parent /> */}
       {/* <Crendering /> */}
       {/* <Calculator /> */}
-      <Forms />
+      {/* <Forms /> */}
       {/* <SpecialCases /> */}
+      {/* <FetchMethod /> */}
+      {/* create a dynaic tabel */}
+      <PeropleTask />
     </>
   );
 }

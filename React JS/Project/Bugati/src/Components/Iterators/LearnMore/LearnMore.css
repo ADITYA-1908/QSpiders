@@ -1,0 +1,76 @@
+.bugatti-container {
+  display: flex;
+  background-color: #0e0e0e;
+  color: white;
+  margin: 40px;
+  padding: 40px;
+  gap: 40px;
+  border-radius: 12px;
+  flex-wrap: wrap;
+}
+
+.bugatti-left {
+  flex: 1;
+  min-width: 300px;
+}
+.bugatti-right {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.bugatti-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.bugatti-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.bugatti-title {
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.bugatti-subtitle {
+  font-size: 16px;
+  color: #b0b0b0;
+}
+
+.bugatti-heading {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.bugatti-description {
+  font-size: 14px;
+  color: #ccc;
+  margin-bottom: 30px;
+}
+
+.bugatti-button {
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 10px 20px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.bugatti-button:hover {
+  background-color: white;
+  color: black;
+}

@@ -1,0 +1,133 @@
+.bugatti-page {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #000;
+  color: white;
+}
+
+.bugatti-page-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.bugatti-page-desc {
+  font-size: 1.1rem;
+  font-weight: 300;
+  max-width: 700px;
+  margin: 0 auto 30px;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.bugatti-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px; /* 3px between each side of the two cards */
+  padding: 0 10px;
+}
+
+.bugatti-card {
+  flex: 0 1 calc(40% - 3px); /* Two cards with 3px gap between */
+  height: 130vh;
+  min-height: 50%;
+  max-width: 500px; /* Optional cap */
+  position: relative;
+}
+
+.bugatti-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+  filter: brightness(0.7);
+  transition: transform 0.3s ease;
+}
+
+.bugatti-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.bugatti-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  margin-top: 10px;
+}
+
+.bugatti-title {
+  font-size: 0.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin: 0;
+}
+
+.bugatti-logo {
+  width: 200px;
+  height: auto;
+  margin-top: 10px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.5));
+  transition: transform 0.3s ease;
+}
+
+.bugatti-btn {
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 8px 20px;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.bugatti-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .bugatti-title {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .bugatti-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bugatti-card {
+    height: 60vh;
+    max-width: 90%;
+    margin: 0 auto 20px;
+  }
+
+  .bugatti-page {
+    padding: 20px;
+  }
+}

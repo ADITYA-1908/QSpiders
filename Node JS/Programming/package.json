@@ -4,7 +4,8 @@
   "description": "programming class",
   "main": "basic.js",
   "scripts": {
-    "numbers": "node Number.js"
+    "numbers": "node Number.js",
+    "strings":"node String.js"
   },
   "keywords": [
     "MERN"
