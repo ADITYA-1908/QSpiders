@@ -1,4 +1,5 @@
 import "./App.css";
+import DropDown from "./Components/FetchMethod/DropDown.jsx";
 import PeropleTask from "./Components/FetchMethod/Task/PeropleTask.jsx";
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       {/* <FetchMethod /> */}
       {/* create a dynaic tabel */}
       <PeropleTask />
+      <DropDown/>
     </>
   );
 }

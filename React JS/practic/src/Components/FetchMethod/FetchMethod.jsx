@@ -1,52 +1,44 @@
+import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { useEffect, useState } from "react";
-
 const FetchMethod = () => {
   const [userData, setUserData] = useState([]);
 
+  // const fetchDAta=()=>{
+  //   const result=fetch("https://fakestoreapi.com/products")
+  //   result.then((data)=>{
+  //     const res=data.json()
+  //     res.then((finalresult)=>{
+  //         setUserData(finalresult)
+  //     })
+  //   }).catch((error)=>{
+  //     console.log(error);
+
+  //   })
+  // }
+
+  //! async await
+
+  // const fetchDAta=async()=>{
+  //     const data= await fetch("https://fakestoreapi.com/products")
+  //     const res=await data.json()
+  //     console.log(res);
+
+  // }
+
+  //! axios with async and await
+
   const fetchDAta = async () => {
-    try {
-      const { data } = await axios.get("https://fakestoreapi.com/products");
-      setUserData(data);
-    } catch (error) {
-      console.error("Error fetching data:", error);
-    }
+    const { data } = await axios.get("https://fakestoreapi.com/products");
+    setUserData(data);
   };
 
+  console.log(fetchDAta);
   useEffect(() => {
     fetchDAta();
   }, []);
+  console.log(userData);
 
-  return (
-    <div style={{ padding: "20px" }}>
-      <h2>Product List</h2>
-      <table
-        border="1"
-        cellPadding="10"
-        cellSpacing="0"
-        style={{ width: "100%", borderCollapse: "collapse" }}
-      >
-        <thead style={{ backgroundColor: "#f2f2f2" }}>
-          <tr>
-            <th>ID</th>
-            <th>Title</th>
-            <th>Description</th>
-            <th>Category</th>
-          </tr>
-        </thead>
-        <tbody>
-          {userData.map((item) => (
-            <tr key={item.id}>
-              <td>{item.id}</td>
-              <td>{item.title}</td>
-              <td>{item.description.slice(0, 100)}...</td>
-              <td>{item.category}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-  );
+  return <div></div>;
 };
 
 export default FetchMethod;

@@ -4,20 +4,21 @@ import { useEffect, useState } from "react";
 const PeopleTask = () => {
   const [products, setProducts] = useState([]);
   const [person, setPerson] = useState("");
-  const [loading, setLoading] = useState(true); 
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     axios
       .get("https://jsonplaceholder.typicode.com/users")
       .then((res) => {
         setProducts(res.data);
-        setLoading(false); 
+        setLoading(false);
       })
       .catch((e) => {
         console.error("Fetch api", e);
-        setLoading(false); 
+        setLoading(false);
       });
-  }, []);
+      
+    }, []);
 
   const handleInput = (e) => {
     const value = e.target.value;
