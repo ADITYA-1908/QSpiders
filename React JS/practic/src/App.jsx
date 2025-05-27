@@ -1,6 +1,5 @@
 import "./App.css";
-import DropDown from "./Components/FetchMethod/DropDown.jsx";
-import PeropleTask from "./Components/FetchMethod/Task/PeropleTask.jsx";
+import ContextGrandParent from "./Components/ContextAPI/ContextGrandParent.jsx";
 function App() {
   return (
     <>
@@ -11,8 +10,9 @@ function App() {
       {/* <SpecialCases /> */}
       {/* <FetchMethod /> */}
       {/* create a dynaic tabel */}
-      <PeropleTask />
-      <DropDown/>
+      {/* <PeropleTask /> */}
+      {/* <DropDown /> */}
+      <ContextGrandParent />
     </>
   );
 }
