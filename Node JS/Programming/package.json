@@ -5,7 +5,7 @@
   "main": "basic.js",
   "scripts": {
     "numbers": "node Number.js",
-    "strings":"node String.js"
+    "strings": "nodemon String.js"
   },
   "keywords": [
     "MERN"
@@ -13,6 +13,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "nodemon": "^3.1.10",
     "prompt-sync": "^4.2.0"
   }
 }

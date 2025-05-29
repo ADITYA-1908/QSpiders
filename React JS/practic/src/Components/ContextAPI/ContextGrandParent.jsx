@@ -21,4 +21,4 @@ const ContextGrandParent = () => {
 };
 
 export default ContextGrandParent;
-export { MoneyContext, BonusContext };
+export { BonusContext, MoneyContext };

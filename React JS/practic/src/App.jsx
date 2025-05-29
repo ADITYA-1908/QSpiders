@@ -1,5 +1,5 @@
 import "./App.css";
-import ContextGrandParent from "./Components/ContextAPI/ContextGrandParent.jsx";
+import UseReducer from "./Components/Hooks/UseReducer/UseReducer.jsx";
 function App() {
   return (
     <>
@@ -12,7 +12,8 @@ function App() {
       {/* create a dynaic tabel */}
       {/* <PeropleTask /> */}
       {/* <DropDown /> */}
-      <ContextGrandParent />
+      {/* <ContextGrandParent /> */}
+      <UseReducer />
     </>
   );
 }
