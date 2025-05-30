@@ -163,19 +163,131 @@
 // printSpecialCharacter("abc123@gmail.com");
 
 //if vouel print *
-function replaceVowels(str) {
-  const vowels = "aeiouAEIOU";
-  let res = "";
+// function replaceVowels(str) {
+//   const vowels = "aeiouAEIOU";
+//   let res = "";
 
-  for (let i = 0; i < str.length; i++) {
-    if (vowels.includes(str[i])) {
-      res + "*";
-    } else {
-      res += str[i];
-    }
-  }
+//   for (let i = 0; i < str.length; i++) {
+//     if (vowels.includes(str[i])) {
+//       res + "*";
+//     } else {
+//       res += str[i];
+//     }
+//   }
 
-  console.log(res);
+//   console.log(res);
+// }
+// const input = "Hello World";
+// replaceVowels(input);
+
+//reverse a string
+// function reverseString(str) {
+//   return str.split("").reverse().join("");
+// }
+
+// const os = "Aditya is a useless boy";
+// const rs = reverseString(os);
+
+// console.log("Original String:", os);
+// console.log("Reversed String:", rs);
+
+// //reverse each word
+// function reverseWords(input) {
+//   let words = [];
+//   let word = "";
+
+//   for (let i = 0; i <= input.length; i++) {
+//     if (input[i] === " " || i === input.length) {
+//       if (word.length > 0) {
+//         words.push(word);
+//         word = "";
+//       }
+//     } else {
+//       word += input[i];
+//     }
+//   }
+
+//   let rs = "";
+//   for (let j = words.length - 1; j >= 0; j--) {
+//     rs += words[j];
+//     if (j !== 0) rs += " ";
+//   }
+
+//   return rs;
+// }
+
+// const input = "the sky is blue";
+// const output = reverseWords(input);
+
+// console.log("Input:", input);
+// console.log("Output:", output);
+
+// //reverse each word in a sting
+// function reverseEachWord(str) {
+//   return str
+//     .split(" ")
+//     .map((word) => word.split("").reverse().join(""))
+//     .join("");
+// }
+
+// const os = "Hello world from Aditya";
+// const rws = reverseEachWord(os);
+
+// console.log("Original String:", os);
+// console.log("Each Word Reversed:", rws);
+
+//reverse each word in a string without inbuilt method
+// function reverseEachWord(str) {
+//   let result = "";
+//   let word = "";
+
+//   for (let i = 0; i <= str.length; i++) {
+//     if (str[i] === " " || i === str.length) {
+//       for (let j = word.length - 1; j >= 0; j--) {
+//         result += word[j];
+//       }
+//       if (i !== str.length) {
+//         result += " ";
+//       }
+//       word = "";
+//     } else {
+//       word += str[i];
+//     }
+//   }
+
+//   return result;
+// }
+
+// const os = "Hello world from Aditya";
+// const rws = reverseEachWord(os);
+
+// console.log("Original String:", os);
+// console.log("Each Word Reversed:", rws);
+
+// //reverse each word and reverse the sentence
+// function reverseEachWord(str) {
+//   return str
+//     .split(" ")
+//     .reverse()
+//     .map((word) => word.split("").reverse().join(""))
+//     .join(" ");
+// }
+
+// const os = "Hello world from Aditya";
+// const rws = reverseEachWord(os);
+
+// console.log("Original String:", os);
+// console.log("Each Word Reversed and Sentence Reversed:", rws);
+
+function capitalizeWords(str) {
+  return str
+    .split(" ")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
 }
-const input = "Hello World";
-replaceVowels(input);
+
+const input = "hello world from aditya";
+const output = capitalizeWords(input);
+
+console.log("Original:", input);
+console.log("Capitalized:", output);

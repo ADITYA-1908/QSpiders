@@ -1,5 +1,5 @@
 import "./App.css";
-import UseReducer from "./Components/Hooks/UseReducer/UseReducer.jsx";
+import UseReducerTask from "./Components/Hooks/UseReducer/API/UseReducerTask.jsx";
 function App() {
   return (
     <>
@@ -13,7 +13,9 @@ function App() {
       {/* <PeropleTask /> */}
       {/* <DropDown /> */}
       {/* <ContextGrandParent /> */}
-      <UseReducer />
+      {/* <UseReducer /> */}
+      {/* <ObjectUR /> */}
+      <UseReducerTask />
     </>
   );
 }
