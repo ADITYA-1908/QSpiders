@@ -1,5 +1,5 @@
 import "./App.css";
-import UseReducerTask from "./Components/Hooks/UseReducer/API/UseReducerTask.jsx";
+import ApiTable from "./Components/Task/ApiTable.jsx";
 function App() {
   return (
     <>
@@ -15,7 +15,8 @@ function App() {
       {/* <ContextGrandParent /> */}
       {/* <UseReducer /> */}
       {/* <ObjectUR /> */}
-      <UseReducerTask />
+      {/* <UseReducerTask /> */}
+      <ApiTable />
     </>
   );
 }

@@ -1,3 +1,4 @@
+@import "tailwindcss";
 .dark {
   background-color: black;
 }
@@ -5,7 +6,6 @@
   background-color: white;
 }
 
-@import "tailwindcss";
 @keyframes fade-in {
   from {
     opacity: 0;

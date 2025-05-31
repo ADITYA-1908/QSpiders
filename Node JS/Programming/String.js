@@ -279,15 +279,62 @@
 // console.log("Original String:", os);
 // console.log("Each Word Reversed and Sentence Reversed:", rws);
 
-function capitalizeWords(str) {
-  return str
-    .split(" ")
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(" ");
+// function capitalizeWords(str) {
+//   return str
+//     .split(" ")
+//     .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+//     .join(" ");
+// }
+
+// const input = "hello world from aditya";
+// const output = capitalizeWords(input);
+
+// console.log("Original:", input);
+// console.log("Capitalized:", output);
+
+//remove a word such a way that word become palendrom
+// function checkPalendrom(str) {
+//   function isPalindrome(s) {
+//     return s === s.split("").reverse().join("");
+//   }
+
+//   for (let i = 0; i < str.length; i++) {
+//     let newStr = str.slice(0, i) + str.slice(i + 1);
+//     if (isPalindrome(newStr)) {
+//       return str[i];
+//     }
+//   }
+// }
+// console.log(checkPalendrom("xyvx"));
+// console.log(checkPalendrom("abca"));
+
+//convert roman to intiger
+function romanToInt(roman) {
+  const convert = {
+    I: 1,
+    V: 5,
+    X: 10,
+    L: 50,
+    C: 100,
+    D: 500,
+    M: 1000,
+  };
+
+  let total = 0;
+
+  for (let i = 0; i < roman.length; i++) {
+    const current = convert[roman[i]];
+    const next = convert[roman[i + 1]];
+
+    if (next > current) {
+      total -= current;
+    } else {
+      total += current;
+    }
+  }
+
+  return total;
 }
 
-const input = "hello world from aditya";
-const output = capitalizeWords(input);
-
-console.log("Original:", input);
-console.log("Capitalized:", output);
+console.log(romanToInt("IX"));
+console.log(50 > 50);
