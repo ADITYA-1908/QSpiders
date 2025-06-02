@@ -1,4 +1,5 @@
 import "./App.css";
+import PeopleTask from "./Components/FetchMethod/Task/PeropleTask.jsx";
 import ApiTable from "./Components/Task/ApiTable.jsx";
 function App() {
   return (
@@ -16,7 +17,11 @@ function App() {
       {/* <UseReducer /> */}
       {/* <ObjectUR /> */}
       {/* <UseReducerTask /> */}
-      <ApiTable />
+      {/* <ApiTable /> */}
+      {/* <TailwindCss /> */}
+      {/* <CustomHooks /> */}
+      {/* <PeopleTask /> */}
+      <ApiTable/>
     </>
   );
 }

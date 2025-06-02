@@ -17,8 +17,7 @@ const PeopleTask = () => {
         console.error("Fetch api", e);
         setLoading(false);
       });
-      
-    }, []);
+  }, []);
 
   const handleInput = (e) => {
     const value = e.target.value;
