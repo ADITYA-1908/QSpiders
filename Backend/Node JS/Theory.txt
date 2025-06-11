@@ -1,0 +1,24 @@
+1) what is Node.js
+Node.js is an open-source, cross-platform JavaScript runtime 
+environment that allows developers to run JavaScript outside 
+of the browser, typically on the server side.
+It uses the V8 JavaScript engine (the same engine used by Google
+Chrome) and is built to develop scalable network applications 
+such as web servers, REST APIs, real-time apps, and more.
+
+2)Key features of Node.js
+Asynchronous & Event-Driven
+Cross-Platform
+Real-Time Capabilities
+Uses JavaScript Everywhere
+NPM (Node Package Manager)
+
+3)History of Node.js
+Node.js invented in 2009 by Ryan dhal
+it is mainted by Openjs foundation
+Major application and platform using node.js paypal,linkedin,NASA.
+current vesrion on node is V24 stable and current version is V22.
+for production deployment use LTS(Long term Support)
+
+
+require:-
