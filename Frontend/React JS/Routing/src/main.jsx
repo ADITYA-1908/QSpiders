@@ -15,8 +15,8 @@ import About from "./Pages/About/About.jsx";
 import Contact from "./Pages/Contact/Contact.jsx";
 import DashBoard from "./Pages/DashBoard/DashBoard.jsx";
 import AllUser from "./Pages/DashBoard/DashBoardPages/AllUser.jsx";
-import Cart from "./Pages/DashBoard/DashBoardPages/Cart.jsx";
 import AllUsers from "./Pages/DashBoard/DashBoardPages/CreateUser.jsx";
+import EditUser from "./Pages/DashBoard/DashBoardPages/EditUser.jsx";
 import Profile from "./Pages/DashBoard/DashBoardPages/Profile.jsx";
 import Setting from "./Pages/DashBoard/DashBoardPages/Setting.jsx";
 import Github, { githubInfoLoader } from "./Pages/Github/Github.jsx";
@@ -38,11 +38,11 @@ const router = createBrowserRouter(
         >
           <Route path="create-users" element={<AllUsers />} />
           <Route path="all-users" element={<AllUser />} />
-          <Route path="cart" element={<Cart />} />
+
           <Route path="profile" element={<Profile />} />
           <Route path="setting" element={<Setting />} />
         </Route>
-
+        <Route path="/edituser/:slug" element={<EditUser />} />
         <Route path="about" element={<About />} />
         <Route path="contact" element={<Contact />} />
         <Route loader={githubInfoLoader} path="github" element={<Github />} />

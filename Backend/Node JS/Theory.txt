@@ -48,19 +48,31 @@ export value /export default value
 - Supports static analysis and tree shaking.
 - Example: `import { name } from './module.js';`
 
-// 6) Advantages of Node.js
-// -Fast Execution
-// -Scalability
-// -Non Blocking I/O (Asynchronous)
-//followed by Event-Driven Architecture handle multiple requests.
-// -Single Programming Language (JavaScript) side by side for both client and server.  makes it easier for developers to work on both ends.
-// -Large Ecosystem (npm) access millions of libraries and modules.
-// -Scalability- support microservices architecture, allowing applications to be built as a collection of small, independent services that can be developed, deployed, and scaled independently.
-// -Community Support
+ 6) Advantages of Node.js
+ -Fast Execution
+ -Scalability
+ -Non Blocking I/O (Asynchronous)
+followed by Event-Driven Architecture handle multiple requests.
+ -Single Programming Language (JavaScript) side by side for both client and server.  makes it easier for developers to work on both ends.
+ -Large Ecosystem (npm) access millions of libraries and modules.
+ -Scalability- support microservices architecture, allowing applications to be built as a collection of small, independent services that can be developed, deployed, and scaled independently.
+ -Community Support
 
-// 7) Disadvantages of Node.js
-// -Single Threaded: Node.js runs on a single thread, which can be a limitation for CPU-intensive tasks.
-// -not suitable for CPU-intensive tasks: Node.js is designed for I/O-bound tasks and may not perform well with CPU-intensive operations.
-// -Callback Hell: Asynchronous nature can lead to complex nested callbacks, making code harder to read and maintain.
-// - lack of  strong typeing
-// -Learning Curve: Developers familiar with synchronous programming may find the asynchronous model of Node.js challenging to grasp initially.
+ 7) Disadvantages of Node.js
+ -Single Threaded: Node.js runs on a single thread, which can be a limitation for CPU-intensive tasks.
+ -not suitable for CPU-intensive tasks: Node.js is designed for I/O-bound tasks and may not perform well with CPU-intensive operations.
+ -Callback Hell: Asynchronous nature can lead to complex nested callbacks, making code harder to read and maintain.
+ - lack of  strong typeing
+ -Learning Curve: Developers familiar with synchronous programming may find the asynchronous model of Node.js challenging to grasp initially.
+
+8) modules;- set of reusable code 
+  8.1)Core Module
+    -http
+    -https
+    -files
+    -OS
+    -Path 
+    -Url
+    -Event
+  8.2) custom module
+  8.3) Third party Module

@@ -1,9 +1,10 @@
 import axios from "axios";
-import { useState } from "react";
-import { ToastContainer, toast } from "react-toastify";
+import { useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const CreateUser = () => {
+const EditUser = () => {
   const [formData, setFormData] = useState({
     username: "",
     email: "",
@@ -13,6 +14,20 @@ const CreateUser = () => {
     dob: "",
     image: "",
   });
+  const navigate = useNavigate();
+  const { slug } = useParams();
+  // Fetch user data by ID when component mounts
+  useEffect(() => {
+    const fetchUserData = async () => {
+      try {
+        const response = await axios.get(`http://localhost:3000/user/${slug}`);
+        setFormData(response.data);
+      } catch (error) {
+        console.error("Error fetching user data:", error);
+      }
+    };
+    fetchUserData();
+  }, [slug]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -21,35 +36,22 @@ const CreateUser = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     try {
-      await axios.post("http://localhost:3000/user", formData);
-      toast.success("User registered successfully!", {
-        position: "top-right",
-        autoClose: 3000,
-      });
-
-      // Reset the form
-      setFormData({
-        username: "",
-        email: "",
-        password: "",
-        gender: "",
-        phone: "",
-        dob: "",
-        image: "",
-      });
+      const { data } = await axios.put(
+        `http://localhost:3000/user/${slug}`,
+        formData
+      );
+      console.log(data);
+      toast.success("Updated", { position: "top-right" });
+      navigate("/dashboard/all-users");
     } catch (error) {
-      toast.error("Failed to register user!", {
-        position: "top-right",
-        autoClose: 3000,
-      });
-      console.error("Error submitting form:", error);
+      console.error("Error updating user:", error);
+      toast.error("Failed to update user", { position: "top-right" });
     }
   };
 
   return (
-    <div className="min-h-screen flex justify-center items-center  p-4">
+    <div className="min-h-screen flex justify-center items-center bg-gray-100 p-4">
       <form
         onSubmit={handleSubmit}
         className="bg-white p-8 rounded-2xl shadow-lg w-full max-w-3xl"
@@ -176,7 +178,7 @@ const CreateUser = () => {
           type="submit"
           className="mt-8 w-full bg-purple-600 text-white font-semibold py-3 rounded-lg hover:bg-purple-700 transition-all"
         >
-          Register
+          Update
         </button>
       </form>
 
@@ -186,4 +188,4 @@ const CreateUser = () => {
   );
 };
 
-export default CreateUser;
+export default EditUser;

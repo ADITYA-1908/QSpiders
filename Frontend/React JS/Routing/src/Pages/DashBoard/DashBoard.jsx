@@ -16,8 +16,8 @@ const DashBoard = () => {
             </NavLink>
           </li>
           <li className="text-center cursor-pointer py-4 hover:bg-slate-700">
-            <NavLink to="cart" className="block">
-              Cart
+            <NavLink to="edit-user" className="block">
+              Edit User
             </NavLink>
           </li>
           <li className="text-center cursor-pointer py-4 hover:bg-slate-700">
@@ -32,7 +32,7 @@ const DashBoard = () => {
           </li>
         </ul>
       </div>
-      <div className="w-[80%] min-h-screen bg-amber-400 p-4">
+      <div className="w-[80%] min-h-screen p-8">
         <Outlet />
       </div>
     </div>
