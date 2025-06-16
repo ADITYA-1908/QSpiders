@@ -1,6 +1,5 @@
 import "./App.css";
-import PeopleTask from "./Components/FetchMethod/Task/PeropleTask.jsx";
-import ApiTable from "./Components/Task/ApiTable.jsx";
+import FetchAPI from "./Components/API/FetchAPI.jsx";
 function App() {
   return (
     <>
@@ -21,7 +20,8 @@ function App() {
       {/* <TailwindCss /> */}
       {/* <CustomHooks /> */}
       {/* <PeopleTask /> */}
-      <ApiTable/>
+      {/* <ApiTable/> */}
+      <FetchAPI />
     </>
   );
 }
