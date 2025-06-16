@@ -25,6 +25,11 @@ export const CounterReducer = (state = initialState, action) => {
         ...state,
         value: action.payload,
       };
+    case "dropDown":
+      return {
+        ...state,
+        dropDown: action.payload,
+      };
     default:
       return state;
   }
