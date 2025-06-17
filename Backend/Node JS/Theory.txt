@@ -1,15 +1,15 @@
 1) what is Node.js
-Node.js is an open-source, cross-platform JavaScript runtime 
-environment that allows developers to run JavaScript outside 
+Node.js is an open-source, cross-platform JavaScript runtime
+environment that allows developers to run JavaScript outside
 of the browser, typically on the server side.
 It uses the V8 JavaScript engine (the same engine used by Google
-Chrome) and is built to develop scalable network applications 
+Chrome) and is built to develop scalable network applications
 such as web servers, REST APIs, real-time apps, and more.
 
 2)Key features of Node.js
 Asynchronous & Event-Driven
 Cross-Platform
-Low buffering 
+Low buffering
 Real-Time Capabilities
 Uses JavaScript Everywhere
 support NPM (Node Package Manager)
@@ -27,8 +27,8 @@ for production deployment use LTS(Long term Support)
 5) what are the diffrence between common js and ES module?
 CommonJS vs ES Module
 CommonJS:
--CJS is a  module system used in node.js for organizing  code into reusebility.
-    it allows you to import and export functionalities like function objects or 
+-CJS is a  module system used in node.js for organizing  code into reusebility.        
+    it allows you to import and export functionalities like function objects or        
     varibale between diffrent files.
 
 -const x = require(<FilePath>)
@@ -37,7 +37,7 @@ CommonJS:
 - Synchronous loading of modules.
 - Primarily used in Node.js.
 - Supports dynamic loading of modules.
-- Example: `const module = require('module');`       
+- Example: `const module = require('module');`
 - Exports can be a single object or multiple named exports.
 ES Module:
 -import x from <filepath>
@@ -65,14 +65,25 @@ followed by Event-Driven Architecture handle multiple requests.
  - lack of  strong typeing
  -Learning Curve: Developers familiar with synchronous programming may find the asynchronous model of Node.js challenging to grasp initially.
 
-8) modules;- set of reusable code 
+8) modules;- set of reusable code
   8.1)Core Module
     -http
     -https
     -files
     -OS
-    -Path 
+    -Path
     -Url
     -Event
   8.2) custom module
   8.3) Third party Module
+
+  9)File system
+   9.1- readfile
+   9.2- writefile
+   9.3- appendfile
+   9.4- renamefile
+   9.5- openfile
+   NOTE- 
+   1) In writeFile and appendFile if file is exist do the operation if file is not exist then create a new file
+   2) In openfile if file is opened in a 'w' mode then it will read the file if not exist then it will create a new file
+   3)In openfile if file is opend in a "r" mode the if the present it will open otherwise it wil hit an error.

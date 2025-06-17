@@ -1,5 +1,5 @@
 import "./App.css";
-import FetchAPI from "./Components/API/FetchAPI.jsx";
+import ClassBasedComponents from "./Components/ClassBasedComponents/ClassBasedComponents.jsx";
 function App() {
   return (
     <>
@@ -21,7 +21,8 @@ function App() {
       {/* <CustomHooks /> */}
       {/* <PeopleTask /> */}
       {/* <ApiTable/> */}
-      <FetchAPI />
+      {/* <FetchAPI /> */}
+      <ClassBasedComponents />
     </>
   );
 }
