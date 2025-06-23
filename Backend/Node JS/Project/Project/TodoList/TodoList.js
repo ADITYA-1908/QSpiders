@@ -30,6 +30,7 @@ const fetchTodos = () => {
     return [];
   }
 };
+//show the Todo list
 
 // Save todos to the file
 const storeTodos = (todos) => {
@@ -46,7 +47,16 @@ async function todoManager() {
 
   const option = await askQuestion("Enter your option: ");
   let todos = fetchTodos();
-
+  function showToo() {
+    if (todos.length === 0) {
+      console.log(" No todos found.");
+    } else {
+      console.log("Your Todos:");
+      todos.map((item, index) => {
+        console.log(`${index + 1}. [${item.id}] [${item.text}]`);
+      });
+    }
+  }
   switch (option) {
     case "1": {
       const text = await askQuestion("Enter your todo: ");
@@ -61,18 +71,12 @@ async function todoManager() {
     }
 
     case "2": {
-      if (todos.length === 0) {
-        console.log(" No todos found.");
-      } else {
-        console.log("Your Todos:");
-        todos.map((item, index) => {
-          console.log(`${index + 1}. [${item.text}]`);
-        });
-      }
+      showToo();
       break;
     }
 
     case "3": {
+      showToo();
       const id = await askQuestion("Enter the ID of the todo to delete: ");
       const newTodos = todos.filter((todo) => todo.id !== id);
       if (newTodos.length === todos.length) {
@@ -85,8 +89,10 @@ async function todoManager() {
     }
 
     case "4": {
+      showToo();
       const id = await askQuestion("Enter the ID of the todo to update: ");
       const index = todos.findIndex((todo) => todo.id === id);
+
       if (index !== -1) {
         const newText = await askQuestion("Enter the new todo text: ");
         todos[index].text = newText;
@@ -107,10 +113,8 @@ async function todoManager() {
       console.log("Invalid option. Try 1 to 5.");
   }
 
-  // Continue
   todoManager();
 }
 
-// Setup
 ensureTodoFile();
 todoManager();
