@@ -1,0 +1,16 @@
+{
+  "name": "connection-db",
+  "version": "1.0.0",
+  "description": "connection,mongoDB",
+  "main": "server.js",
+  "scripts": {
+   
+    "server": "node server.js"
+  },
+  "author": "Aditya",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0",
+    "mongoose": "^8.16.0"
+  }
+}
