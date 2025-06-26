@@ -1,89 +1,121 @@
-1) what is Node.js
-Node.js is an open-source, cross-platform JavaScript runtime
-environment that allows developers to run JavaScript outside
-of the browser, typically on the server side.
-It uses the V8 JavaScript engine (the same engine used by Google
-Chrome) and is built to develop scalable network applications
-such as web servers, REST APIs, real-time apps, and more.
+// * 1) What is Node.js
+// Node.js is an open-source, cross-platform JavaScript runtime environment that allows developers to run JavaScript outside of the browser, typically on the server side.
+// It uses the V8 JavaScript engine (the same engine used by Google Chrome) and is designed to develop scalable network applications such as web servers, REST APIs, real-time apps, and more.
 
-2)Key features of Node.js
-Asynchronous & Event-Driven
-Cross-Platform
-Low buffering
-Real-Time Capabilities
-Uses JavaScript Everywhere
-support NPM (Node Package Manager)
+// * 2) Key Features of Node.js
+// - Asynchronous & Event-Driven
+// - Cross-Platform
+// - Low Buffering
+// - Real-Time Capabilities
+// - Uses JavaScript Everywhere
+// - Supports NPM (Node Package Manager)
 
-3)History of Node.js
-Node.js invented in 2009 by Ryan dhal
-it is mainted by Openjs foundation
-Major application and platform using node.js paypal,linkedin,NASA.
-current vesrion on node is V24 stable and current version is V22.
-for production deployment use LTS(Long term Support)
+// * 3) History of Node.js
+// - Node.js was invented in 2009 by Ryan Dahl.
+// - It is maintained by the OpenJS Foundation.
+// - Major applications and platforms using Node.js: PayPal, LinkedIn, NASA.
+// - Current stable version of Node.js is v24, and the latest version is v22.
+// - //! For production deployment, use LTS (Long Term Support) versions.
 
+// * 4) `require`:
+// It is used to import modules into the current file in the CommonJS module system.
 
-4) require:- it is used to import module in my current file in common js moule
+// * 5) Difference Between CommonJS and ES Module
 
-5) what are the diffrence between common js and ES module?
-CommonJS vs ES Module
-CommonJS:
--CJS is a  module system used in node.js for organizing  code into reusebility.        
-    it allows you to import and export functionalities like function objects or        
-    varibale between diffrent files.
+// * CommonJS (CJS):
+// - CJS is a module system used in Node.js for organizing reusable code.
+// - It allows you to import and export functionalities like functions, objects, or variables between different files.
+// - Syntax:
+//   const x = require('<FilePath>');
+//   module.exports = value;
+// - Uses `require` to import modules and `module.exports` to export them.
+// - Synchronous loading of modules.
+// - Primarily used in Node.js.
+// - Supports dynamic loading of modules.
+// - Exports can be a single object or multiple named exports.
 
--const x = require(<FilePath>)
--module.exports= value
-- Uses `require` to import modules and `module.exports` to export them.
-- Synchronous loading of modules.
-- Primarily used in Node.js.
-- Supports dynamic loading of modules.
-- Example: `const module = require('module');`
-- Exports can be a single object or multiple named exports.
-ES Module:
--import x from <filepath>
-export value /export default value
-- Uses `import` to import modules and `export` to export them.
-- Asynchronous loading of modules.
-- Can be used in both Node.js and browser environments.
-- Supports static analysis and tree shaking.
-- Example: `import { name } from './module.js';`
+// * ES Module (ESM):
+// - Syntax:
+//   import x from '<FilePath>';
+//   export value; or export default value;
+// - Uses `import` to import modules and `export` to export them.
+// - Asynchronous loading of modules.
+// - Can be used in both Node.js and browser environments.
+// - Supports static analysis and tree-shaking.
 
- 6) Advantages of Node.js
- -Fast Execution
- -Scalability
- -Non Blocking I/O (Asynchronous)
-followed by Event-Driven Architecture handle multiple requests.
- -Single Programming Language (JavaScript) side by side for both client and server.  makes it easier for developers to work on both ends.
- -Large Ecosystem (npm) access millions of libraries and modules.
- -Scalability- support microservices architecture, allowing applications to be built as a collection of small, independent services that can be developed, deployed, and scaled independently.
- -Community Support
+// * 6) Advantages of Node.js
+// - Fast Execution
+// - Scalability
+// - Non-Blocking I/O (Asynchronous), followed by Event-Driven Architecture to handle multiple requests.
+// - Single Programming Language (JavaScript) used for both client and server-side, making it easier for developers to work on both ends.
+// - Large Ecosystem (NPM) provides access to millions of libraries and modules.
+// - Supports Microservices Architecture, allowing applications to be built as a collection of small, independent services that can be developed, deployed, and scaled independently.
+// - Strong Community Support
 
- 7) Disadvantages of Node.js
- -Single Threaded: Node.js runs on a single thread, which can be a limitation for CPU-intensive tasks.
- -not suitable for CPU-intensive tasks: Node.js is designed for I/O-bound tasks and may not perform well with CPU-intensive operations.
- -Callback Hell: Asynchronous nature can lead to complex nested callbacks, making code harder to read and maintain.
- - lack of  strong typeing
- -Learning Curve: Developers familiar with synchronous programming may find the asynchronous model of Node.js challenging to grasp initially.
+// * 7) Disadvantages of Node.js
+// - //! Single-Threaded: Node.js runs on a single thread, which can be a limitation for CPU-intensive tasks.
+// - //! Not suitable for CPU-intensive tasks. Node.js is designed for I/O-bound operations.
+// - //! Callback Hell: The asynchronous nature can lead to complex nested callbacks, making code harder to read and maintain.
+// - Lack of Strong Typing
+// - Learning Curve: Developers familiar with synchronous programming may find the asynchronous model challenging initially.
 
-8) modules;- set of reusable code
-  8.1)Core Module
-    -http
-    -https
-    -files
-    -OS
-    -Path
-    -Url
-    -Event
-  8.2) custom module
-  8.3) Third party Module
+// * 8) Modules: A set of reusable code
 
-  9)File system
-   9.1- readfile
-   9.2- writefile
-   9.3- appendfile
-   9.4- renamefile
-   9.5- openfile
-   NOTE- 
-   1) In writeFile and appendFile if file is exist do the operation if file is not exist then create a new file
-   2) In openfile if file is opened in a 'w' mode then it will read the file if not exist then it will create a new file
-   3)In openfile if file is opend in a "r" mode the if the present it will open otherwise it wil hit an error.
+// * 8.1) Core Modules:
+// - http
+// - https
+// - fs (File System)
+// - os
+// - path
+// - url
+// - events
+
+// * 8.2) Custom Modules
+// * 8.3) Third-Party Modules
+
+// * 9) File System Operations
+
+// - readFile
+// - writeFile
+// - appendFile
+// - renameFile
+// - openFile
+
+// * Notes:
+// - In `writeFile` and `appendFile`, if the file exists, the operation is performed; if not, a new file is created.
+// - In `openFile`, if the file is opened in `'w'` mode, it will create a new file if it doesn't exist.
+// - In `openFile`, if the file is opened in `'r'` mode, it will open the file if present; otherwise, it will throw an error.
+
+// * 10) libuv
+
+// * libuv Queues:
+// - Microtask Queue
+//   - process.nextTick callbacks
+//   - Promise callbacks
+//   - //! Note: The Event Loop operates inside the Microtask Queue
+// - Timer Queue
+// - Check Queue
+// - Close Queue
+
+// * 11) Streams
+
+// Streams in Node.js are a way to handle data that is being transferred piece by piece (chunks), rather than all at once, making it more efficient for processing large amounts of data.
+
+// * Example:
+// Watching a video online without downloading the entire file.
+
+// * Types of Streams in Node.js:
+// 1) Readable Stream
+//    - A stream from which data can be read.
+//    - Example: fs.createReadStream()
+
+// 2) Writable Stream
+//    - A stream to which data can be written.
+      - if file doesnt exit then it will create a new file. other wisw it replace the data. 
+//    - Example: fs.createWriteStream()
+
+// 3) Duplex Stream
+//    - A stream that is both readable and writable.
+
+// 4) Transform Stream
+//    - A duplex stream that can modify or transform the data as it is written and read (e.g., compression, encryption).
