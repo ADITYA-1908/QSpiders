@@ -4,13 +4,15 @@
   "description": "connection,mongoDB",
   "main": "server.js",
   "scripts": {
-   
-    "server": "node server.js"
+    "server":  "nodemon server.js"
   },
   "author": "Aditya",
   "license": "ISC",
   "dependencies": {
     "express": "^5.1.0",
     "mongoose": "^8.16.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
   }
 }

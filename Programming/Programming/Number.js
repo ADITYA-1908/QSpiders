@@ -252,7 +252,7 @@ var prompt = require("prompt-sync")();
 //Disarium number
 //find Disarium number in a range
 //Hashed humber 18=9 9 is 9/9=0
-//find Hashed humber in a range
+//find Hashed number in a range
 //factors of a given number
 //Deficient Number 8=1,2,4  sum is 7   so 7<8 true
 //find Deficient Number in a range

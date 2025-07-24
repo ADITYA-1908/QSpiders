@@ -1,0 +1,4 @@
+project installation
+tailwind CSS
+app.jsx
+Firebase

@@ -1,0 +1,14 @@
+{
+  "name": "oops",
+  "version": "1.0.0",
+  "description": "oops",
+  "main": "server.js",
+    "type": "module",   
+
+  "scripts": {
+    "server": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "author": "aditya",
+  "license": "ISC"
+}

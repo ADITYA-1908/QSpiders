@@ -1,0 +1,53 @@
+
+# 👨‍🏫 JavaScript OOP Concepts Notes
+
+## 📘 Class
+- A **class** is a blueprint for creating objects.
+- It defines the structure and behavior (properties and methods) of an object.
+- By convention, class names start with a **capital letter**.
+
+## 🔹 Object
+- An **object** is an instance of a class.
+- It contains properties (data) and methods (functions) defined by the class.
+- Objects are created using the `new` keyword with a class.
+
+## 🔧 Method
+- A **method** is a function defined **inside a class** or an **object**.
+- Methods are used to define behavior and perform actions using the object's properties.
+- In classes, methods are defined **without** the `function` keyword.
+
+## 🛠️ Constructor
+- A **constructor** is a special method used to initialize objects.
+- It helps to bind the `this` keyword with the current object.
+- A function defined inside an object is called a method.
+- Inside the constructor, you **cannot** declare variables using `let`, `var`, or `const` — but you can do so inside methods.
+
+## 🧷 Static Variable
+- Static variables **cannot be accessed using objects**.
+- They can be accessed **only using the class name**.
+
+```js
+class Demo {
+  static x = 10;
+}
+console.log(Demo.x); // ✅ Correct
+```
+
+# 🧬 Inheritance in JavaScript
+
+## 🔸 Single Inheritance
+- A child class inherits from a **single parent class** and gains access to its properties and methods.
+
+## 🔸 Multilevel Inheritance
+- A class is derived from a **child class**, which is itself derived from **another class**, forming a chain.
+
+## 🔸 Hierarchical Inheritance
+- Occurs when **multiple child classes** inherit from a **single parent class**.
+
+## 🔸 Multiple Inheritance
+- When a class inherits from **more than one parent class**.
+- ❗ JavaScript **does not support multiple inheritance directly** due to potential conflicts (commonly known as the **diamond problem**).
+
+## 🔸 Hybrid Inheritance
+- A **combination** of multiple types of inheritance, such as hierarchical + multilevel.
+- ❗ JavaScript does **not support hybrid inheritance directly**, but it can be **simulated using mixins**, class composition, or function composition.
