@@ -1,19 +1,33 @@
-const connectionDB =require("./config/db")
+const express = require("express");
 const mongoose = require("mongoose");
-//! DB connected  
-connectionDB()
+const connectionDB = require("./config/db");
 
-//! create a schema
+const app = express();
+const PORT = 8080;
+
+//! Connect to DB
+connectionDB();
+
+//! Create Schema
 const userSchema = new mongoose.Schema({
     name: String,
     age: Number
 });
 
-//! model
+//! Create Model
 const User = mongoose.model("boys", userSchema);
-const db= async () =>{
 
-    const users = await User.find();
-    console.log(users);
-}
-db()
+//! Route to show users
+app.get("/users", async (req, res) => {
+    try {
+        const users = await User.find();
+        res.json(users);  // Send the data to frontend
+    } catch (err) {
+        res.status(500).json({ message: "Error fetching users" });
+    }
+});
+
+//! Start server
+app.listen(PORT, () => {
+    console.log(`Server is running at http://localhost:${PORT}`);
+});

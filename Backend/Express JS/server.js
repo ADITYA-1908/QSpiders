@@ -12,7 +12,6 @@ const data = {
     age: 22
 }
 
-
 app.get("/", (req, res) => {
     res.json({ obj })
 })
