@@ -6,7 +6,6 @@ const obj = {
     age: 20
 }
 
-
 const data = {
     userName: "Anurag",
     age: 22

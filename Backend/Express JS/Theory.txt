@@ -72,3 +72,25 @@ difrence between request and responce
 | Content   | URL, HTTP method, headers, body, cookies | Text, JSON, HTML, images, status code, headers ex-res.send(),res.json()
 
 Note:- For One req only one responce need to be send 
+
+
+8) URL 
+-> A URL (Uniform Resource Locator) is the address used to access resources on the internet — like a web page, image, video, or API.
+https://www.example.com:443/blog/article.html?search=nodejs#comments
+|      |       |     |          |              |               |
+|      |       |     |          |              |               └─ Fragment (anchor)
+|      |       |     |          |              └─ Query string (parameters)
+|      |       |     |          └─ Path to resource (file/page)
+|      |       |     └─ Domain name (hostname)
+|      |       └─ Subdomain
+|      └─ Protocol (scheme, like http or https)
+└─ Entire URL
+
+9)HTTPS
+->GET:    app.get(path,controlers)
+->POST:   app.post(path,contolers)
+->PUT:    app.put(path,contolers)
+->DELETE: app.delete(path,contolers)
+
+-> path: The URL endpoint you want to handle. It's what the client (Postman, browser, frontend) will hit.
+-> contolers: The function that runs when that path is accessed. It handles the request and sends the response. (req,res)
