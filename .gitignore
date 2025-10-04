@@ -10,3 +10,17 @@ node_modules/
 
 # Ignore .env files
 .env
+
+# Ignore Excel files
+*.xls
+*.xlsx
+*.xlsm
+*.ods
+
+# Ignore Word files
+*.doc
+*.docx
+*.odt
+
+# Ignore PDF files
+*.pdf
