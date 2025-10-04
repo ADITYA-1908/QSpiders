@@ -1,0 +1,90 @@
+------------------JavaScript-----------------------------
+JavaScript 
+static and dynamic page 
+Identifires - rules 
+variable 
+Data type 
+Operators - types of operator 
+Template literals 
+Input in the runtime
+Data type conversation - coercion 
+truthy and falsy value 
+Increment and decrement operator  and not opeartor
+Diffrence between the && and & 
+Bitwise oprator 
+conditional statement 
+Looping statement 
+Break,continue,return 
+Function and types of function 
+IIFE
+JS Runtime environment  ------
+Stack and heap 
+Global execution context ------------
+Execution context Code  
+Code execution process of the JS code
+Hoisting 
+TDZ
+Scope - global,functional,block 
+Lexical Environment 
+Closer 
+this key word 
+Prototype -mscope chain and prototype chain 
+call,bind,apppl method 
+Recurion 
+Pure function 
+Impure function 
+All event listeners
+Storage
+Array methods 
+Shallow copy , Deep Copy
+Rest parameter,Rest operatos,spread opeartors 
+async,Await
+AJAX
+CallBack ---CallBace hell 
+Promise  -- types of promise 
+Destructuring 
+
+--------------DOM------------------
+All query selectors 
+JS Events 
+Event handling 
+Inline Event
+Event props 
+All class list 
+
+---------------OOPS------------------------
+class
+Object
+Constructure
+Inheritance 
+Polymorphism - class ,object ,method  ---------> overriding and overloading 
+Abstraction
+Encaptulation - data properties,Accessor Properties 
+
+-----------ClassBased operation-------------------
+class decleration 
+class Expration 
+strict mode 
+static and non-static method
+
+
+
+
+
+
+type conversation and coercion 
+function object
+aysn await 
+storage 
+settimeout setinteveral 
+event propagation event loop , js engine 
+function constructre 
+this 
+prototype
+===, ==
+type conversion , type coresion 
+truthy, faley value 
+
+
+
+
