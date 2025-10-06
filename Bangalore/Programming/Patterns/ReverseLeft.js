@@ -1,93 +1,102 @@
-//  ****
-//   ***
-//    **
-//     *
-//     *
+// *****
+// ****
+// ***
+// **
+// *
 
-// let n = 5
-// for (let i = 1; i < n; i++) {
-//     let res = "";
-//     for (let j = 1; j < i; j++) {
-//         res += " "
-//     }
-//     for (let s = 1; s < n - i + 1; s++) {
+// let n = 5;
+// for (let i = n; i >= 1; i--) {
+//     let res = ""
+//     for (let j = 1; j <= i; j++) {
 //         res += "*"
 //     }
 //     console.log(res)
 // }
 
 
-// 1234
-//  123
-//   12
-//    1
+// 55555
+// 4444
+// 333
+// 22
+// 1
 
-// let n = 5
-// for (let i = 1; i < n; i++) {
-//     let res = "";
-//     for (let j = 1; j < i; j++) {
-//         res += " "
-//     }
-//     for (let s = 1; s < n - i + 1; s++) {
-//         res += s
-//     }
-//     console.log(res)
-// }
-
-
-
-// 1111
-//  222
-//   33
-//    4
-
-// let n = 5
-// for (let i = 1; i < n; i++) {
-//     let res = "";
-//     for (let j = 1; j < i; j++) {
-//         res += " "
-//     }
-//     for (let s = 1; s < n - i + 1; s++) {
+// let n = 5;
+// for (let i = n; i >= 1; i--) {
+//     let res = ""
+//     for (let j = 1; j <= i; j++) {
 //         res += i
 //     }
 //     console.log(res)
 // }
 
 
-// ABCDE
-//  ABCD
-//   ABC
-//    AB
-//     A
 
-// let n = 5
-// for (let i = 0; i < n; i++) {
-//     let res = "";
-//     for (let j = 0; j < i; j++) {
-//         res += " "
+// 12345
+// 1234
+// 123
+// 12
+// 1
+
+// let n = 5;
+// for (let i = n; i >= 1; i--) {
+//     let res = ""
+//     for (let j = 1; j <= i; j++) {
+//         res += j
 //     }
-//     for (let s = 0; s < n - i; s++) {
-//         res += String.fromCharCode(65 + s)
+//     console.log(res)
+// }
+
+
+// ABCDE
+// ABCD
+// ABC
+// AB
+// A
+
+// let n = 5;
+// for (let i = n; i > 0; i--) {
+//     let res = ""
+//     for (let j = 0; j < i; j++) {
+//         res += String.fromCharCode(65 + j)
+
 //     }
 //     console.log(res)
 // }
 
 
 
-// AAAAA
-//  BBBB
-//   CCC
-//    DD
-//     E
+// EEEEE
+// DDDD
+// CCC
+// BB
+// A
 
-let n = 5
-for (let i = 0; i < n; i++) {
-    let res = "";
-    for (let j = 0; j < i; j++) {
-        res += " "
-    }
-    for (let s = 0; s < n - i; s++) {
-        res += String.fromCharCode(65 + i)
-    }
-    console.log(res)
-}
+// let n = 5;
+// for (let i = n - 1; i >= 0; i--) {
+//     let res = ""
+//     for (let j = 0; j <= i; j++) {
+//         res += String.fromCharCode(65 + i)
+//     }
+//     console.log(res)
+// }
+
+
+// ABCDE
+// FGHI
+// JKL
+// MN
+// O
+
+
+// let n = 5;
+// let c = 0;
+// for (let i = n; i >= 1; i--) {
+//     let res = ""
+//     for (let j = 1; j <= i; j++) {
+//         res += String.fromCharCode(65 + c)
+//         c++;
+//     }
+//     console.log(res)
+// }
+
+
