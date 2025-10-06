@@ -1,7 +1,6 @@
 import './App.css'
 import Header from './Components/Header'
-import Event from './Pages/Event'
-
+import Table from './Hooks/UseState/Table'
 function App() {
 
   return (
@@ -14,7 +13,13 @@ function App() {
       {/* //!By usig destructuring  */}
       {/* <DpropsPage /> */}
       {/* //! Event handaling */}
-      <Event />
+      {/* <Event /> */}
+      {/* //!Hooks */}
+      {/* 1.useState */}
+      {/* <UsestateHooks /> */}
+      <Table />
+
+
 
     </>
   )
