@@ -1,6 +1,8 @@
-import './App.css'
-import Header from './Components/Header'
-import Table from './Hooks/UseState/Table'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
+import Header from './Components/Header';
+import ListRendering from './Hooks/UseState/ListRendering';
+
 function App() {
 
   return (
@@ -15,9 +17,12 @@ function App() {
       {/* //! Event handaling */}
       {/* <Event /> */}
       {/* //!Hooks */}
+
       {/* 1.useState */}
       {/* <UsestateHooks /> */}
-      <Table />
+      {/* <Table /> */}
+      <ListRendering />
+
 
 
 
