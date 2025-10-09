@@ -1,12 +1,29 @@
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 const Header = () => {
     return (
-        <nav>
-            <div className="h-12 w-full bg-blue-600">
-                <h1 className="font-bold text-white pt-2 ml-3">React.JS</h1>
+        <nav className="navbar navbar-expand-lg navbar-dark bg-primary px-4">
+            <div className="container-fluid">
+
+                <a className="navbar-brand fw-bold fs-4" href="#">
+                    MyApp
+                </a>
+
+                {/* Navbar Content */}
+                <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <div className="d-flex gap-2">
+                        <button className="btn btn-outline-light" type="button">
+                            Sign In
+                        </button>
+                        <button className="btn btn-light text-primary fw-semibold" type="button">
+                            Sign Up
+                        </button>
+                    </div>
+                </div>
             </div>
         </nav>
-    )
-}
+    );
+};
 
-export default Header
+export default Header;
