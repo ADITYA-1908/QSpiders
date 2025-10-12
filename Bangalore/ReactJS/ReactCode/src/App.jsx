@@ -1,13 +1,16 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { useState } from 'react';
 import './App.css';
 import Header from './Components/Header';
-import Login from './Hooks/UseState/Login';
+import Login from './Hooks/UseState/Signin';
+import Signup from './Hooks/UseState/Signup';
 
 function App() {
+  const [page, setPage] = useState("signin");
 
   return (
     <>
-      <Header />
+      <Header setPage={setPage} />
       {/* //! By using Array */}
       {/* <Images /> */}
       {/* //! By using props */}
@@ -22,7 +25,10 @@ function App() {
       {/* <UsestateHooks /> */}
       {/* <Table /> */}
       {/* <ListRendering /> */}
-      <Login />
+      <div className=" mt-4">
+        {page === "signin" && <Login />}
+        {page === "signup" && <Signup />}
+      </div>
       {/* <Signup /> */}
 
 

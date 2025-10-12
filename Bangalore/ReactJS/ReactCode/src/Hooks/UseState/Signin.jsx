@@ -41,7 +41,7 @@ const Login = () => {
                     <input
                         id="username"
                         type="text"
-                        className="form-control"
+                        className="custom-input p-2 border rounded w-100"
                         value={data.user}
                         onChange={handleUser}
                         placeholder="Enter your username"
@@ -57,7 +57,7 @@ const Login = () => {
                     <input
                         id="password"
                         type="password"
-                        className="form-control"
+                        className="custom-input p-2 border rounded w-100"
                         value={data.password}
                         onChange={handlePassword}
                         placeholder="Enter your password"

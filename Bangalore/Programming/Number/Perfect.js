@@ -1,7 +1,7 @@
-let c = 0
 function isPerfect(n) {
-    for (let i = 1; i <= n; i++) {
-        if (i % n == 0) {
+    let c = 0
+    for (let i = 1; i < n; i++) {
+        if (n % i == 0) {
             c += i;
         }
     }
@@ -13,5 +13,5 @@ console.log(data)
 if (data == n) {
     console.log("Perfect")
 } else {
-    console.log("not a perfect")
+    console.log("Not a perfect")
 }

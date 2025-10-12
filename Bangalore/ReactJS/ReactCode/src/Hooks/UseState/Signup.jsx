@@ -13,12 +13,10 @@ const Signup = () => {
 
     const { username, email, password, job, text, accept } = data;
 
-    // For text, email, password, textarea, select
     function handleUpdateInput(e) {
         setData({ ...data, [e.target.name]: e.target.value });
     }
 
-    // For checkbox
     function handleUpdateBox(e) {
         setData({ ...data, [e.target.name]: e.target.checked });
     }
@@ -27,7 +25,6 @@ const Signup = () => {
         e.preventDefault();
         console.log(data);
 
-        // Reset form
         setData({
             username: "",
             email: "",
@@ -40,74 +37,69 @@ const Signup = () => {
 
     return (
         <div className="container mt-5">
-            <form
-                className="p-4 border w-50 mx-auto "
-                onSubmit={handleSubmit}
-            >
+            <form className="p-4 border w-100 h-200" onSubmit={handleSubmit}>
                 <h2 className="text-center mb-4">Sign Up</h2>
-
-                {/* Username */}
-                <div className="mb-3">
-                    <label className="form-label">Username</label>
-                    <input
-                        type="text"
-                        className="form-control"
-                        name="username"
-                        value={username}
-                        onChange={handleUpdateInput}
-                        placeholder="Enter your username"
-                        required
-                    />
+                <div className="row mb-3">
+                    <div className="col">
+                        <label className="form-label">Username</label>
+                        <input
+                            type="text"
+                            className="custom-input p-2 border rounded w-100"
+                            name="username"
+                            value={username}
+                            onChange={handleUpdateInput}
+                            placeholder="Enter your username"
+                            required
+                        />
+                    </div>
+                    <div className="col">
+                        <label className="form-label">Email</label>
+                        <input
+                            type="email"
+                            className="custom-input p-2 border rounded w-100"
+                            name="email"
+                            value={email}
+                            onChange={handleUpdateInput}
+                            placeholder="Enter your email"
+                            required
+                        />
+                    </div>
                 </div>
 
-                {/* Email */}
-                <div className="mb-3">
-                    <label className="form-label">Email</label>
-                    <input
-                        type="email"
-                        className="form-control"
-                        name="email"
-                        value={email}
-                        onChange={handleUpdateInput}
-                        placeholder="Enter your email"
-                        required
-                    />
-                </div>
-
-                {/* Password */}
-                <div className="mb-3">
-                    <label className="form-label">Password</label>
-                    <input
-                        type="password"
-                        className="form-control"
-                        name="password"
-                        value={password}
-                        onChange={handleUpdateInput}
-                        placeholder="Enter your password"
-                        required
-                    />
-                </div>
-
-                {/* Job */}
-                <div className="mb-3">
-                    <label className="form-label">Job</label>
-                    <select
-                        className="form-select"
-                        name="job"
-                        value={job}
-                        onChange={handleUpdateInput}
-                    >
-                        <option value="">Select</option>
-                        <option value="Developer">Developer</option>
-                        <option value="Tester">Tester</option>
-                    </select>
+                {/* Password + Job Row */}
+                <div className="row mb-3">
+                    <div className="col">
+                        <label className="form-label">Password</label>
+                        <input
+                            type="password"
+                            className="custom-input p-2 border rounded w-100"
+                            name="password"
+                            value={password}
+                            onChange={handleUpdateInput}
+                            placeholder="Enter your password"
+                            required
+                        />
+                    </div>
+                    <div className="col">
+                        <label className="form-label">Job</label>
+                        <select
+                            className="custom-input p-2 border rounded w-100"
+                            name="job"
+                            value={job}
+                            onChange={handleUpdateInput}
+                        >
+                            <option value="">Select</option>
+                            <option value="Developer">Developer</option>
+                            <option value="Tester">Tester</option>
+                        </select>
+                    </div>
                 </div>
 
                 {/* Description */}
                 <div className="mb-3">
                     <label className="form-label">Description</label>
                     <textarea
-                        className="form-control"
+                        className="custom-input p-2 border rounded w-100"
                         rows="3"
                         name="text"
                         value={text}
