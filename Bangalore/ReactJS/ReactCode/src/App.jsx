@@ -2,11 +2,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState } from 'react';
 import './App.css';
 import Header from './Components/Header';
-import Login from './Hooks/UseState/Signin';
+import Login from "./Hooks/UseState/Signin";
 import Signup from './Hooks/UseState/Signup';
-
+import TodoList from './Pages/TodoList';
 function App() {
-  const [page, setPage] = useState("signin");
+  const [page, setPage] = useState("");
 
   return (
     <>
@@ -29,12 +29,7 @@ function App() {
         {page === "signin" && <Login />}
         {page === "signup" && <Signup />}
       </div>
-      {/* <Signup /> */}
-
-
-
-
-
+      <TodoList />
     </>
   )
 }

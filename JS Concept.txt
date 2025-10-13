@@ -84,7 +84,8 @@ prototype
 ===, ==
 type conversion , type coresion 
 truthy, faley value 
-
+derived state -- the state which is calculated from other state
+state lifting
 
 
 ## 📘 HTML

@@ -6,7 +6,7 @@ const Header = ({ setPage }) => {
         <nav className="navbar navbar-expand-lg navbar-dark bg-primary px-4">
             <div className="container-fluid">
                 <a className="navbar-brand fw-bold fs-4" href="#">
-                    ReactJS Code
+                    TodoList
                 </a>
 
                 <div className="d-flex gap-2 ms-auto">
