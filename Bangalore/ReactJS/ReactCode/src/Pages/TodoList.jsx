@@ -17,27 +17,27 @@ export default function ToDoList() {
         })
     }
 
+    function handleToggleItem(id) {
+        setItems((items) => {
+            return items.map((item) => {
+                if (item.id == id) {
+                    return { ...item, carried: !item.carried }
+                }
+                return item;
+            })
+        });
+    }
+
     return (
         <>
 
             <Form onAddItem={handleAddItem} />
-            <ItemsList itemsList={items} onDeleteItem={handleDeleteItem} />
-            <Stats itemsList={items} />
+            <ItemsList itemsList={items} onDeleteItem={handleDeleteItem} onToggleItem={handleToggleItem} />
+            <Stats itemsList={items} onToggleItem={handleToggleItem} />
         </>
     )
 }
 
-function Navbar() {
-    return (
-        <>
-            <nav className='navbar navbar-dark bg-dark'>
-                <div className="container-fluid">
-                    <a href="#" className='navbar-brand'>🧾 Jspiders Institute</a>
-                </div>
-            </nav>
-        </>
-    )
-}
 
 function Form({ onAddItem }) {
     let [itemName, setItemName] = useState("");
@@ -84,7 +84,7 @@ function Form({ onAddItem }) {
 }
 
 
-function ItemsList({ itemsList, onDeleteItem }) {
+function ItemsList({ itemsList, onDeleteItem, onToggleItem }) {
     return (
         <>
             <section className='container-fluid mt-3'>
@@ -94,7 +94,7 @@ function ItemsList({ itemsList, onDeleteItem }) {
                             <div className="card">
                                 <div className="card-body">
                                     <ol className='list-group'>
-                                        {itemsList.map(item => <Item item={item} key={item.id} onDeleteItem={onDeleteItem} />)}
+                                        {itemsList.map(item => <Item item={item} key={item.id} onDeleteItem={onDeleteItem} onToggleItem={onToggleItem} />)}
                                     </ol>
                                 </div>
                             </div>
@@ -106,12 +106,14 @@ function ItemsList({ itemsList, onDeleteItem }) {
     )
 }
 
-function Item({ item, onDeleteItem }) {
+function Item({ item, onDeleteItem, onToggleItem }) {
     return (
         <>
             <li className='list-group-item list-group-item-secondary mb-2'>
+                <input className="form-check-input" type="checkbox" value={item.carried} id="checkDefault" onChange={() => onToggleItem(item.id)} />
                 <span className='fw-bold' style={item.carried ? { textDecoration: "line-through" } : {}}>{item.qty} {item.itemName}</span>
                 <button className='btn float-end' onClick={() => onDeleteItem(item.id)}>❌</button>
+                <button className='btn float-end'>✏️</button>
             </li>
         </>
     )
@@ -119,6 +121,9 @@ function Item({ item, onDeleteItem }) {
 
 function Stats({ itemsList }) {
     let totalItems = itemsList.length;
+    let carriedItems = itemsList.filter(item => item.carried).length;
+    let percentage = totalItems ? (carriedItems / totalItems) * 100 : 0;
+
     return (
         <>
             <section className='container-fluid mt-3'>
@@ -127,8 +132,9 @@ function Stats({ itemsList }) {
                         <div className="col-6 m-auto">
                             <div className="card">
                                 <div className="card-body bg-dark text-white text-center">
+                                    {totalItems == carriedItems && <h1 className='text-success'>All items packed</h1>}
                                     {
-                                        <h2>{(itemsList.length == 0) ? "Your List Is Empty" : `You Packed ${totalItems} Items`}</h2>
+                                        <h2>{(itemsList.length == 0) ? "Your List Is Empty" : `You Packed ${carriedItems} out of ${totalItems} Items (${percentage}%)`}</h2>
 
                                     }
                                 </div>
