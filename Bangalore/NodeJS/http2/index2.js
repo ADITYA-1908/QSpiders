@@ -9,6 +9,7 @@ const server = http.createServer((req, res) => {
     console.log("url =", url);
     console.log("method =", method);
 
+
     function myfunc(endPath) {
         fs.readFile(path.join(__dirname, endPath), (err, file) => {
             if (err) {
@@ -18,8 +19,6 @@ const server = http.createServer((req, res) => {
             }
         });
     }
-
-    if (url === "/favicon.ico") return;
 
     // Handle GET requests
     if (method === 'GET') {
@@ -43,6 +42,8 @@ const server = http.createServer((req, res) => {
 
             case '/signin':
                 myfunc('htmlfiles/signin.html');
+            case '/delete':
+                myfunc('htmlfiles/delete.html');
                 break;
 
             default:
@@ -96,10 +97,96 @@ const server = http.createServer((req, res) => {
                 });
                 break;
 
+            case '/signin':
+                let LoginData = '';
+
+                req.on('data', chunk => {
+                    LoginData += chunk;
+                });
+
+                req.on('end', () => {
+                    try {
+                        const user = JSON.parse(LoginData);
+                        console.log(user)
+
+                        fs.readFile(path.join(__dirname, 'users.json'), 'utf-8', (err, file) => {
+                            if (err) {
+                                return res.end(JSON.stringify({ message: "Server side error" }));
+                            }
+                            //read json file 
+                            const usersArray = JSON.parse(file);
+
+                            //check Email is exit or not 
+                            const isUser = usersArray.find(u => u.email === user.email);
+
+                            //If email is not exit then !f of T
+                            if (!isUser) {
+                                return res.end(JSON.stringify({ message: "Invalid Email" }));
+                            }
+
+                            //If password is not exit then !f of T
+                            if (isUser.password !== user.password) {
+                                return res.end(JSON.stringify({ message: "Invalid Password" }));
+                            }
+
+                            return res.end(JSON.stringify({ message: "Login successful" }));
+                        });
+                    } catch (error) {
+                        res.end(JSON.stringify({ message: "Invalid JSON data" }));
+                    }
+                });
+                break;
+
             default:
                 res.end("<h1>404 POST route not found</h1>");
         }
+    } else if (method === 'DELETE') {
+        switch (url) {
+            case '/delete':
+                let body = '';
+
+                req.on('data', chunk => {
+                    body += chunk;
+                });
+
+                req.on('end', () => {
+                    try {
+                        const user = JSON.parse(body);
+                        const filePath = path.join(__dirname, 'users.json');
+
+                        if (!fs.existsSync(filePath)) {
+                            return res.end(JSON.stringify({ message: "No users found" }));
+                        }
+
+                        const usersArray = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+
+                        const isUser = usersArray.find(u => u.email === user.email);
+
+                        if (!isUser) {
+                            return res.end(JSON.stringify({ message: "User not found" }));
+                        }
+
+                        if (isUser.password !== user.password) {
+                            return res.end(JSON.stringify({ message: "Invalid password" }));
+                        }
+
+                        // delete the user
+                        const updatedUsers = usersArray.filter(u => u.email !== user.email);
+
+                        fs.writeFileSync(filePath, JSON.stringify(updatedUsers, null, 2));
+
+                        res.end(JSON.stringify({ message: "User deleted successfully" }));
+
+                    } catch (err) {
+                        res.end(JSON.stringify({ message: "Invalid JSON data" }));
+                    }
+                });
+                break;
+        }
+    } else {
+        return res.end(JSON.stringify({ message: "invalid api" }));
     }
+
 
 
 });
