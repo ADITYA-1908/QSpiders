@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Delete Page</title>
+    <title>Signin Page</title>
 </head>
 
 <body>
-    <h1>THIS IS Delete Emai PAGE</h1>
+    <h1>THIS IS SIGNIN PAGE</h1>
 
     <form id="signin-form">
         <input type="text" placeholder="email" id="email" required>
@@ -28,7 +28,7 @@
             let userData = { email, password };
 
             try {
-                let res = await fetch('/delete', {
+                let res = await fetch('/signin', {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify(userData)

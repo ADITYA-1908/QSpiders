@@ -30,7 +30,6 @@ export default function ToDoList() {
 
     return (
         <>
-
             <Form onAddItem={handleAddItem} />
             <ItemsList itemsList={items} onDeleteItem={handleDeleteItem} onToggleItem={handleToggleItem} />
             <Stats itemsList={items} onToggleItem={handleToggleItem} />
@@ -132,7 +131,7 @@ function Stats({ itemsList }) {
                         <div className="col-6 m-auto">
                             <div className="card">
                                 <div className="card-body bg-dark text-white text-center">
-                                    {totalItems == carriedItems && <h1 className='text-success'>All items packed</h1>}
+                                    {totalItems == carriedItems && totalItems != 0 && <h1 className='text-success'>All items packed</h1>}
                                     {
                                         <h2>{(itemsList.length == 0) ? "Your List Is Empty" : `You Packed ${carriedItems} out of ${totalItems} Items (${percentage}%)`}</h2>
 

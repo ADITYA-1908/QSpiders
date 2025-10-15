@@ -4,20 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Delete Account</title>
+    <title>Signin Page</title>
 </head>
 
 <body>
-    <h1>Delete User Account</h1>
+    <h1>THIS IS SIGNIN PAGE</h1>
 
-    <form id="delete-form">
+    <form id="signin-form">
         <input type="text" placeholder="email" id="email" required>
         <input type="password" placeholder="password" id="pass" required>
-        <input type="submit" id="submit" value="Delete">
+        <input type="submit" id="submit" value="Login">
     </form>
 
     <script>
-        let form = document.getElementById('delete-form');
+        let form = document.getElementById('signin-form');
 
         form.addEventListener('submit', async (e) => {
             e.preventDefault();
@@ -28,8 +28,8 @@
             let userData = { email, password };
 
             try {
-                let res = await fetch('/delete', {
-                    method: "POST", // using POST for simplicity
+                let res = await fetch('/signin', {
+                    method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify(userData)
                 });
@@ -40,7 +40,7 @@
                 document.getElementById('email').value = "";
                 document.getElementById('pass').value = "";
             } catch (err) {
-                alert("Error while deleting user");
+                alert("Error while signing in");
             }
         });
     </script>

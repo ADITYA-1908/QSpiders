@@ -4,16 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signin Page</title>
+    <title>Delete Page</title>
 </head>
 
 <body>
-    <h1>THIS IS SIGNIN PAGE</h1>
+    <h1>THIS IS Delete Emai PAGE</h1>
 
     <form id="signin-form">
         <input type="text" placeholder="email" id="email" required>
         <input type="password" placeholder="password" id="pass" required>
-        <input type="submit" id="submit" value="Login">
+        <input type="submit" id="submit" value="Delete">
     </form>
 
     <script>
@@ -28,11 +28,15 @@
             let userData = { email, password };
 
             try {
-                let res = await fetch('/signin', {
+                let res = await fetch('/delete', {
                     method: "DELETE",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify(userData)
                 });
+
+                if (!res.ok) {
+                    throw new Error("Server error");
+                }
 
                 let data = await res.json();
                 alert(data.message);
@@ -40,10 +44,12 @@
                 document.getElementById('email').value = "";
                 document.getElementById('pass').value = "";
             } catch (err) {
-                alert("Error while signing in");
+                console.error(err);
+                alert("Error while deleting user");
             }
         });
     </script>
+
 </body>
 
 </html>

@@ -1,8 +1,7 @@
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
-const { stringify } = require('querystring');
-const { json } = require('stream/consumers');
+
 
 const server = http.createServer((req, res) => {
     const { url, method } = req;
@@ -45,7 +44,9 @@ const server = http.createServer((req, res) => {
             case '/delete':
                 myfunc('htmlfiles/delete.html');
                 break;
-
+            case '/password':
+                myfunc('htmlfiles/password.html');
+                break;
             default:
                 res.end("<h1>404 page not found</h1>");
 
@@ -137,8 +138,7 @@ const server = http.createServer((req, res) => {
                 });
                 break;
 
-            default:
-                res.end("<h1>404 POST route not found</h1>");
+
         }
     } else if (method === 'DELETE') {
         switch (url) {
@@ -182,7 +182,54 @@ const server = http.createServer((req, res) => {
                     }
                 });
                 break;
+
+            default:
+                res.end("<h1>404 POST route not found</h1>");
         }
+    } else if (method === 'PUT') {
+        switch (url) {
+            case '/password':
+                let body = '';
+                req.on('data', chunk => {
+                    body += chunk;
+                });
+                req.on('end', () => {
+                    try {
+                        const user = JSON.parse(body);
+
+                        const filePath = path.join(__dirname, 'users.json');
+
+                        if (!fs.existsSync(filePath)) {
+                            return res.end(JSON.stringify({ message: "No users found" }));
+                        }
+
+                        const users = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+                        const isUser = users.find(u => u.email === user.email);
+
+                        if (!isUser) {
+                            return res.end(JSON.stringify({ message: "User not found" }));
+                        }
+
+                        if (isUser.password !== user.password) {
+                            return res.end(JSON.stringify({ message: "Old password is incorrect" }));
+                        }
+
+
+                        const updatedUsers = users.map(u =>
+                            u.email === user.email ? { ...u, password: user.newpassword } : u
+                        );
+
+                        fs.writeFileSync(filePath, JSON.stringify(updatedUsers, null, 2));
+
+                        res.end(JSON.stringify({ message: "Password updated successfully" }));
+
+                    } catch (err) {
+                        res.end(JSON.stringify({ message: "Invalid data" }));
+                    }
+                });
+                break;
+        }
+
     } else {
         return res.end(JSON.stringify({ message: "invalid api" }));
     }

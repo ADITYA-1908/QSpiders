@@ -1,0 +1,1 @@
+onsole.log(s[i])
