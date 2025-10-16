@@ -1,11 +1,11 @@
 let arr = [1, 2, 3, 4, 5, 6]
-let key = 4;
+let key = 6;
 function binarySearch(arr, key) {
     let left = 0;
     let right = arr.length - 1;
     while (left <= right) {
         let mid = left + right
-        if (mid[mid] == key) {
+        if (arr[mid] == key) {
             return mid
         } else if (arr[mid] < key) {
             left = mid + 1

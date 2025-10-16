@@ -6,9 +6,11 @@ const app = express();
 app.use(express.json());
 
 //! ---------- Helper function ----------
-const filePath = path.join(__dirname, 'users.json');
+const filePath = path.join(__dirname, 'user.json');
 function readUsers() {
-    if (!fs.existsSync(filePath)) return [];
+    if (!fs.existsSync(filePath)) {
+        return []
+    };
     return JSON.parse(fs.readFileSync(filePath, 'utf-8'));
 }
 
@@ -19,8 +21,7 @@ function writeUsers(users) {
 //! ---------- Serve Static Files ----------
 app.use('/home/css', express.static(path.join(__dirname, 'htmlfiles/css')));
 app.use('/home/js', express.static(path.join(__dirname, 'htmlfiles/js')));
-
-//! ---------- GET Routes (HTML Pages) ----------
+//! ---------- GET Routes ----------
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'htmlfiles/home.html'));
 });
@@ -52,7 +53,7 @@ app.get('/password', (req, res) => {
 //! ---------- POST: Signup ----------
 app.post('/signup', (req, res) => {
     const { name, email, age, password } = req.body;
-
+    console.log("hiee")
     if (!name || !email || !age || !password) {
         return res.json({ status: "error", message: "All fields are required" });
     }
