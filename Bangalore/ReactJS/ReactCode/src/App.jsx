@@ -2,9 +2,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState } from 'react';
 import './App.css';
 import Header from './Components/Header';
+import Product from './Hooks/UseEffect/Product';
 import Login from "./Hooks/UseState/Signin";
 import Signup from './Hooks/UseState/Signup';
-import TodoList from './Pages/TodoList';
 function App() {
   const [page, setPage] = useState("");
 
@@ -29,7 +29,10 @@ function App() {
         {page === "signin" && <Login />}
         {page === "signup" && <Signup />}
       </div>
-      <TodoList />
+      {/* <TodoList /> */}
+
+      {/*2. useEffect */}
+      <Product />
     </>
   )
 }
