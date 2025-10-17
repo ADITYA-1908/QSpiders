@@ -2,9 +2,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState } from 'react';
 import './App.css';
 import Header from './Components/Header';
-import Product from './Hooks/UseEffect/Product';
 import Login from "./Hooks/UseState/Signin";
 import Signup from './Hooks/UseState/Signup';
+import ClassBased from './Pages/ClassBased';
 function App() {
   const [page, setPage] = useState("");
 
@@ -32,7 +32,10 @@ function App() {
       {/* <TodoList /> */}
 
       {/*2. useEffect */}
-      <Product />
+      {/* <Product /> */}
+
+      {/* //!Class based component */}
+      <ClassBased name={"aditya"} />
     </>
   )
 }
