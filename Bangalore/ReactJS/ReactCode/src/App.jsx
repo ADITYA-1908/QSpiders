@@ -4,7 +4,7 @@ import './App.css';
 import Header from './Components/Header';
 import Login from "./Hooks/UseState/Signin";
 import Signup from './Hooks/UseState/Signup';
-import ClassBased from './Pages/ClassBased';
+import Mounting from './Pages/LifeCycle/Mounting';
 function App() {
   const [page, setPage] = useState("");
 
@@ -35,7 +35,11 @@ function App() {
       {/* <Product /> */}
 
       {/* //!Class based component */}
-      <ClassBased name={"aditya"} />
+      {/* <ClassBased name={"aditya"} /> */}
+      {/* <ListFetch /> */}
+
+      {/* //!Life cycle methods */}
+      <Mounting />
     </>
   )
 }
