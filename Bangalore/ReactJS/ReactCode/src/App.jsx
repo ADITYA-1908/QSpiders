@@ -4,7 +4,6 @@ import './App.css';
 import Header from './Components/Header';
 import Login from "./Hooks/UseState/Signin";
 import Signup from './Hooks/UseState/Signup';
-import Mounting from './Pages/LifeCycle/Mounting';
 function App() {
   const [page, setPage] = useState("");
 
@@ -39,7 +38,15 @@ function App() {
       {/* <ListFetch /> */}
 
       {/* //!Life cycle methods */}
-      <Mounting />
+      {/* <MountingParent /> */}
+
+      {/* //!React routing */}
+      {/* layout(about,contact,home,navbar,pagenotfound),user(auth) */}
+      {/* <BrowserRouter>
+          <Routes>
+            <Route path='/'/>
+          </Routes>
+      </BrowserRouter> */}
     </>
   )
 }

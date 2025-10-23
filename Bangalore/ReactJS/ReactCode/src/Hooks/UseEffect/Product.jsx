@@ -34,7 +34,7 @@ const Product = () => {
             <div className="container mt-4">
                 <h2 className="text-center mb-3">Product List</h2>
                 <div className="text-center mb-3">
-                    <input type="text" placeholder="Search items" onChange={handleInput}/>
+                    <input type="text" placeholder="Search items" onChange={handleInput} />
 
                 </div>
                 <div className="text-center mb-3">

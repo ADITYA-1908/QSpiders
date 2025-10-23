@@ -8,7 +8,7 @@ const Header = ({ setPage }) => {
                 <a className="navbar-brand fw-bold fs-4" href="#">
                     🛒MyCart
                 </a>
-
+                    
                 <div className="d-flex gap-2 ms-auto">
                     <button
                         className="btn btn-outline-light"

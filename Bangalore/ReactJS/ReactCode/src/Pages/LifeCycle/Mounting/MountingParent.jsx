@@ -1,6 +1,7 @@
 import { Component } from "react";
+import MountingChild1 from "./MountigChild1";
 
-class Mounting extends Component {
+class MountingParent extends Component {
     constructor(props) {
         super(props)
         console.log("Parent constructure")
@@ -9,12 +10,13 @@ class Mounting extends Component {
         console.log("Parent component didi mount")
     }
     render() {
-        console.log("render Method")
+        console.log("Parent render Method")
         return (
             <>
-                <h1>Retunn statement</h1>
+                <h1>Parent Retunn statement</h1>
+                <MountingChild1 />
             </>
         )
     }
 }
-export default Mounting;
+export default MountingParent;
