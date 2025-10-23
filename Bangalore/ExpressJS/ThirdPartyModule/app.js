@@ -1,5 +1,6 @@
-import cookieParser from 'cookie-parser';
-import express from 'express';
+const express = require('express');
+const cookieParser = require('cookie-parser');
+const path = require('path');
 
 const app = express();
 const PORT = 3000;
@@ -7,6 +8,7 @@ const PORT = 3000;
 app.use(express.json());   // for req.body
 app.use(cookieParser());   // for req.cookies
 
+//!-------------------------Request object-----------------------------------------
 
 //! req.app
 app.get('/', (req, res) => {
@@ -35,13 +37,48 @@ app.get('/cookies', (req, res) => {
 //! req.params (route parameters)
 app.get('/params/:id', (req, res) => {
     console.log(req.params);
-    return res.json({message:"Parames are accepted" });
+    return res.json({ message: "Params are accepted", params: req.params });
 });
 
 //! req.query (query parameters)
 app.get('/search', (req, res) => {
     console.log(req.query);
     return res.json({ query: req.query });
+});
+
+//!-------------------------Response object----------------------------------
+
+//! res.cookie
+app.post('/cookie', (req, res) => {
+    const token = "ashfdgfgkhgeu";
+    res.cookie("Token", token);
+    return res.json({ message: "Login successful" });
+});
+
+//! res.download
+app.get('/download', (req, res) => {
+    return res.download(path.join(__dirname, 'Lipuv.png'), 'Lipuv.png');
+});
+
+//! res.clearCookie
+app.post('/clearCookies', (req, res) => {
+    res.clearCookie("Token");
+    return res.json({ message: "Cookie cleared" });
+});
+
+//! res.sendFile
+app.get('/sendfile', (req, res) => {
+    return res.sendFile(path.join(__dirname, "index.html"));
+});
+
+//! res.status
+app.post('/signup', (req, res) => {
+    return res.status(201).json({ message: "User created" });
+});
+
+//! res.status
+app.post('/signin', (req, res) => {
+    return res.sendStatus(201);
 });
 
 app.listen(PORT, () => {
