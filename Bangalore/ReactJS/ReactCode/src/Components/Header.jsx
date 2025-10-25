@@ -1,15 +1,18 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import UseOnlineStatus from "../Hooks/CustomHooks/UseOnlineStaus";
 
 const Header = ({ setPage }) => {
+    const status = UseOnlineStatus()
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-primary px-4">
             <div className="container-fluid">
                 <a className="navbar-brand fw-bold fs-4" href="#">
                     🛒MyCart
                 </a>
-                    
+
                 <div className="d-flex gap-2 ms-auto">
+                    <span className="text-center">Online Status:{status ? "green" : "red"}</span>
                     <button
                         className="btn btn-outline-light"
                         type="button"
