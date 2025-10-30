@@ -1,0 +1,20 @@
+*{
+    margin:0px;
+    box-sizing: border-box;
+    padding: 0px;
+}
+nav{
+    background-color: Black;
+    padding: 30px;
+}
+a{
+    text-decoration: none;
+    color: white;
+    margin-right: 20px;
+}
+a:active{
+    color: yellow;
+}
+a:hover{
+    color: greenyellow;
+}

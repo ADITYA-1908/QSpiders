@@ -10,4 +10,5 @@ function countVowel(s) {
 }
 let str = "aditya"
 let data = countVowel(str);
-console.log(data)
+console.log("total vowel", data)
+console.log("total consonent", str.length - data)
