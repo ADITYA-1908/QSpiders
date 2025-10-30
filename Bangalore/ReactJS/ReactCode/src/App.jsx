@@ -1,10 +1,12 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState } from 'react';
+import { Provider } from 'react-redux';
 import './App.css';
 import Header from './Components/Header';
 import Login from "./Hooks/UseState/Signin";
 import Signup from './Hooks/UseState/Signup';
-import ReduceForm from './Hooks/useReduce/ReduceForm';
+import ReduxComponent from './ReacatRedux/ReduxComponent';
+import store from './ReacatRedux/Store';
 function App() {
   const [page, setPage] = useState("");
 
@@ -52,7 +54,12 @@ function App() {
       {/* //!useReduce */}
       {/* <ReduceCount /> */}
       {/* <ReduceObject /> */}
-      <ReduceForm />
+      {/* <ReduceForm /> */}
+
+      {/* //!React redux */}
+      <Provider store={store}>
+        <ReduxComponent />
+      </Provider>
     </>
   )
 }

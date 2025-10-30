@@ -23,6 +23,12 @@ const ReduceForm = () => {
     const [data, setData] = useState([]);
     const [state, dispatch] = useReducer(formReduce, init)
     function handleSubmit(e) {
+        let { name, age } = state;
+        if (!name || !age) {
+            alert("Enter the fileds")
+            dispatch({ type: "RESET" })
+            return
+        }
         e.preventDefault()
         setData([...data, state])
         dispatch({ type: "RESET" })
