@@ -1,10 +1,15 @@
 
-import { createStore } from "redux";
+import { combineReducers, createStore } from "redux";
 
 //! Initial state
 const initialState = {
     init: 0,
 };
+
+const initForm = {
+    name: "",
+    age: ""
+}
 
 //! Reducer function passed by the init as a default parameter
 function counterReducer(state = initialState, action) {
@@ -18,8 +23,22 @@ function counterReducer(state = initialState, action) {
     }
 }
 
-//combine reducer functiom to combine 2 or more reducer function
-//!created a store to pasas it 
-const store = createStore(counterReducer);
+function formReduce(state = initForm, action) {
+    switch (action.type) {
+        case "":
+
+            break;
+
+        default:
+            break;
+    }
+}
+
+//combineReducer functiom to combine 2 or more reducer function
+// //!created a store to pasas it 
+// const store = createStore(counterReducer);
+
+let rootReducer = combineReducers({ formReduce, counterReducer })
+const store = createStore(rootReducer);
 
 export default store;

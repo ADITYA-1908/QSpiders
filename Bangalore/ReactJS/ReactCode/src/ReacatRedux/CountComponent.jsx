@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 
-const ReduxComponent = () => {
+const CountComponent = () => {
     const data = useSelector((state) => state.init);
     const dispatch = useDispatch();
 
@@ -13,4 +13,4 @@ const ReduxComponent = () => {
     );
 };
 
-export default ReduxComponent;
+export default CountComponent;
