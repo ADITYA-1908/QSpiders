@@ -1,0 +1,40 @@
+1) what is react and Virtual DOM?
+2) what is node.js ?
+3) difference between NPM and NPX ?
+4) How to rerate a react application and folder structure?
+5)Explain babel, Web pack,ESlient?
+6) What is component and how to create it? 
+7) difference between class based and functional based components?
+8) what is JSX and explain its rules?
+9) what is props?
+10) what is State?
+11) Diffrnece between props and state?
+12) Expain childer props and give a example? 
+13) what is props drilling how to prevent it?
+14) what is context API ?
+15)Diffrence between contoled and uncontrolled components? 
+16) Diffrene between stateless and statefull components ?
+17) Explain life cycle phases in react components 
+18) what is useEffect hook and what is use of it ?
+19) Which life cycle method replace useEffect?
+20) difference between useState and useRef hooks ?
+21) how to achive routing in react application ?
+22) Diffrence between axios and fetch? 
+23) Diffrence between library and framework ?
+24)what is Virtual DOM and how react use it ?
+25) what is reconciliation process?
+26) Explain keys in react and importance?
+27) Explain react fragment ?
+28) what is custum hooks and give a example 
+29) What is HOF?
+30)Diffrence between react router V5 and V6
+31)what is lazy loading and susupence components
+32) what is useMemo and useCallback Hooks 
+33)What is difference between useMemo hooks and memo function 
+34) what is differ
+35) what is useReducer?
+36) Diffrence between useReducer and useState
+37)What is redux and explain the work flow it ?
+38)How to pass data from child to parent components ?
+39) what is debouncing and trotlling ??
+40)

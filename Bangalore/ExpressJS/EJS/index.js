@@ -47,15 +47,69 @@ app.get("/login", (req, res) => {
 app.post("/signup", (req, res) => {
     const { userName, age, password } = req.body;
 
-    if (!userName || !age || !password) {
+    try {
+        // Validate input
+        if (!userName || !age || !password) {
+            return res.render("signup", { message: "Please fill all fields" });
+        }
 
-        return res.render("signup", { message: " Please fill all fields" });
+        // Read existing users
+        const users = readUsers();
+
+        // Check for duplicate username
+        const existingUser = users.find((u) => u.userName === userName);
+        if (existingUser) {
+            return res.render("signup", { message: "Username already exists!" });
+        }
+
+        // Create new user
+        const newUser = { userName, age, password };
+
+        // Save to JSON file
+        users.push(newUser);
+        writeUsers(users);
+
+        console.log("New user added:", newUser);
+
+        // Success message
+        res.render("signup", { message: "Signup successful!" });
+    } catch (error) {
+        return res.render("signup", { message: "Server side error" });
     }
-    const user = readUsers();
-    const isUser = user.find((u) => u.userName === userName)
+});
 
-    console.log(" User signed up:", { userName, age, password });
-    res.render("signup", { message: " Signup successful!" });
+app.post("/signin", (req, res) => {
+    const { userName, password } = req.body;
+
+    try {
+        // Check empty fields
+        if (!userName || !password) {
+            return res.render("signin", { message: "Please fill all fields" });
+        }
+
+        // Read existing users
+        const users = readUsers();
+
+        // Find user by username
+        const existingUser = users.find((u) => u.userName === userName);
+
+        if (!existingUser) {
+            return res.render("signin", { message: "Invalid username" });
+        }
+
+        // Check password
+        if (existingUser.password !== password) {
+            return res.render("signin", { message: "Invalid password" });
+        }
+
+        // Success
+        console.log("User signed in:", existingUser);
+        return res.render("signin", { message: "Signin successful!" });
+
+    } catch (error) {
+        console.error("Signin error:", error);
+        res.render("signin", { message: "Something went wrong" });
+    }
 });
 
 app.listen(PORT, () => {

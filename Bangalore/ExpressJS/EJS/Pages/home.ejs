@@ -4,20 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home</title>
 </head>
 
 <body>
-
     <%- include('./../Partials/navbar.ejs') %>
-        <h1>This is home page</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae tempora vel debitis nihil. Eum sed
-            magni, laborum autem illum suscipit.</p>
 
-        <h5>TO know more about this website Do login</h5>
-        <a href="/login">login</a>
-        <a href="/signup">Signup</a>
+        <h1>This is the Home Page</h1>
 
+        <% if (user) { %>
+            <h2>Hello, <%= user.userName %> 👋</h2>
+            <p>Welcome back! Enjoy exploring the website.</p>
+            <% } else { %>
+                <p>To know more about this website, please log in or sign up.</p>
+                <a href="/login">Login</a>
+                <a href="/signup">Signup</a>
+                <% } %>
 </body>
 
 </html>
