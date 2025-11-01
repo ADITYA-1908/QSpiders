@@ -1,0 +1,13 @@
+react 
+all hooks 
+redux redux toolkit - redux thunk redux saga 
+mongodb -aggregation, scaling, replica set,
+expreess - authontication, authorition , load ballenbcer , microservices, live data communication (webscocation) , difference web socket and rest api , JWT, soap api and rest api full form , bootstrap grip sysytem.
+
+html - mata tag ,semnatigate , utf-8
+css- box modeling ,selectore ,mediaqueswry, postion , spacificity 
+js- code snippet , try cath , promis,asysn awit , function , spread rest , export deafult , library.
+
+
+Useref={}  ----> Color Change 
+Programming ---> 

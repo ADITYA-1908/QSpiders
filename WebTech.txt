@@ -1,0 +1,87 @@
+## 📘 HTML
+1. Difference between HTML and HTML5  
+2. What is the use of Doctype  
+3. What is Meta tag in HTML  
+4. Semantic tag  
+5. What is formatting tag  
+6. HTML attributes (uses and examples)  
+7. Difference between cell padding and cell spacing  
+8. Differentiate Block-level element and Inline element  
+9. List types and list attribute examples  
+10. Form attributes and Form elements  
+11. Table  
+
+---
+
+## 🎨 CSS
+1. Types of CSS  
+2. CSS specificity  
+3. What is … (incomplete)  
+4. Difference between pseudo-class and pseudo-element  
+5. —  
+6. CSS position properties  
+7. Difference between sticky and fixed in CSS  
+8. Difference between position absolute and relative  
+9. CSS display properties  
+10. —  
+11. —  
+12. What is z-index  
+13. What is media query  
+14. —  
+15. —  
+16. Grid and its properties  
+
+---
+
+## JavaScript
+1. What is JS and why we need JS  
+2. Data types in JS  
+3. Difference between Null and Undefined  
+4. Falsy values in JS
+5. Difference between let and var  
+6. Difference between let and const  
+7. What is scope, types of scope, scope chaining  
+8. Difference between `==` and `===`  
+9. Difference between type coercion and type conversion  
+10. What is hoisting  
+11. What is a function and its types  
+12. What is object declaration in JS  
+13. Explain function methods and differences  
+14. What is pure function, HOF, callback function  
+15. Arrays in JS and method examples  
+16. Difference between forEach and map  
+17. Difference between map and filter  
+18. Difference between slice and splice
+19. Difference between map and reduce  
+20. ES6 features in JS  
+21. Difference between rest operator and spread operator  
+22. What is async and await  
+23. What are import and export keywords  
+24. What is DOM in JS and its methods  
+25. Difference between innerHTML and innerText  
+26. How to create HTML element in JS  
+27. What is event propagation and its phases  
+28. What is event delegation  
+29. Difference between preventDefault and stopPropagation and event deligation 
+30. Difference between setTimeout and setInterval  
+31.What is prototype 
+32.All oops concept 
+---
+
+## Extra Questions
+1. What is closure in JS  
+2. Currying in JS  
+3. `this` keyword  
+4. IIFE function  
+5. Strict mode in JS  
+6. Constructor Function  
+7. First-class functions  
+8. Function side effects  
+9. Difference between Array and JSON  
+10. Destructuring in array and object  
+11. Default parameters  
+12. Execution context and call stack  
+13. String methods in JS  
+14. What is storage in JS  
+
+---
