@@ -1,5 +1,5 @@
 let arr = [1, 2, 3, 4, 5, 6]
-let key = 6;
+let key = 5;
 function binarySearch(arr, key) {
     let left = 0;
     let right = arr.length - 1;
