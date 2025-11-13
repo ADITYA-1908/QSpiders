@@ -1,63 +1,64 @@
+//!Mid level
 
-const data = [
-    {
-        name: "aditya",
-        age: "21",
-        designation: "QA"
-    },
-    {
-        name: "subham",
-        age: "22",
-        designation: "QA"
-    },
-    {
-        name: "subham",
-        age: "23",
-        designation: "DA"
-    }
-]
+//!Q1
+//!output
+// [
+//     { id: 1, name: 'Aditya', age: 22 },
+//     { id: 2, name: 'Subham', age: 23 }
+// ]
+// const arr1 = [
+//     { id: 1, name: "Aditya" },
+//     { id: 2, name: "Subham" },
+// ];
 
-//! Add in the object
-// const add = data.map((item) => ({ ...item, address: "bangalore" }))
-// console.log(add);
+// const arr2 = [
+//     { id: 1, age: 22 },
+//     { id: 2, age: 23 },
+// ];
 
-//!remove in the object
-// const remove = data.map(({ age, ...rest }) => rest)
-// console.log(remove);
-
-//!add "year old after age"
-// const addAge = data.map((item) => ({ ...item, age: item.age + " year old" }))
-// console.log(addAge);
-
-//!filter QA and give all the data
-// const Qa = data.filter((item) => (item.designation === "QA")).map((i) => ({ name: i.name, age: i.age }))
-// console.log(Qa);
-
-//!filter QA and add postfix of designation as Traniee
-// const traniee = data.
-//     filter((item) => (item.designation === "QA"))
-//     .map((tr) => ({ name: tr.name, designation: tr.designation + "Traniee" }))
-
-// console.log(traniee);
-
-//!Remove objects with duplicate designation and keep the first occurrence.
-// const seen = []
-// const unique = data.filter((item) => {
-//     if (!seen.includes(item.designation)) {
-//         seen.push(item.designation)
-//         return true
-//     }
-//     return false
-// })
-// console.log(unique);
-
-//!If designation is "DA", add level: "Junior" else level: "Intern".
-// const update = data.map((item) => (
-//     { ...item, level: item.designation === "DA" ? "intern" : "Junior" }
+// const merged = arr1.map((item) => (
+//     { ...item, ...arr2.find((a) => a.id === item.id) }
 // ))
-// console.log(update);
+// console.log(merged);
 
-//!sort age
-// const sortAge = data.sort((a, b) => a.age - b.age)
-// console.log(sortAge);
+//!Q2
+const students = [
+    { name: "Aditya", grade: "A" },
+    { name: "Neha", grade: "B" },
+    { name: "Subham", grade: "A" },
+];
 
+const res = {}
+students.forEach((obj) => {
+    if (res[obj.grade]) {
+        res[obj.grade].push(obj.name)
+    } else {
+        res[obj.grade] = [obj.name]
+    }
+})
+
+console.log(res);
+// let arr = [
+//     { county: "IND", state: "odisha" },
+//     { county: "IND", state: "karnataka" },
+//     { county: "USA", state: "Londan" },
+//     { county: "USA", state: "Califonia" }
+// ]
+
+// let res = {}
+// let result = []
+// arr.forEach((o) => {
+//     if (res[o.county]) {
+//         res[o.county].push(o.state)
+//     } else {
+//         res[o.county] = [o.state]
+//     }
+// })
+// console.log(res);
+// for (let c in res) {
+//     let obj = {}
+//     obj.c = c;
+//     obj.s = res[c]
+//     result.push(obj)
+// }
+// console.log(result);

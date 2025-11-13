@@ -11,7 +11,7 @@ const studentRoutes = require("./Routes/studentRoutes");
 // Use routes
 app.use("/api/student", studentRoutes);
 
-app.listen(PORT, (req, res) => {
-
+// Start server
+app.listen(PORT, () => {
     console.log(`Server is running at http://localhost:${PORT}/`);
 });

@@ -10,7 +10,7 @@ function quickSort(arr, s, e) {
         while (arr[j] > pi) j--;
 
         if (i <= j) {
-            swap(arr[i], arr[j])
+            swap(arr, i, j);
             i++;
             j--;
         }
@@ -20,12 +20,12 @@ function quickSort(arr, s, e) {
     quickSort(arr, i, e);
 }
 
-function swap(a, b) {
-    let t = a;
-    b = a;
-    a = t;
-
+function swap(arr, i, j) {
+    let temp = arr[i];
+    arr[i] = arr[j];
+    arr[j] = temp;
 }
+
 let arr = [1, 9, 5, 2, 7, 3];
 quickSort(arr, 0, arr.length - 1);
-console.log(arr);
+console.log(arr); 

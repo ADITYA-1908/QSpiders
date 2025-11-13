@@ -1,1 +1,9 @@
-[]
+[
+  {
+    "id": 1762667077169,
+    "name": "Anurag",
+    "email": "anurag@gmail.com",
+    "password": "$2b$10$l4SaIiYjDWfREtMwgAFXN.T7bAcrzNCtjiS7D1xt7cEZcfpPjGqrq",
+    "age": 21
+  }
+]

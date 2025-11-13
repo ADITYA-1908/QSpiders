@@ -8,7 +8,6 @@
 // }
 // console.log(total - sum);
 
-
 //find all missing 
 let arr = [2, 4, 7, 9]
 let min = Math.min(...arr)
