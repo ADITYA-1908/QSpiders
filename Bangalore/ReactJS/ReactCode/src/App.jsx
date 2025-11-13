@@ -5,9 +5,8 @@ import './App.css';
 import Header from './Components/Header';
 import Login from "./Hooks/UseState/Signin";
 import Signup from './Hooks/UseState/Signup';
-import ReduxComponent from './ReacatRedux/CountComponent';
-import FormComponent from './ReacatRedux/FormComponent';
-import store from './ReacatRedux/Store';
+import CounterComponent from './reduxToolkit/CounterComponent';
+import store from './reduxToolkit/Store/store';
 function App() {
   const [page, setPage] = useState("");
 
@@ -58,9 +57,14 @@ function App() {
       {/* <ReduceForm /> */}
 
       {/* //!React redux */}
-      <Provider store={store}>
+      {/* <Provider store={store}>
         <ReduxComponent />
         <FormComponent />
+      </Provider> */}
+
+      {/* //!ReduxToolkit */}
+      <Provider store={store}>
+        <CounterComponent />
       </Provider>
     </>
   )
