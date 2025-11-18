@@ -1,0 +1,54 @@
+Q1) What is a Database Driver?
+
+Ans: A database driver is a software component that allows an application to interact with a specific DBMS.
+It acts as a bridge between the application and the database, making communication and data exchange standardized and easier.
+
+Q2) What is ORM?
+
+Ans: ORM stands for Object Relational Mapping.
+It is a software technique that acts as an abstraction layer between a relational database and an object-oriented programming language.
+ORM helps programmers work with data without manually writing complex SQL queries.
+It allows developers to use object-oriented structures to interact with the database.
+
+Advantages of ORM:
+
+Increases productivity by removing boilerplate code
+
+Improves application design
+
+Code reusability
+
+Easier to maintain
+
+Reduces development cost
+
+Q3) What is ODM?
+
+Ans: ODM stands for Object Document Mapper.
+It is a tool that allows users to interact with a MongoDB database using JavaScript objects.
+
+Q4) What is Mongoose ODM?
+
+Ans: Mongoose is an ODM library for MongoDB and Node.js.
+It manages relationships between data, provides schema validation, and translates objects in code into documents stored in MongoDB.
+
+Q5) What is a Schema in Mongoose?
+
+Ans: A Mongoose schema defines the structure and properties of documents in a MongoDB collection.
+A schema is used to define expected fields, their types, default values, constraints, and indexes.
+A compiled version of a schema is called a Model.
+
+Q6) What is a Model in Mongoose?
+
+Ans: A Mongoose model is a wrapper around a schema.
+While a schema defines the structure, default values, and validators, the model provides the interface to the database for:
+
+Creating
+
+Reading
+
+Updating
+
+Deleting
+
+Querying records
