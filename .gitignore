@@ -20,6 +20,7 @@ node_modules/
 # Ignore Word files
 *.doc
 *.docx
+*.pdf
 *.odt
 
 # Ignore PDF files
