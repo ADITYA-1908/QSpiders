@@ -1,10 +1,10 @@
 let arr = [1, 2, 3, 4, 5, 6]
-let key = 5;
+let key = 1;
 function binarySearch(arr, key) {
     let left = 0;
     let right = arr.length - 1;
-    while (left <= right) {
-        let mid = left + right
+    while (left < right) {
+        let mid = Math.floor((left + right) / 2);
         if (arr[mid] == key) {
             return mid
         } else if (arr[mid] < key) {

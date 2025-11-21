@@ -10,18 +10,27 @@
 
 //find all missing 
 let arr = [2, 4, 7, 9]
-let min = Math.min(...arr)
-let max = Math.max(...arr)
+let min = arr[0]
+let max = arr[0]
+for (let i = 1; i < arr.length; i++) {
+    if (arr[i] < min) {
+        min = arr[i]
+    }
+    if (arr[i] > max) {
+        max = arr[i]
+    }
+
+}
 let arr2 = []
 for (let i = min; i < max; i++) {
-    let found = false;
+    let flag = false
     for (let j = 0; j < arr.length; j++) {
         if (arr[j] === i) {
-            found = true
-            break;
+            flag = true
+            break
         }
     }
-    if (!found) {
+    if (!f) {
         arr2[arr2.length] = i
     }
 }

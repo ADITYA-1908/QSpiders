@@ -1,4 +1,3 @@
-
 const data = [
     {
         name: "aditya",
@@ -60,4 +59,3 @@ const data = [
 //!sort age
 // const sortAge = data.sort((a, b) => a.age - b.age)
 // console.log(sortAge);
-
